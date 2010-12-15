@@ -1,0 +1,30 @@
+<html>
+<head>
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+    <h1>Add New Person</h1>
+    <form id="frmNewPerson" method="POST" action="addPersonAction.php">
+        <table>
+            <tr>
+                <td class="emphasis">姓名</td>
+                <td><input name="txtTitle" type="text" size="30" maxlength="50"/></td>
+            </tr>
+            <tr>
+                <td class="emphasis">性别:</td>
+                <td><input name="txtFormat" type="text" size="30" maxlength="50"/></td>
+            </tr>
+            <tr>
+                <td class="emphasis">电话号码</td>
+                <td><input name="txtGenre" type="text" size="30" maxlength="50"/></td>
+            </tr>
+            <tr>
+                <td class="emphasis" colspan="2">
+                    <input type="submit" id="btnAdd" value="Add Person"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
