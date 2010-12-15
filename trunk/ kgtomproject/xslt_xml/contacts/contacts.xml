@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+  <Person id="1">
+    <name>Tom</name>
+    <sex>male</sex>
+    <phone>655927</phone>
+  </Person>
+  <Person id="2">
+    <name>哈哈哈</name>
+    <sex>male</sex>
+    <phone>655928</phone>
+  </Person>
+  <Person id="3">
+    <name>好生</name>
+    <sex>男</sex>
+    <phone>655939</phone>
+  </Person>
+  <Person id="4">
+    <name>福生</name>
+    <sex>男</sex>
+    <phone>655940</phone>
+  </Person>
+  <Person id="5">
+    <name>发生</name>
+    <sex>女</sex>
+    <phone>655941</phone>
+    <Person id="6">
+      <name>他生</name>
+      <sex>女</sex>
+      <phone>655942</phone>
+    </Person>
+  </Person>
+  <Person id="7">
+    <name>开生</name>
+    <sex>男</sex>
+    <phone>655943</phone>
+  </Person>
+  <Person id="8">
+    <name>大包</name>
+    <sex>女</sex>
+    <phone>655944</phone>
+  </Person>
+  <Person id="9">
+    <name>不错</name>
+    <sex>男</sex>
+    <phone>XXXXX</phone>
+  </Person>
+  <Person id="10">
+    <name>AAA</name>
+    <sex>BBB</sex>
+    <phone>CCC</phone>
+  </Person>
+</contacts>

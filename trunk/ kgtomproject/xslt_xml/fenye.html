@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<TITLE>利用我的XSLT类实现分页范例</TITLE>
+<script language="javascript" src="XsltClass.js"></script>
+<SCRIPT language="javascript">
+var XMLFILE="fenye.xml", XSLFILE="fenye.xsl";
+
+var xslt=new XsltClass(XMLFILE, XSLFILE);//创建对象，传如XML文件名和XSL文件名
+
+function init() {
+ divContainer.innerHTML=xslt.output();//输出XSLT转换后的HTML
+ //xslt.setParam("FuncName", "goPage");//设置跳转页面的函数名，默认情况下为"goPage"
+ //xslt.setParam("Count", 2);//设置每页显示的记录数，默认为2
+}
+
+function goPage(pageNo) {
+ xslt.setParam("PageNo", pageNo);//设置XSL的参数，页号
+ divContainer.innerHTML=xslt.output();//输出XSLT
+}
+</SCRIPT>
+<style>
+body, td, div, span{
+ font-size: 18px;
+}
+#divContainer {
+ margin: 20px;
+ position: absolute;
+ left: 10%;
+ top: 30%;
+}
+table {
+ margin: 20px;
+ border: 1px solid black;
+}
+</style>
+</HEAD>
+<BODY onLoad="init();">
+<DIV id="divContainer">
+</DIV>
+</BODY>
+</HTML>
