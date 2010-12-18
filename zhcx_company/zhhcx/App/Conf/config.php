@@ -9,9 +9,9 @@ return array(
 	//'配置项'=>'配置值'
 	'APP_DEBUG' => false,
  	'APP_GROUP_LIST' => 'Admin,Home', 
-	'DEFAULT_GROUP' => 'Admin',
+	'DEFAULT_GROUP' => 'Home',
 	//URL 配置
-	'URL_HTML_SUFFIX' => '.shtml',		//URL 伪静态
+//	'URL_HTML_SUFFIX' => '.shtml',		//URL 伪静态
 	'HTML_CACHE_ON' => false, 
 	
 	//开启令牌验证
@@ -25,7 +25,7 @@ return array(
 	'DB_HOST' => 'localhost', // 服务器地址
 	'DB_NAME' => 'zhhcx',          // 数据库名
 	'DB_USER' => 'root',      // 用户名
-	'DB_PWD' => '',          // 密码
+	'DB_PWD' => '123',          // 密码
 	'DB_PORT' => 3306,        // 端口
 	'DB_PREFIX' => 'zhh_',    // 数据库表前缀
 	'DB_SUFFIX' => '',          // 数据库表后缀
