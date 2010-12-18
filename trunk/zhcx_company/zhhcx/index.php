@@ -1,7 +1,7 @@
 <?php 
 /**
  * 入口文件
- * @author 吴奇成
+ * @author TOM
  * @version 1.0
  * create Date 12 15,2010
  */
@@ -10,13 +10,13 @@
 define( 'THINK_PATH' ,  './ThinkPHP/' ); 
 
 // 定义项目名称和路径 
-define( 'APP_NAME' ,  'zhhcx' ); 
-define( 'APP_PATH' ,  './App' ); 
+define( 'APP_NAME' ,  'App' ); 
+define( 'APP_PATH' ,  'App' ); 
 
 //
-define ( 'BUILD_DIR_SECURE' , true ); 
-define ( 'DIR_SECURE_FILENAME' ,  'default.html' ); 
-define ( 'DIR_SECURE_CONTENT' ,  '非法访问!' ); 
+//define ( 'BUILD_DIR_SECURE' , true ); 
+//define ( 'DIR_SECURE_FILENAME' ,  'default.html' ); 
+//define ( 'DIR_SECURE_CONTENT' ,  '非法访问!' ); 
 
 //   加载框架入口文件
 require(THINK_PATH."/ThinkPHP.php"); 
