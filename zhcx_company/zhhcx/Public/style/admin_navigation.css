@@ -1,0 +1,208 @@
+body {
+	background-color:#eee;
+    color: #000;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 18px;
+    margin: 0 0 20px;
+}
+
+a {
+    color: #FFF;
+}
+
+.clear {
+    clear: both;
+    font-size: 1px;
+    line-height: 1px;
+}
+
+#overlay {
+    background-color: transparent;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+#overlay #preloader {
+    background: url(../image/admin/nav_loader_bg.gif) no-repeat;
+    height: 50px;
+    left: 50%;
+    line-height: 50px;
+    margin: -25px 0 0 -25px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 50px;
+}
+
+#overlay #preloader img {
+    margin: 11px 0 0 0;
+    vertical-align: middle;
+}
+
+.ui-sortable {
+    background-color: #FFF;
+    color: #222;
+    margin: 0 15px 15px 0;
+    padding: 0 10px 10px;
+    width: 100%;
+}
+
+.ui-sortable h2 {
+    background: url(../image/admin/nav_header_bg.gif) no-repeat left;
+    padding-left: 10px;
+	height:25px;
+    color: #215dc6;
+    font-size: 11px;
+    margin: 0 -10px 10px;
+    line-height: 2;
+    padding: 0 10px;
+}
+
+.ui-sortable h2 span{
+	position:absolute;
+	right:0;
+	background:url(../image/admin/nav_header_right.gif) right center;
+}
+
+dl.sort {
+    color: #000;
+	float: left;
+	width: 150px;
+	margin-left: 10px;
+	
+}
+
+#uidemo dl.first {
+    margin-top: 0;
+}
+
+#uidemo dl.last {
+    margin-bottom: 0;
+}
+
+
+
+dl.sort dt {
+    background: url(../image/admin/nav_header_bg.gif) left;
+    color: #215dc6;
+    cursor: move;
+    line-height:25px;
+    padding-left: 10px;
+	height:25px;
+    position: relative;
+}
+dl.sort dt span{
+	position:absolute;
+	right:0;
+	background:url(../image/admin/nav_header_right.gif) right center;
+}
+
+dl.sort dd {
+    background-color: #DFE8F6;
+    border-left: 1px solid #99BBE8;
+    border-right: 1px solid #99BBE8;
+    margin: 0;
+    padding-left: 5px;
+}
+
+DIV.dragFooter {
+    font-size: 1px;
+    width: 100%;
+    height: 5px;
+    line-height: 5px;
+    background: url(../image/admin/nav_footer_bg.gif) left;
+    color: #15428B;
+}
+
+DIV.dragFooter .right {
+    font-size: 1px;
+    height: 100%;
+    float: right;
+    background: url(../image/admin/nav_footer_right.gif) right #FFF;
+    width: 50px;
+}
+
+.ui-sortable-helper {
+    width: 175px;
+}
+
+.placeholder {
+    border: 1px dashed #AAA;
+}
+
+span.options {
+    cursor: default;
+    font-size: 1px;
+    line-height: 1px;
+    position: absolute;
+}
+
+span.options a {
+    background-color: #FFF;
+    cursor: pointer;
+    display: block;
+    float: left;
+    text-indent: -9000px;
+}
+
+.ui-sortable h2 span.options {
+    right: 10px;
+    top: 8px;
+    width: 30px;
+}
+
+.ui-sortable h2 span.options a {
+    height: 12px;
+    width: 30px;
+}
+
+dl.sort dt span.options {
+    right: 5px;
+    top: 5px;
+    width: 27px;
+}
+
+dl.sort dt span.options a {
+    height: 12px;
+    width: 12px;
+}
+
+dl.sort dt span.options a.up {
+    margin-right: 3px;
+}
+
+dl.sort dt span.options a.disabled {
+    background-color: #555;
+    cursor: default;
+}
+
+#container {
+	width:100%;
+    float: left;
+}
+
+#header {
+	float: left;
+    width: 80%;
+}
+
+#sidebar {
+    float: left;
+    width: 80%;
+}
+
+#trashcan {
+    float: left;
+	width:250px;
+}
+
+#trashcan p {
+    margin: 0;
+}

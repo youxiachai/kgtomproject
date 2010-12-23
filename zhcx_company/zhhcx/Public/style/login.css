@@ -1,0 +1,83 @@
+@CHARSET "UTF-8";
+	*{
+		margin:0;
+		padding:0;
+	}
+	body{
+		text-align:center;
+		margin:0;
+		background:#01132b;
+	}
+	#center{
+		background:url(../image/admin/login_01.gif) #01132b repeat-x center;
+		margin-top:7%;
+	}
+	#center #main{
+		margin:0 auto;
+		text-align:left;
+		width:1003px;
+		height:613px;
+		background-image:url(../image/admin/login_bg.jpg);
+	}
+	#center #main #top{
+		height:246px;
+	}
+	#center #main #index{
+		width:343px;
+		height:140px;
+		margin-left:401px;
+		text-align:left;
+	}
+	
+	#center #main #index h2{
+		margin:0;
+		height:24px;
+		padding-top:24px;
+		padding-left:205px;
+	}
+	
+	#center #main #index h2 a{
+		margin:0;
+		width:122px;
+		height:21px;
+		background:url(../image/admin/login_button.png) no-repeat;
+		display:block;
+	}
+	
+	#center #main #index form{
+		padding-top:6px;
+		margin-left:35px;
+	}
+	
+	#center #main #index form p{
+		margin:5px;
+	}
+
+
+	
+	#center #main #index form p .text{
+		margin-right:5px;
+		font-size:12px;
+		color:#fff;
+	}
+	
+	#center #main #index form p input {
+		border:1px solid #09f;
+		width:120px;
+		height:14px;
+		font-size:12px;
+		color:#fff;
+		background:URL(../image/admin/login_2.jpg);
+	}
+	
+	#center #main #index #check{
+		width:50px;
+	}
+	#center #main #index form p img{
+		width:55px;
+		height:20px;
+		margin:0;
+		margin-left:8px;
+		border:none;
+		vertical-align:middle;
+	}
