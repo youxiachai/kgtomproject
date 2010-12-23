@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+
+body{
+	font-size:12px;
+	background:#eee;
+	color:#666;
+}
+#fileMain{
+	width:1000px;
+	margin:40px auto;
+}
+
+#fileMain #title p#classify{
+	margin:20px 0;	
+}
+#fileMain #title span{
+	font-size:24px;
+	font-weight:bold;
+	margin-right:20px;
+}
+
+#fileMain table{
+	background:#6298e1;
+	width:99%;
+}
+#fileMain table tr.head{
+	background:url(../image/admin/list_bg.gif);
+	height:30px;
+	color:#ffffff;
+	font-weight:bold;
+}
+
+#fileMain table tr{
+	height:40px;
+	background:#ebf2f9;
+}
+#fileMain table tr#pagetr{
+	background:#D7E4F7;
+}
+
