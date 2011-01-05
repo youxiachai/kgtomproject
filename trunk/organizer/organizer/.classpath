@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/cglib-nodep.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-attributes-api.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/freemarker.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ognl.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/oscore.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/rife-continuations.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-aop.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-beans.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-context.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-core.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-dao.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-jdbc.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-mock.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-web.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/webwork.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xwork.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>
