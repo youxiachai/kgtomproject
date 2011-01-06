@@ -1,4 +1,4 @@
-package com.apress.ajaxprojects.theorganizer.actions;
+package com.ypg.ajaxprojects.theorganizer.actions;
 
 
 import com.opensymphony.xwork.Action;

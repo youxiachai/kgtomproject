@@ -1,8 +1,9 @@
-package com.apress.ajaxprojects.theorganizer.daos;
+package com.ypg.ajaxprojects.theorganizer.daos;
 
 
-import com.apress.ajaxprojects.theorganizer.Globals;
-import com.apress.ajaxprojects.theorganizer.objects.NoteObject;
+import com.ypg.ajaxprojects.theorganizer.Globals;
+import com.ypg.ajaxprojects.theorganizer.objects.NoteObject;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

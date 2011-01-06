@@ -1,7 +1,8 @@
-package com.apress.ajaxprojects.theorganizer.daos;
+package com.ypg.ajaxprojects.theorganizer.daos;
 
 
-import com.apress.ajaxprojects.theorganizer.Globals;
+import com.ypg.ajaxprojects.theorganizer.Globals;
+
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;

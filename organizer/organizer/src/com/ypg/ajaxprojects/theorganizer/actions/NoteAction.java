@@ -1,11 +1,12 @@
-package com.apress.ajaxprojects.theorganizer.actions;
+package com.ypg.ajaxprojects.theorganizer.actions;
 
 
-import com.apress.ajaxprojects.theorganizer.daos.NoteDAO;
-import com.apress.ajaxprojects.theorganizer.objects.AccountObject;
-import com.apress.ajaxprojects.theorganizer.objects.NoteObject;
 import com.opensymphony.webwork.interceptor.SessionAware;
 import com.opensymphony.xwork.Action;
+import com.ypg.ajaxprojects.theorganizer.daos.NoteDAO;
+import com.ypg.ajaxprojects.theorganizer.objects.AccountObject;
+import com.ypg.ajaxprojects.theorganizer.objects.NoteObject;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Map;

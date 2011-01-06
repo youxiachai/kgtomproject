@@ -1,12 +1,13 @@
-package com.apress.ajaxprojects.theorganizer.actions;
+package com.ypg.ajaxprojects.theorganizer.actions;
 
 
-import com.apress.ajaxprojects.theorganizer.daos.AccountDAO;
-import com.apress.ajaxprojects.theorganizer.objects.AccountObject;
 import com.opensymphony.webwork.interceptor.SessionAware;
 import com.opensymphony.webwork.ServletActionContext;
 import com.opensymphony.xwork.Action;
 import com.opensymphony.xwork.ActionContext;
+import com.ypg.ajaxprojects.theorganizer.daos.AccountDAO;
+import com.ypg.ajaxprojects.theorganizer.objects.AccountObject;
+
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

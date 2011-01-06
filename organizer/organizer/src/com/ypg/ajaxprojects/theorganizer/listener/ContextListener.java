@@ -1,8 +1,9 @@
-package com.apress.ajaxprojects.theorganizer.listener;
+package com.ypg.ajaxprojects.theorganizer.listener;
 
 
-import com.apress.ajaxprojects.theorganizer.daos.TableDAO;
-import com.apress.ajaxprojects.theorganizer.Globals;
+import com.ypg.ajaxprojects.theorganizer.Globals;
+import com.ypg.ajaxprojects.theorganizer.daos.TableDAO;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import javax.servlet.ServletContextEvent;
