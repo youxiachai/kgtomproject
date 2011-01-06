@@ -286,52 +286,52 @@ function dsSelectorChange() {
 function validateAppointment(inForm) {
 
   if (inForm.subject.value == "") {
-    alert("You must enter a subject");
+    alert("你必须输入肢体");
     inForm.subject.focus();
     return false;
   }
   if (inForm.appointmentDateMonth.value == "") {
-    alert("You must enter a month for the appoinment");
+    alert("你必须输入约会的时间");
     inForm.appointmentDateMonth.focus();
     return false;
   }
   if (inForm.appointmentDateDay.value == "") {
-    alert("You must enter a day for the appoinment");
+    alert("你必须输入约会的时间");
     inForm.appointmentDateDay.focus();
     return false;
   }
   if (inForm.appointmentDateYear.value == "") {
-    alert("You must enter a year for the appoinment");
+    alert("你必须输入约会的时间");
     inForm.appointmentDateYear.focus();
     return false;
   }
   if (inForm.startTimeHour.value == "") {
-    alert("You must enter an hour for the start time");
+    alert("你必须输入约会的时间");
     inForm.startTimeHour.focus();
     return false;
   }
   if (inForm.startTimeMinute.value == "") {
-    alert("You must enter a minute for the start time");
+    alert("你必须输入约会的时间");
     inForm.startTimeMinute.focus();
     return false;
   }
   if (inForm.startTimeAMPM.value == "") {
-    alert("You must enter a meridian (AM/PM) for the start time");
+    alert("你必须输入约会的时间");
     inForm.startTimeAMPM.focus();
     return false;
   }
   if (inForm.endTimeHour.value == "") {
-    alert("You must enter an hour for the end time");
+    alert("你必须输入约会的时间");
     inForm.endTimeHour.focus();
     return false;
   }
   if (inForm.endTimeMinute.value == "") {
-    alert("You must enter a minute for the end time");
+    alert("你必须输入约会的时间");
     inForm.endTimeMinute.focus();
     return false;
   }
   if (inForm.endTimeAMPM.value == "") {
-    alert("You must enter a meridian (AM/PM) for the end time");
+    alert("你必须输入约会的时间");
     inForm.endTimeAMPM.focus();
     return false;
   }

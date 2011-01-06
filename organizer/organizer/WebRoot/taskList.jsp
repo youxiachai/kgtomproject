@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="ww" uri="webwork" %>
 
 <img src="img/head_tasks.gif">
@@ -19,7 +20,7 @@
     </ww:iterator>
   </ww:if>
   <ww:else>
-    There are no tasks to display
+    今天没有任务
   </ww:else>
 
 </div>

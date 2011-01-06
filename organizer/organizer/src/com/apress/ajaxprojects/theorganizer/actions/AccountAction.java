@@ -196,8 +196,8 @@ public class AccountAction implements Action, SessionAware {
 
     // Validation: does password match password_2?
     if (!password.equalsIgnoreCase(password_2)) {
-      log.debug("Password not matched");
-      message = "Password not matched";
+      log.debug("两次输入的密码不一致");
+      message = "两次输入的密码不一致";
       return Action.ERROR;
     }
 
@@ -213,7 +213,7 @@ public class AccountAction implements Action, SessionAware {
     } catch (DataIntegrityViolationException dive) {
       // Username already exists.
       log.debug("Username already exists");
-      message = "That username already exists.  Please try another.";
+      message = "用户名已经存在";
       return Action.ERROR;
     }
 
@@ -271,8 +271,8 @@ public class AccountAction implements Action, SessionAware {
 
     // Validation: does password match password_2?
     if (!password.equalsIgnoreCase(password_2)) {
-      log.debug("Password not matched");
-      message = "Password not matched";
+      log.debug("密码不正确");
+      message = "密码不正确";
       return Action.ERROR;
     }
 

@@ -134,12 +134,12 @@ function noteDelete(inForm) {
 function validateNote(inForm) {
 
   if (inForm.subject.value == "") {
-    alert("You must enter a subject");
+    alert("你必须输入主题");
     inForm.subject.focus();
     return false;
   }
   if (inForm.text.value == "") {
-    alert("You must enter some text");
+    alert("你必须输入一些内容");
     inForm.text.focus();
     return false;
   }

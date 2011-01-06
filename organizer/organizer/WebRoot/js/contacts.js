@@ -134,12 +134,12 @@ function contactDelete(inForm) {
 function validateContact(inForm) {
 
   if (inForm.firstName.value == "") {
-    alert("You must enter a first name");
+    alert("你必须输入姓名");
     inForm.firstName.focus();
     return false;
   }
   if (inForm.lastName.value == "") {
-    alert("You must enter a last name");
+    alert("你必须输入姓名");
     inForm.lastName.focus();
     return false;
   }

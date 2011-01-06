@@ -150,13 +150,13 @@ public class LogonAction implements Action, SessionAware {
 
     // See if they exist, and if their password is correct.
     if (account == null) {
-      log.info("User not found");
-      message = "User not found";
+      log.info("用户名不存在");
+      message = "用户名不存在";
       return Action.ERROR;
     } else {
       if (!password.equalsIgnoreCase(account.getPassword())) {
-        log.info("Password incorrect");
-        message = "Password incorrect";
+        log.info("密码不正确");
+        message = "密码不正确";
         return Action.ERROR;
       }
     }
