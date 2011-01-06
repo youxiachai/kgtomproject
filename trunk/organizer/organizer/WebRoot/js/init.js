@@ -48,7 +48,7 @@ function init() {
 
   // Start on Day At A Glance screen.
   hidePleaseWait();
-  alert("Welcome to The Organizer!");
+  alert("欢迎进入");
   showDayAtAGlance();
 
 } // End init().

@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="ww" uri="webwork" %>
 
 <img src="img/head_tasks.gif">
@@ -8,9 +9,9 @@
   String requestURI = (String)request.getAttribute("webwork.request_uri");
   requestURI = requestURI.toLowerCase();
   if (requestURI.indexOf("create") != -1) {
-    out.println("Create Task:");
+    out.println("创建任务:");
   } else {
-    out.println("Edit Task:");
+    out.println("编辑任务:");
   }
 %>
 </div>
@@ -21,26 +22,26 @@
   <ww:form cssClass="cssMain" onsubmit="return false">
     <ww:hidden name="createdDT" value="%{task.createdDT}" />
     <ww:hidden name="due" value="%{task.due}" />
-    <ww:textfield label="Subject" name="subject" value="%{task.subject}"
+    <ww:textfield label="主题" name="subject" value="%{task.subject}"
       cssClass="cssInput0" maxlength="100" size="48"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />
-    <ww:select label="Status" name="status"
-      list="#{'I':'Incomplete', 'C':'Complete'}" cssClass="cssInput0"
+    <ww:select label="状态" name="status"
+      list="#{'I':'草稿', 'C':'完成'}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />
-    <ww:select label="Priority" name="priority"
-      list="#{'N':'Normal', 'L':'Low', 'H':'High'}" cssClass="cssInput0"
+    <ww:select label="优先级" name="priority"
+      list="#{'N':'正常', 'L':'低', 'H':'高'}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />
     <tr>
-      <td><label>Due Date</label></td>
+      <td><label>日期</label></td>
       <td>
         <ww:select name="dueMonth" theme="simple"
-          list="#{'':'', '01':'January', '02':'February', '03':'March',
-          '04':'April', '05':'May', '06':'June', '07':'July', '08':'August',
-          '09':'September', '10':'October', '11':'November',
-          '12':'December'}"
+          list="#{'':'', '01':'一月', '02':'二月', '03':'三月',
+          '04':'四月', '05':'五月', '06':'六月', '07':'七月', '08':'八月',
+          '09':'九月', '10':'十月', '11':'十一月',
+          '12':'十二月'}"
           cssClass="cssInput0"
           onfocus="this.className='cssInput1';"
           onblur="this.className='cssInput0';" />
@@ -66,7 +67,7 @@
           onblur="this.className='cssInput0';" />
       </td>
     </tr>
-    <ww:textarea label="Comments" cols="45" rows="15" name="comments"
+    <ww:textarea label="内容" cols="45" rows="15" name="comments"
       value="%{task.comments}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />

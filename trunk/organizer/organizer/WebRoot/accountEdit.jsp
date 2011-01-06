@@ -1,3 +1,4 @@
+<%@ page  pageEncoding="UTF-8"%>
 <%@ taglib prefix="ww" uri="webwork" %>
 
 <img src="img/head_myAccount.gif">
@@ -13,11 +14,11 @@
   </ww:else>
 
   <ww:form cssClass="cssMain" onsubmit="return false">
-    <ww:textfield label="Password" name="password" value="%{password}"
+    <ww:textfield label="密码" name="password" value="%{password}"
       cssClass="cssInput0"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Re-Enter Password" name="password_2"
+    <ww:textfield label="重复密码" name="password_2"
       value="%{password_2}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />

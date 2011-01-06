@@ -1,3 +1,4 @@
+<%@ page  pageEncoding="UTF-8"%>
 <%@ taglib prefix="ww" uri="webwork" %>
 
 <ww:if test="view.equalsIgnoreCase('day')">
@@ -48,7 +49,7 @@
     </ww:iterator>
   </ww:if>
   <ww:else>
-    There are no appointments to display for today
+    今天没有约会
   </ww:else>
 
 </div>

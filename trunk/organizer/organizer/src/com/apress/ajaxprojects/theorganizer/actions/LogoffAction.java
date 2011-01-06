@@ -63,7 +63,7 @@ public class LogoffAction implements Action {
 
     log.debug("LogoffAction.execute()...");
 
-    message = "You have logged out";
+    message = "你已经退出";
     ActionContext      context = ActionContext.getContext();
     HttpServletRequest request =
       (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);

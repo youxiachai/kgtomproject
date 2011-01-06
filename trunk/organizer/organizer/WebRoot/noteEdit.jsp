@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="ww" uri="webwork" %>
 
 <img src="img/head_notes.gif">
@@ -8,9 +9,9 @@
   String requestURI = (String)request.getAttribute("webwork.request_uri");
   requestURI = requestURI.toLowerCase();
   if (requestURI.indexOf("create") != -1) {
-    out.println("Create Note:");
+    out.println("创建日记:");
   } else {
-    out.println("Edit Note:");
+    out.println("编辑日记:");
   }
 %>
 </div>
@@ -20,11 +21,11 @@
 
   <ww:form cssClass="cssMain" onsubmit="return false">
     <ww:hidden name="createdDT" value="%{note.createdDT}" />
-    <ww:textfield label="Subject" name="subject" value="%{note.subject}"
+    <ww:textfield label="主题" name="subject" value="%{note.subject}"
       cssClass="cssInput0" maxlength="100" size="52"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />
-    <ww:textarea label="Text" cols="49" rows="15" name="text"
+    <ww:textarea label="内容" cols="49" rows="15" name="text"
       value="%{note.text}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />

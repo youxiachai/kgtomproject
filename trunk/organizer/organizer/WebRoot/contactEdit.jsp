@@ -1,3 +1,4 @@
+<%@ page  pageEncoding="UTF-8"%>
 <%@ taglib prefix="ww" uri="webwork" %>
 
 <img src="img/head_contacts.gif">
@@ -8,9 +9,9 @@
   String requestURI = (String)request.getAttribute("webwork.request_uri");
   requestURI = requestURI.toLowerCase();
   if (requestURI.indexOf("create") != -1) {
-    out.println("Create Contact:");
+    out.println("创建联系人:");
   } else {
-    out.println("Edit Contact:");
+    out.println("编辑联系人:");
   }
 %>
 </div>
@@ -20,195 +21,195 @@
 
   <ww:form cssClass="cssMain" onsubmit="return false">
     <ww:hidden name="createdDT" value="%{contact.createdDT}" />
-    <ww:textfield label="First Name" name="firstName"
+    <ww:textfield label="姓名1" name="firstName"
       value="%{contact.firstName}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="25" size="26"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Middle Name" name="middleName"
+    <ww:textfield label="姓名2" name="middleName"
       value="%{contact.middleName}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="25" size="26"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Last Name" name="lastName"
+    <ww:textfield label="姓名3" name="lastName"
       value="%{contact.lastName}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="25" size="26"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Home Phone" name="homePhone"
+    <ww:textfield label="家庭电话" name="homePhone"
       value="%{contact.homePhone}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="15" size="16"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Home Address 1" name="homeAddress1"
+    <ww:textfield label="家庭地址1" name="homeAddress1"
       value="%{contact.homeAddress1}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Home Address 2" name="homeAddress2"
+    <ww:textfield label="家庭地址2" name="homeAddress2"
       value="%{contact.homeAddress2}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Home Address 3" name="homeAddress3"
+    <ww:textfield label="家庭地址3" name="homeAddress3"
       value="%{contact.homeAddress3}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Home Address 4" name="homeAddress4"
+    <ww:textfield label="家庭地址4" name="homeAddress4"
       value="%{contact.homeAddress4}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Personal eMail" name="personalEMail"
+    <ww:textfield label="个人 eMail" name="personalEMail"
       value="%{contact.personalEMail}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Personal IM" name="personalIM"
+    <ww:textfield label="个人IM" name="personalIM"
       value="%{contact.personalIM}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Personal FAX" name="personalFAX"
+    <ww:textfield label="个人FAX" name="personalFAX"
       value="%{contact.personalFAX}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="15" size="16"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Personal Cell" name="personalCell"
+    <ww:textfield label="单位" name="personalCell"
       value="%{contact.personalCell}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="15" size="16"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Personal Pager" name="personalPager"
+    <ww:textfield label="寻呼机" name="personalPager"
       value="%{contact.personalPager}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="15" size="16"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Spouse" name="spouse"
+    <ww:textfield label="配偶" name="spouse"
       value="%{contact.spouse}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Child #1" name="child1"
+    <ww:textfield label="子女 #1" name="child1"
       value="%{contact.child1}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Child #2" name="child2"
+    <ww:textfield label="子女 #2" name="child2"
       value="%{contact.child2}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Child #3" name="child3"
+    <ww:textfield label="子女 #3" name="child3"
       value="%{contact.child3}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Child #4" name="child4"
+    <ww:textfield label="子女 #4" name="child4"
       value="%{contact.child4}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Child #5" name="child5"
+    <ww:textfield label="子女 #5" name="child5"
       value="%{contact.child5}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Child #6" name="child6"
+    <ww:textfield label="子女 #6" name="child6"
       value="%{contact.child6}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Child #7" name="child7"
+    <ww:textfield label="子女 #7" name="child7"
       value="%{contact.child7}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Child #8" name="child8"
+    <ww:textfield label="子女 #8" name="child8"
       value="%{contact.child8}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Company" name="company"
+    <ww:textfield label="公司" name="company"
       value="%{contact.company}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="75" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Title" name="title"
+    <ww:textfield label="标题" name="title"
       value="%{contact.title}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="75" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Department" name="department"
+    <ww:textfield label="部门" name="department"
       value="%{contact.department}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="75" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Work Phone" name="workPhone"
+    <ww:textfield label="工作电话" name="workPhone"
       value="%{contact.workPhone}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="15" size="16"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Work Address 1" name="workAddress1"
+    <ww:textfield label="工作地址1" name="workAddress1"
       value="%{contact.workAddress1}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Work Address 2" name="workAddress2"
+    <ww:textfield label="工作地址2" name="workAddress2"
       value="%{contact.workAddress2}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Work Address 3" name="workAddress3"
+    <ww:textfield label="工作地址3" name="workAddress3"
       value="%{contact.workAddress3}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Work Address 4" name="workAddress4"
+    <ww:textfield label="工作地址4" name="workAddress4"
       value="%{contact.workAddress4}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Work eMail" name="workEMail"
+    <ww:textfield label="工作email" name="workEMail"
       value="%{contact.workEMail}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Work IM" name="workIM"
+    <ww:textfield label="工作IM" name="workIM"
       value="%{contact.workIM}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Work FAX" name="workFAX"
+    <ww:textfield label="工作FAX" name="workFAX"
       value="%{contact.workFAX}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="15" size="16"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Work Cell" name="workCell"
+    <ww:textfield label="工作单位" name="workCell"
       value="%{contact.workCell}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="15" size="16"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Work Pager" name="workPager"
+    <ww:textfield label="工作寻呼机" name="workPager"
       value="%{contact.workPager}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="15" size="16"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Assistant" name="assistant"
+    <ww:textfield label="助理" name="assistant"
       value="%{contact.assistant}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Manager" name="manager"
+    <ww:textfield label="经理" name="manager"
       value="%{contact.manager}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Other Phone" name="otherPhone"
+    <ww:textfield label="其他电话1" name="otherPhone"
       value="%{contact.otherPhone}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="15" size="16"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Other Address 1" name="otherAddress1"
+    <ww:textfield label="其他地址1" name="otherAddress1"
       value="%{contact.otherAddress1}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Other Address 2" name="otherAddress2"
+    <ww:textfield label="其他地址2" name="otherAddress2"
       value="%{contact.otherAddress2}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="other Address 3" name="otherAddress3"
+    <ww:textfield label="其他地址3" name="otherAddress3"
       value="%{contact.otherAddress3}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="other Address 4" name="otherAddress4"
+    <ww:textfield label="其他地址4" name="otherAddress4"
       value="%{contact.otherAddress4}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Other eMail" name="otherEMail"
+    <ww:textfield label="其他邮件" name="otherEMail"
       value="%{contact.otherEMail}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="100" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Other IM" name="otherIM"
+    <ww:textfield label="其他IM" name="otherIM"
       value="%{contact.otherIM}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="50" size="42"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Other FAX" name="otherFAX"
+    <ww:textfield label="其他FAX" name="otherFAX"
       value="%{contact.otherFAX}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="15" size="16"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Other Cell" name="otherCell"
+    <ww:textfield label="其他单位" name="otherCell"
       value="%{contact.otherCell}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="15" size="16"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Other Pager" name="otherPager"
+    <ww:textfield label="其他寻呼机" name="otherPager"
       value="%{contact.otherPager}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';" maxlength="15" size="16"
       onblur="this.className='cssInput0';" />
-    <ww:textarea label="Comments" cols="39" rows="15" name="comments"
+    <ww:textarea label="评论" cols="39" rows="15" name="comments"
       value="%{contact.comments}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />

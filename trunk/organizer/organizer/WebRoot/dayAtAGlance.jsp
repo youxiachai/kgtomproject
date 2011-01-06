@@ -1,3 +1,4 @@
+<%@ page  pageEncoding="UTF-8"%>
 <%@ taglib prefix="ww" uri="webwork" %>
 
 <img src="img/head_dayAtAGlance.gif">
@@ -5,7 +6,7 @@
 
 <div class="cssScrollContent">
 
-  <div class="cssDAAGHeading">Tasks due today:</div>
+  <div class="cssDAAGHeading">今天到期行程:</div>
   <ww:if test="%{!tasks.isEmpty()}">
     <ww:iterator value="tasks">
       <form>
@@ -21,7 +22,7 @@
             </td>
             <td width="10">&nbsp;</td>
             <td>
-              Subject: <ww:property value="subject" />
+             主题: <ww:property value="subject" />
             </td>
           </tr>
         </table>
@@ -29,12 +30,12 @@
     </ww:iterator>
   </ww:if>
   <ww:else>
-    There are no tasks to display
+    今天尚未安排行程
   </ww:else>
 
   <br><br><br>
 
-  <div class="cssDAAGHeading">Appointments for today:</div>
+  <div class="cssDAAGHeading">今天的计划:</div>
   <ww:if test="%{!appointments.isEmpty()}">
     <ww:iterator value="appointments">
       <form>
@@ -50,14 +51,14 @@
             </td>
             <td width="10">&nbsp;</td>
             <td>
-              Subject: <ww:property value="subject" />
+              主题: <ww:property value="subject" />
               <br>
-              Time:
+              时间:
               <ww:property value="startTime" />
               -
               <ww:property value="endTime" />
               <br>
-              Location: <ww:property value="location" />
+              位置: <ww:property value="location" />
             </td>
           </tr>
         </table>
@@ -65,7 +66,7 @@
     </ww:iterator>
   </ww:if>
   <ww:else>
-    There are no appointments to display for today
+  今天 没有约会
   </ww:else>
 
 </div>

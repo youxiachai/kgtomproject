@@ -1,3 +1,4 @@
+<%@ page  pageEncoding="UTF-8"%>
 <%@ taglib prefix="ww" uri="webwork" %>
 
 <img src="img/head_appointments.gif">
@@ -8,9 +9,9 @@
   String requestURI = (String)request.getAttribute("webwork.request_uri");
   requestURI = requestURI.toLowerCase();
   if (requestURI.indexOf("create") != -1) {
-    out.println("Create Appointment:");
+    out.println("创建行程:");
   } else {
-    out.println("Edit Appointment:");
+    out.println("编辑行程:");
   }
 %>
 </div>
@@ -23,22 +24,22 @@
     <ww:hidden name="appointmentDate" value="%{appointment.appointmentDate}" />
     <ww:hidden name="startTime" value="%{appointment.startTime}"/>
     <ww:hidden name="endTime" value="%{appointment.endTime}" />
-    <ww:textfield label="Subject" name="subject" maxlength="100" size="40"
+    <ww:textfield label="主题" name="subject" maxlength="100" size="40"
       value="%{appointment.subject}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />
-    <ww:textfield label="Location" name="location" maxlength="100" size="40"
+    <ww:textfield label="地点" name="location" maxlength="100" size="40"
       value="%{appointment.location}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />
     <tr>
-      <td><label>Appointment Date:</label></td>
+      <td><label>时间:</label></td>
       <td>
         <ww:select name="appointmentDateMonth" theme="simple"
-          list="#{'':'', '01':'January', '02':'February', '03':'March',
-          '04':'April', '05':'May', '06':'June', '07':'July', '08':'August',
-          '09':'September', '10':'October', '11':'November',
-          '12':'December'}"
+          list="#{'':'', '01':'一月', '02':'二月', '03':'三月',
+          '04':'四月', '05':'五月', '06':'六月', '07':'七月', '08':'八月',
+          '09':'九月', '10':'十月', '11':十一月',
+          '12':'十二月'}"
           cssClass="cssInput0"
           onfocus="this.className='cssInput1';"
           onblur="this.className='cssInput0';" />
@@ -65,7 +66,7 @@
       </td>
     </tr>
     <tr>
-      <td><label>Start Time:</label></td>
+      <td><label>开始时间:</label></td>
       <td>
         <ww:select name="startTimeHour" theme="simple"
           list="#{'':'', '1':'1', '2':'2', '3':'3', '4':'4', '5':'5',
@@ -90,7 +91,7 @@
     </tr>
 
     <tr>
-      <td><label>End Time:</label></td>
+      <td><label>结束时间:</label></td>
       <td>
         <ww:select name="endTimeHour" theme="simple"
           list="#{'':'', '1':'1', '2':'2', '3':'3', '4':'4', '5':'5',
@@ -113,7 +114,7 @@
           onblur="this.className='cssInput0';" />
       </td>
     </tr>
-    <ww:textarea label="Comments" cols="38" rows="15" name="comments"
+    <ww:textarea label="评论" cols="38" rows="15" name="comments"
       value="%{appointment.comments}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />

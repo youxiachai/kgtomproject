@@ -1,3 +1,4 @@
+<%@ page  pageEncoding="UTF-8"%>
 <%@ taglib prefix="ww" uri="webwork" %>
 
 <html>
@@ -25,15 +26,15 @@
       </ww:else>
       <br><br><br>
       <ww:form action="accountCreate" cssClass="cssMain">
-        <ww:textfield label="Username" name="username"
+        <ww:textfield label="用户名" name="username"
           value="%{username}" cssClass="cssInput0" maxlength="20" size="21"
           onfocus="this.className='cssInput1';"
           onblur="this.className='cssInput0';" />
-        <ww:textfield label="Password" name="password"
+        <ww:textfield label="密码" name="password"
           value="%{password}" cssClass="cssInput0" maxlength="20" size="21"
           onfocus="this.className='cssInput1';"
           onblur="this.className='cssInput0';" />
-        <ww:textfield label="Verify Password" name="password_2"
+        <ww:textfield label="重复密码" name="password_2"
           value="%{password_2}" cssClass="cssInput0" maxlength="20" size="21"
           onfocus="this.className='cssInput1';"
           onblur="this.className='cssInput0';" />

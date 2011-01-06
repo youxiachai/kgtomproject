@@ -1,3 +1,4 @@
+<%@ page  pageEncoding="UTF-8"%>
 <%@ taglib prefix="ww" uri="webwork" %>
 
 <html>
@@ -17,7 +18,7 @@
       <br>
       <img src="img/title.gif">
       <br><br><br><br><br><br><br><br><br><br>
-      Your account has been created.  You may now use The Organizer.
+      用户名创建成功
       <br><br><br><br>
       <input type="image" src="img/ok0.gif" id="ok"
         onmouseover="rollover(this);" onmouseout="rollout(this);"

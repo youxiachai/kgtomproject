@@ -147,7 +147,7 @@ function taskDelete(inForm) {
 function validateTask(inForm) {
 
   if (inForm.subject.value == "") {
-    alert("You must enter a subject");
+    alert("你必须输入主题");
     inForm.subject.focus();
     return false;
   }

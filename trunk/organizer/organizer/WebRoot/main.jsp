@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
 <html>
 
   <head>
@@ -120,27 +121,27 @@
                               onMouseOut="rollout(this);">
                             <br>
                             <div id="dateSelector" style="display:none;">
-                              Month:<br>
+                              月:<br>
                               <select class="cssSideNav" id="dsMonth"
                                 onChange="dsSelectorChange();"
                                 cssClass="cssInput0"
                                 onfocus="this.className='cssInput1';"
                                 onblur="this.className='cssInput0';">
-                                <option value="01">JANUARY</option>
-                                <option value="02">FEBRUARY</option>
-                                <option value="03">MARCH</option>
-                                <option value="04">APRIL</option>
-                                <option value="05">MAY</option>
-                                <option value="06">JUNE</option>
-                                <option value="07">JULY</option>
-                                <option value="08">AUGUST</option>
-                                <option value="09">SEPTEMBER</option>
-                                <option value="10">OCTOBER</option>
-                                <option value="11">NOVEMBER</option>
-                                <option value="12">DECEMBER</option>
+                                <option value="01">一月</option>
+                                <option value="02">二月</option>
+                                <option value="03">三月</option>
+                                <option value="04">四月</option>
+                                <option value="05">五月</option>
+                                <option value="06">六月</option>
+                                <option value="07">七月</option>
+                                <option value="08">八月</option>
+                                <option value="09">九月</option>
+                                <option value="10">十月</option>
+                                <option value="11">十一月</option>
+                                <option value="12">十二月</option>
                               </select>
                               <br>
-                              Day:<br>
+                              日:<br>
                               <select class="cssSideNav" id="dsDay"
                                 onChange="dsSelectorChange();"
                                 cssClass="cssInput0"
@@ -179,7 +180,7 @@
                                 <option value="31">31</option>
                               </select>
                               <br>
-                              Year:<br>
+                              年:<br>
                               <select class="cssSideNav" id="dsYear"
                                 onChange="dsSelectorChange();"
                                 cssClass="cssInput0"
@@ -211,7 +212,7 @@
               </td>
               <td class="cssMain" valign="top">
                 <span id="mainContent"></span>
-                <span id="pleaseWait">Please wait...</span>
+                <span id="pleaseWait">请稍等...</span>
               </td>
             </tr>
           </table>
