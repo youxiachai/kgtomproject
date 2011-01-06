@@ -1,8 +1,9 @@
-package com.apress.ajaxprojects.theorganizer.daos;
+package com.ypg.ajaxprojects.theorganizer.daos;
 
 
-import com.apress.ajaxprojects.theorganizer.Globals;
-import com.apress.ajaxprojects.theorganizer.objects.AccountObject;
+import com.ypg.ajaxprojects.theorganizer.Globals;
+import com.ypg.ajaxprojects.theorganizer.objects.AccountObject;
+
 import java.util.List;
 import java.util.Map;
 import org.apache.commons.logging.Log;

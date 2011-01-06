@@ -1,11 +1,12 @@
-package com.apress.ajaxprojects.theorganizer.actions;
+package com.ypg.ajaxprojects.theorganizer.actions;
 
 
-import com.apress.ajaxprojects.theorganizer.daos.AppointmentDAO;
-import com.apress.ajaxprojects.theorganizer.objects.AccountObject;
-import com.apress.ajaxprojects.theorganizer.objects.AppointmentObject;
 import com.opensymphony.webwork.interceptor.SessionAware;
 import com.opensymphony.xwork.Action;
+import com.ypg.ajaxprojects.theorganizer.daos.AppointmentDAO;
+import com.ypg.ajaxprojects.theorganizer.objects.AccountObject;
+import com.ypg.ajaxprojects.theorganizer.objects.AppointmentObject;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package com.apress.ajaxprojects.theorganizer.objects;
+package com.ypg.ajaxprojects.theorganizer.objects;
 
 
 /**
