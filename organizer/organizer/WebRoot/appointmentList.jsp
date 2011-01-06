@@ -32,16 +32,16 @@
             </td>
             <td width="10">&nbsp;</td>
             <td>
-              Date: <ww:property value="appointmentDate" />
+              日期: <ww:property value="appointmentDate" />
               <br>
-              Subject: <ww:property value="subject" />
+              主题: <ww:property value="subject" />
               <br>
-              Time:
+              时间:
               <ww:property value="startTime" />
               -
               <ww:property value="endTime" />
               <br>
-              Location: <ww:property value="location" />
+              地点: <ww:property value="location" />
             </td>
           </tr>
         </table>

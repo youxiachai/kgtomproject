@@ -23,7 +23,7 @@
 
   <!-- The Organizer initialization. -->
   <listener>
-    <listener-class>com.apress.ajaxprojects.theorganizer.listener.ContextListener</listener-class>
+    <listener-class>com.ypg.ajaxprojects.theorganizer.listener.ContextListener</listener-class>
   </listener>
 
   <!-- Session timeout config. -->

@@ -1,6 +1,5 @@
-<%@ page  pageEncoding="UTF-8"%>
 <%@ taglib prefix="ww" uri="webwork" %>
-
+<%@ page  pageEncoding="UTF-8"%>
 <img src="img/head_appointments.gif">
 <br><br>
 
@@ -9,9 +8,9 @@
   String requestURI = (String)request.getAttribute("webwork.request_uri");
   requestURI = requestURI.toLowerCase();
   if (requestURI.indexOf("create") != -1) {
-    out.println("创建行程:");
+    out.println("创建约会:");
   } else {
-    out.println("编辑行程:");
+    out.println("编辑约会:");
   }
 %>
 </div>
@@ -38,7 +37,7 @@
         <ww:select name="appointmentDateMonth" theme="simple"
           list="#{'':'', '01':'一月', '02':'二月', '03':'三月',
           '04':'四月', '05':'五月', '06':'六月', '07':'七月', '08':'八月',
-          '09':'九月', '10':'十月', '11':十一月',
+          '09':'九月', '10':'十月', '11':'十一月',
           '12':'十二月'}"
           cssClass="cssInput0"
           onfocus="this.className='cssInput1';"
@@ -114,7 +113,7 @@
           onblur="this.className='cssInput0';" />
       </td>
     </tr>
-    <ww:textarea label="评论" cols="38" rows="15" name="comments"
+    <ww:textarea label="标注" cols="38" rows="15" name="comments"
       value="%{appointment.comments}" cssClass="cssInput0"
       onfocus="this.className='cssInput1';"
       onblur="this.className='cssInput0';" />
