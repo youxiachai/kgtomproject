@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<load href="__PUBLIC__/style/article_add.css"/>
+<load href="__PUBLIC__/style/jquery-ui-1.8.6.custom.css"/>
+<load href="__PUBLIC__/js/jquery-1.4.4.min.js"/>
+<load href="__PUBLIC__/editor/kindeditor.js"/>
+<load href="__PUBLIC__/js/jquery-ui-1.8.6.custom.min.js"/>
+<load href="__PUBLIC__/js/article_add.js"/>
+</head>
+<body>
+
+<div id="articleMain">
+
+	<h1>修改公司简介</h1>
+	
+	<div id="articleLeft">
+		<form action="__URL__/saveSummary" method="post" name="articleForm" id="articleForm">
+		<p><span class="title">标题</span><input class="" type="text" name="title" value="创星公司"/></p>
+		
+		<p><textarea name="content" id="content">{$content.summary} </textarea></p>
+		
+		<input type="hidden" name="atpid" id="atpidhidden"/>
+		<input type="hidden" name="digest" id="digesthidden"/>
+		<input type="submit" value="修改"/>
+		</form>
+	
+	</div>
+	
+
+	
+
+
+</div>
+</body>
+</html>

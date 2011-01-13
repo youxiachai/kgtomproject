@@ -12,9 +12,9 @@
 	<label for="userName"><span>用户名：</span><input id="userName" name="userName" type="text" /></label>
 	<label for="passWord"><span>密码：</span><input id="passWord" name="passWord"type="password" /></label>
 	<label id="submit"><input name="" type="submit" class="bt" value="确定" />
-	<input type="button" class="bt" value="注册" onclick="document.location='register.html';"/>
+	
 	</label>
 </form>
-<p id="siteCopyRight">版权所有：www.richbox.net</p>
+
 </body>
 </html>

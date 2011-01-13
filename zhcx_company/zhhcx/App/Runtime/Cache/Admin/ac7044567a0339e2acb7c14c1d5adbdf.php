@@ -12,13 +12,13 @@
 <p id="classify"><a href="">全部(1)</a> | 
 <table cellSpacing="1" cellPadding="3" border=0>
 <thead>
-	<tr class="head"><td>文件名</td><td>上传时间</td><td>操作</td></tr>
+	<tr class="head"><td>文件名</td><td>上传时间</td><td>类别</td><td>操作</td></tr>
 </thead>
 <tbody>
 <?php if(is_array($file)): $i = 0; $__LIST__ = $file;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$file): ++$i;$mod = ($i % 2 )?><tr>
 		<td><?php echo ($file["img_name"]); ?></td>
 		<td><?php echo ($file["img_create_time"]); ?></td>
-
+		<td><?php echo ($file["img_category"]); ?></td>
 		<td><a href="__URL__/deleteFile">删除</a></td>
 	</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </tbody>

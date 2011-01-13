@@ -3,7 +3,7 @@ class UploadAction extends Action {
 	
 	public function addFile() {
 		$Photo = M ( 'Photo' );
-		$list = $Photo->order ( 'img_create_time desc' )->limit ( 2 )->findAll ();
+		$list = $Photo->order ( 'img_create_time desc' )->limit ( 5 )->findAll ();
 		$this->assign ( 'list', $list );
 		$this->display ();
 	}
@@ -38,10 +38,10 @@ class UploadAction extends Action {
 		$model = M ( 'Photo' );
 		//保存当前数据对象
 		$data ['img_name'] = $_POST ['image'];
-		$data ['img_create_time'] = time ();
+		$data['img_category'] = $_POST['category'];
+		$data ['img_create_time'] =  date("Y-m-d H:i:s");
 		
-		echo $data ['img_name'];
-		echo $data ['img_create_time'];
+	
 		
 		$list = $model->add ( $data );
 		
@@ -50,7 +50,10 @@ class UploadAction extends Action {
 		} else {
 			$this->error ( '上传图片失败!' );
 		}
+
 	}
+	
+	
 	/**
      +----------------------------------------------------------
 	 * 获取数据库的所有上传信息,并分页显示输出到模板(index.html)
@@ -58,7 +61,7 @@ class UploadAction extends Action {
 	 */
 	function managerFile(){
 		check_logined();
-		$pagesize = 10;	//每页显示的记录数
+		$pagesize = 9;	//每页显示的记录数
 		$Photo = M("Photo");
 		import("ORG.Util.Page");
 		$count = $Photo->count();
