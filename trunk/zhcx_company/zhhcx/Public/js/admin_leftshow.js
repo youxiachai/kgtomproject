@@ -31,15 +31,15 @@ window.onload = function()
 	TaskMenu.setHeadMenuSpecial(true);
 	item1 = new TaskMenuItem("我的资料","../../../Public/image/admin/left_demo.gif","parent.window.frames[2].location.href='TaskMenu_Demo.html'");
 	item2 = new TaskMenuItem("添加管理员","../../../Public/image/admin/left_demo.gif","parent.window.frames[2].location.href='TaskMenu_API.html'");
-	item3 = new TaskMenuItem("公司信息","../../../Public/image/admin/left_demo.gif","parent.window.frames[2].location.href='../article/managerArticle'");
+	item3 = new TaskMenuItem("公司信息","../../../Public/image/admin/left_demo.gif","parent.window.frames[2].location.href='../Message/summary'");
 	
-
-	item6 = new TaskMenuItem("友情链接管理","../../../Public/image/admin/left_demo.gif","parent.window.frames[2].location.href='../Friendlink/managerFriendlink'");
+	item4 = new TaskMenuItem("公司联系方式","../../../Public/image/admin/left_demo.gif","parent.window.frames[2].location.href='../Message/contacts'");
+	
 
 	item8 = new TaskMenuItem("已审核留言","../../../Public/image/admin/left_demo.gif","parent.window.frames[2].location.href='../Message/managerAuditMessage'");
 	item9 = new TaskMenuItem("未审核留言","../../../Public/image/admin/left_demo.gif","parent.window.frames[2].location.href='../Message/managerUnauditMessage'");
 	
-	item5 = new TaskMenuItem("管理成功案例","../../../Public/image/admin/left_demo.gif","parent.window.frames[2].location.href='../Message/managerUnauditMessage'"); 
+	
 	
 	item12 = new TaskMenuItem("文件管理","../../../Public/image/admin/left_demo.gif","parent.window.frames[2].location.href='../upload/managerFile'");
 	item13 = new TaskMenuItem("图片上传","../../../Public/image/admin/left_demo.gif","parent.window.frames[2].location.href='../upload/addFile'");
@@ -54,24 +54,17 @@ window.onload = function()
 	
 	taskMenu2 = new TaskMenu("公司信息");
 	taskMenu2.add(item3);
-	taskMenu2.add(item4);
-
 	taskMenu2.init();
-	
-	taskMenu3 = new TaskMenu("友情链接");
-	taskMenu3.add(item6);
-
+	taskMenu3 = new TaskMenu("公司联系方式");
+	taskMenu3.add(item4);
 	taskMenu3.init();
+
 	
 	taskMenu4 = new TaskMenu("留言");
 	taskMenu4.add(item8);
 	taskMenu4.add(item9);
 	taskMenu4.init();
-	
-	taskMenu5 = new TaskMenu("成功案例");
-	taskMenu5.add(item5);
-	
-	taskMenu5.init();
+
 
 	
 	taskMenu6 = new TaskMenu("上传文件");

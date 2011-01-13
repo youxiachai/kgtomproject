@@ -2,7 +2,7 @@
 <html>
  <head>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>ThinkPHP示例：缩略图生成</title>
+  <title>珠海创新公司</title>
 <load href='__PUBLIC__/Css/common.css' />
  </head>
  <body>
@@ -11,14 +11,20 @@
  
  <div id="main" class="main" > 
 <div class="image">
- <volist name='list' id='vo'>
-<table width="190" border="0" cellspacing="0" cellpadding="0">
- <tr>
-    <td width="126" rowspan="2"><img src="__PUBLIC__/Uploads/{$vo.img_name}" width="198" height="130" /></td>
-    <td width="64">&nbsp;</td>
-  </tr>
 
-</table>  </volist>
+              
+                         
+
+ <p>
+  <marquee onmouseover="this.stop()" onmouseout="this.start()" 
+                        scrollamount="3" scrolldelay="1" direction="left" width="960">
+                        <volist name='list' id='vo'>
+   <img src="__PUBLIC__/Uploads/{$vo.img_name}" width="198" height="130" /> 
+   </volist>
+    </marquee>
+
+</p>
+  最近上传                  
 </div>
 <div class="content">
 <form id="upload" method='post' action="__URL__/upload/" enctype="multipart/form-data">
@@ -33,6 +39,12 @@
 	<td class="tLeft tTop">
 <div class="impBtn  fLeft" ><input name="image" id="image" type="file" class="file huge" /></div>
 	<table id='tbl' style="clear:both"></table>
+	<select name="category">
+  <option value="打印耗材">打印耗材</option>
+  <option value="精密模切">精密模切</option>
+  <option value="特殊胶制品">特殊胶粘制品</option>
+  
+</select>
   <input type="submit" value="提交" class="button" >
 </td>
 </tr>

@@ -12,14 +12,14 @@
 <p id="classify"><a href="">全部(1)</a> | 
 <table cellSpacing="1" cellPadding="3" border=0>
 <thead>
-	<tr class="head"><td>文件名</td><td>上传时间</td><td>操作</td></tr>
+	<tr class="head"><td>文件名</td><td>上传时间</td><td>类别</td><td>操作</td></tr>
 </thead>
 <tbody>
 <volist name="file" id="file">
 	<tr>
 		<td>{$file.img_name}</td>
 		<td>{$file.img_create_time}</td>
-
+		<td>{$file.img_category}</td>
 		<td><a href="__URL__/deleteFile">删除</a></td>
 	</tr>
 </volist>

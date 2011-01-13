@@ -110,5 +110,63 @@ class MessageAction extends Action{
     	 $this->ajaxReturn($result,"test",0 ); 
     }
     
+    
+    function summary(){
+ 		check_logined();
+ 		$Summary = M("Comsummary");
+ 		$content = $Summary->find(0);	
+ 		$this->assign('content',$content); 
+    	$this->display();
+    }
+    
+    //修改公司简介
+    function editSummary(){
+    	check_logined();
+ 		$Summary = M("Comsummary");
+ 		$content = $Summary->find(0);
+ 		$this->assign('content',$content); 
+    	$this->display();
+    }
+    
+    function saveSummary(){
+    	check_logined();
+    	$Summary = M("Comsummary");
+    	$data['id'] = 0; 
+    	$data['summary'] = $_POST['content']; 
+    	$Summary->save($data);
+    	$this->success("修改成功");
+    }
+    //公司联系方式
+    function contacts(){
+    	
+    	$Contacts = M('Comcontacts');
+    	if(!isset($_POST['Submit'])){
+    	$contact = $Contacts->find(0);
+    	$this->assign('contact',$contact);
+    	$this->display();
+    	}else{
+    		
+    		$data['id'] = 0; 
+    		$data['com_name'] = $_POST['company']; 
+    		$data['com_address'] = $_POST['address']; 
+    		$data['com_telphone'] = $_POST['telphone']; 
+    		$data['com_mobile'] = $_POST['mobile']; 
+    		$data['com_fax'] = $_POST['fax']; 
+    		$data['com_website'] = $_POST['website']; 
+    		$data['com_email'] = $_POST['email']; 
+    		$data['com_person'] = $_POST['name']; 
+    		
+    		$Contacts->save($data);
+    		$this->success("修改成功");
+    	}
+    	
+    	
+    
+    }
+    
+	function editContacts(){
+    	echo "OK";
+    }
+    
 }
 ?>
