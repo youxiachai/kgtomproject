@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Chapter7Activity!</string>
+    <string name="app_name">Chapter7</string>
+	<string name="start_service">启动Serivce</string>
+	<string name="stop_service">停止Service</string>
+	<string name="bind_service">绑定service</string>
+	<string name="unbind_service">解除绑定</string>
+	<string name="service_status">获取service状态</string>
+	<string name="send_broadcast">发送广播</string>
+	<string name="play_raw">播放应用资源文件</string>
+	<string name="play_sdcard">播放卡上的音频文件</string>
+	<string name="play_online">播放来至于网络的音频</string>
+	<string name="soundpool_airfile">子弹发射</string>
+	<string name="soundpool_explosion">爆炸</string>
+	<string name="soundpool_gameover">游戏结束</string>
+</resources>

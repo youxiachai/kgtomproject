@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kg.tom"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:label="@string/app_name"
+            android:name=".Chapter7Activity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="StartServiceActivity"></activity>
+        <service android:name=".service.Mp3PlayService" >
+            <intent-filter>
+                <action android:name="kg.tom.service.PALY_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:name=".service.BindService">
+            <intent-filter>
+                <action android:name="kg.tom.service.BIND_SERVICE"/>
+            </intent-filter>
+        </service>
+        <activity android:name="BindServiceActivity"></activity>
+        <receiver android:name=".broadcast.MyReceiver">
+            <intent-filter>
+                <action android:name="kg.tom.action.SEND_BROADCAST"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="BroadcastActivity"></activity>
+        <receiver android:name=".broadcast.OrderReceiver1">
+            <intent-filter android:priority="100">
+                <action android:name="kg.tom.action.ORDER_BROADCAST"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcast.OrderReceiver2">
+            <intent-filter android:priority="0">
+                <action android:name="kg.tom.action.ORDER_BROADCAST"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="SortedBroadcastActivity"></activity>
+        <activity android:name="MediaPlayerActivity"></activity>
+        <activity android:name="SoundPoolActivity"></activity>
+        <activity android:name="VideoPlayerActivity"></activity>
+        
+
+    </application>
+
+</manifest>
