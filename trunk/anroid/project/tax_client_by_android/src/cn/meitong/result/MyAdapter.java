@@ -46,8 +46,8 @@ public class MyAdapter extends ArrayAdapter<Invoice> {
         }
 		
 		TextView pnum = (TextView)myLayout.findViewById(R.id.num);
-		TextView id = (TextView)myLayout.findViewById(R.id.Invoiceid);
-		TextView num = (TextView)myLayout.findViewById(R.id.Invoicenum);
+		TextView id = (TextView)myLayout.findViewById(R.id.showrealut_Invoiceid);
+		TextView num = (TextView)myLayout.findViewById(R.id.showrealut_Invoicenum);
 		
 		pnum.setText("��¼"+String.valueOf(position)+"��");
 		id.setText(data.getInvoiceId());

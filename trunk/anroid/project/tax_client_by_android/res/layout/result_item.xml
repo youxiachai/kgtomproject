@@ -6,132 +6,279 @@
     <include
     layout="@layout/titlebar" 
     />
-    <TextView 
+   <TextView 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/num"
-        android:textSize="18px"/>
+        android:textStyle="bold"
+        android:text="记录1："/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="发票代码:  " />
 
         <TextView
-            android:id="@+id/Invoiceid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Invoiceid" 
+            />
+
+
+        <TextView
+            android:id="@+id/showrealut_Invoiceid"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" />
+            android:text="asdfa" 
+            android:gravity="right"
+            />
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="发票代码:  " />
 
         <TextView
-            android:id="@+id/Invoicenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Invoicenumber" />
+
+        <TextView
+            android:id="@+id/showrealut_Invoicenum"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" />
+            android:text="asdfa" 
+            android:gravity="right"/>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payname" />
+        
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="发票代码:  " />
+            android:text="asdfa" 
+            android:gravity="right"/>
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/paycertificalnumber" />
+        
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="发票代码:  " />
+            android:text="asdfa" 
+            android:gravity="right"/>
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ordername" />
+        
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="发票代码:  " />
+            android:text="asdfa" 
+            android:gravity="right"/>
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Invoicedate" />
+        
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="发票代码:  " />
+            android:text="asdfa" 
+            android:gravity="right"/>
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Invoiceamount" />
+        
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="发票代码:  " />
+            android:text="asdfa" 
+            android:gravity="right"/>
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checktime" />
+        
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="发票代码:  " />
+            android:text="asdfa" 
+            android:gravity="right"/>
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fiscalnumber" />
+        
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="发票代码:  " />
+            android:text="asdfa" 
+            android:gravity="right"/>
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/passwordversion" />
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="asdfa" 
+            android:gravity="right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thephonenumberlogined" />
+        
+        <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="发票代码:  " />
+            android:text="asdfa" 
+            android:gravity="right"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prizelevel" />
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="asdfa" 
+            android:gravity="right"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prizeaccount" />
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="asdfa" 
+            android:gravity="right"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prizepriods" />
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="asdfa" 
+            android:gravity="right"/>
+
     </LinearLayout>
 
 </LinearLayout>

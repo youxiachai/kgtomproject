@@ -73,7 +73,7 @@
 	<string name="invoicenum">发票号码</string>
 	<string name="money">金额</string>
 	<string name="seabtntext">查询</string>
-	<!--  -->
+	<!-- xxxxxxx -->
 	<string name="Invoiceid">发票代码</string>
     <string name="Invoicenumber">发票号码</string>
     <string name="payname">收款方名称</string>
@@ -92,7 +92,7 @@
     <string name="checkinresult">登记结果</string>
     <string name="faildes">失败原因信息描述</string>
     <string name="Invoiceamount_2">发票金额</string>
-	 <!--  -->   
+	 <!-- xxxxxxxx -->   
 	<!-- winnum.xml -->
 	<string name="winseachoice">中奖查询方式选择</string>
 	<string name="qrcodesea">二维码查询</string>

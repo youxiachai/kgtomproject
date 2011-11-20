@@ -4,10 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ImageView 
+     <ImageView 
         android:layout_width="fill_parent"
         android:layout_height="60px"
         android:id="@+id/resultpic"/>
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="符合条件的有N条记录："/>
     <ListView 
         android:id="@android:id/list"
         android:layout_width="match_parent"
