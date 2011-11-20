@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    
+     >
+     
+    <include 
+        layout="@layout/titlebar"
+        />
+<TableLayout 
+    android:layout_width="300dip"
+    android:layout_height="300dip"
+    >
+    <TableRow 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal" 
+        android:layout_marginTop="60dip"
+        >
+        <TextView
+            android:id="@+id/codetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phonetext" 
+            android:textSize="22dip"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/codeinput"
+            android:layout_width="180dip"
+            android:layout_height="35dip" />
+        
+    </TableRow>
+    
+</TableLayout>
+<Button 
+    android:id="@+id/phoneserbtn"
+    android:layout_width="280dip"
+    android:layout_height="50dip"
+    android:text="@string/phoneserbtn"
+    />    
+
+</LinearLayout>
