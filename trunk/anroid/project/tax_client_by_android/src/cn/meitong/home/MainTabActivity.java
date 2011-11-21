@@ -77,7 +77,7 @@ public class MainTabActivity extends TabActivity implements
 		/**
 		 * 这里是用于初始化tab
 		 */
-		this.mScanQuery = new Intent().setClass(this, CaptureActivity.class);
+		this.mScanQuery = new Intent().setClass(this, ScanTestActivity.class);
 		this.mInputQuery = new Intent()
 				.setClass(this, PhoneInputActivity.class);
 		this.mLuckyQuery = new Intent().setClass(this,
@@ -123,6 +123,12 @@ public class MainTabActivity extends TabActivity implements
 	 * @param action
 	 */
 	private void setTab(String action) {
+		
+		
+		if(action.equals("")){
+			
+		}
+		
 		if (action.equals(ActionValues.SCAN_SUCCESS)) {
 			Log.d(TAG, "ok-------->");
 			this.mHost.setCurrentTabByTag("m_result");
@@ -208,8 +214,8 @@ public class MainTabActivity extends TabActivity implements
 				Log.d(TAG, "0");
 				this.mHost.setCurrentTabByTag("mScan_tab");
 	//			跳转到扫描capture;
-//				Intent intent = new Intent().setClass(this, CaptureActivity.class);
-//				startActivity(intent);
+				Intent intent = new Intent().setClass(this, CaptureActivity.class);
+				startActivity(intent);
 				break;
 			case R.id.radio_button1:
 				Log.d(TAG, "1");
