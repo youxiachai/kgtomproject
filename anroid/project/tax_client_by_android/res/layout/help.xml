@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    style="@style/content_background" >
 
     <include layout="@layout/titlebar" />
 
     <LinearLayout
-        style="@style/content_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -44,7 +44,8 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/expander_ic_minimized" />
+                    android:background="@drawable/help_button_selector"
+                    />
             </TableRow>
 
             <TableRow
@@ -75,7 +76,7 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/expander_ic_minimized" />
+                    android:background="@drawable/help_button_selector" />
             </TableRow>
 
             <TableRow
@@ -104,7 +105,7 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/expander_ic_minimized" />
+                    android:background="@drawable/help_button_selector" />
             </TableRow>
         </TableLayout>
     </LinearLayout>
