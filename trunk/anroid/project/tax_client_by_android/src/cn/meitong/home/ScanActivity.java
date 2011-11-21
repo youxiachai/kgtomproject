@@ -29,6 +29,7 @@ public class ScanActivity extends Activity {
 		mTitle = (TextView) findViewById(R.id.titleText);
 		mScan = (Button) findViewById(R.id.button_scan);
 		mTitle.setText(R.string.title_scan);
+		mScan.setOnClickListener(new ScanListener());
 		
 	}
 	

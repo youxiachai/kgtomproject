@@ -13,7 +13,9 @@
         android:paddingRight="12.0dip"
         android:text="@string/back"
         android:textColor="#ff242e38"
-        android:textSize="11.0sp" />
+        android:textSize="11.0sp" 
+        android:visibility="gone"
+        />
 
     <Button
         android:id="@id/titleSave"
