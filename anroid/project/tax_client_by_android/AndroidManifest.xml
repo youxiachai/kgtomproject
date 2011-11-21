@@ -12,14 +12,18 @@
         <activity
             android:label="@string/app_name"
             android:name=".home.MainTabActivity"
-            android:screenOrientation="landscape" >
-            <intent-filter >
+            android:screenOrientation="portrait"
+            >
+        	  <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".decoder.CaptureActivity" >
+        <activity android:name=".decoder.CaptureActivity"
+            	android:screenOrientation="landscape"
+             >
+              
         </activity>
         <activity android:name=".home.SMSInputActivity" >
         </activity>
@@ -37,6 +41,7 @@
         </activity>
         <activity android:name=".result.BackToResults" >
         </activity>
+        <activity android:name=".home.ScanActivity"></activity>
     </application>
 
     <uses-permission android:name="android.permission.CAMERA" />
