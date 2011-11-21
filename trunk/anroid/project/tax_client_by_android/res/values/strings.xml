@@ -90,7 +90,7 @@
     <string name="prizeaccount">中奖金额</string>
     <string name="prizepriods">中奖期数</string>
     <string name="checkinresult">登记结果</string>
-    <string name="faildes">失败原因信息描述</string>
+    <string name="faildes">失败描述</string>
     <string name="Invoiceamount_2">发票金额</string>
 	 <!-- xxxxxxxx -->   
 	<!-- winnum.xml -->
