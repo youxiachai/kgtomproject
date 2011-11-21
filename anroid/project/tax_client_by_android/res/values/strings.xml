@@ -77,7 +77,7 @@
 	<string name="Invoiceid">发票代码</string>
     <string name="Invoicenumber">发票号码</string>
     <string name="payname">收款方名称</string>
-    <string name="paycertificalnumber">收款方证号码</string>
+    <string name="paycertificalnumber">收款方证件号码</string>
     <string name="ordername">付款方名称</string>
     <string name="Invoicedate">开票日期</string>
     <string name="Invoiceamount">金额</string>
@@ -98,7 +98,8 @@
 	<string name="qrcodesea">二维码查询</string>
 	<string name="phonenumsea">手机号码查询</string>
 	<string name="input_invoice">输入发票信息查询</string>
-     
+	
+	    
 	<!-- scan.xml -->
 	<string name="scan_text">扫描</string>
 
