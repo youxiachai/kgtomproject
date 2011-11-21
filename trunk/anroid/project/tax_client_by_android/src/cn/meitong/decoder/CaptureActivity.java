@@ -179,6 +179,7 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 		if (barcode == null) {
 			Log.d("capture", "错误!!!");
 		} else {
+			Log.d("capture", obj.getText());
 			beepManger.playBeepSoundAndVibrate();
 			Intent intent = new Intent().setClass(this, MainTabActivity.class);
 			intent.setAction(ActionValues.SCAN_SUCCESS);
