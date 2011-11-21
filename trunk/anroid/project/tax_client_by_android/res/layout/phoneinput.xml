@@ -10,37 +10,53 @@
     <include 
         layout="@layout/titlebar"
         />
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/content_background"
+    android:orientation="vertical" >      
 <TableLayout 
-    android:layout_width="300dip"
-    android:layout_height="300dip"
+    android:layout_width="match_parent"
+    android:layout_height="250dip"
     >
     <TableRow 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="110dip"
+        android:layout_height="40dip"
         android:gravity="center_horizontal" 
         android:layout_marginTop="60dip"
         >
         <TextView
-            android:id="@+id/codetext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/tb_textviewbg"
             android:text="@string/phonetext" 
-            android:textSize="22dip"
-            android:textStyle="bold" />
+            android:textSize="18dip"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#FFF" />
 
         <EditText
             android:id="@+id/codeinput"
-            android:layout_width="180dip"
-            android:layout_height="35dip" />
+            android:layout_width="160dip"
+            android:layout_height="40dip"
+            android:background="@drawable/tb_editbg" 
+            android:textColor="#FFF"
+            android:paddingLeft="5dip"
+		/>
         
     </TableRow>
     
 </TableLayout>
-<Button 
-    android:id="@+id/phoneserbtn"
-    android:layout_width="280dip"
-    android:layout_height="50dip"
-    android:text="@string/phoneserbtn"
-    />    
 
+    
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dip"
+    android:background="@drawable/scan_background"
+    android:text="@string/phoneserbtn"
+    android:textColor="#FFFFFF"
+    />
+</LinearLayout>
 </LinearLayout>
