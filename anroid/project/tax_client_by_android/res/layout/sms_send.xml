@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    style="@style/content_background" >
 
     <include
         android:id="@+id/titlebarid"
-        layout="@layout/titlebar" />
+        layout="@layout/titlebar"
+         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#FFCCCCCC"
+        android:background="@color/gray"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="5dip" >
@@ -19,7 +21,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_launcher" />
+            android:background="@drawable/presence_invisible" />
 
         <EditText
             android:id="@+id/sms_message"
@@ -37,9 +39,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/titlebarid"
-        android:background="#FFFFFFFF"
+    	android:layout_marginTop="1dip"
+        android:background="@color/white"
         android:orientation="horizontal" >
 
         <TextView
@@ -47,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dip"
             android:text="@string/sms_sendto"
-            android:textColor="#FFCCCCCC"
+            android:textColor="@color/gray"
             android:textSize="18dip" />
 
         <TextView
@@ -56,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dip"
             android:text="@string/sms_send_address"
-            android:textColor="#FF000000" />
+            android:textColor="@color/black" />
     </LinearLayout>
 
 </RelativeLayout>

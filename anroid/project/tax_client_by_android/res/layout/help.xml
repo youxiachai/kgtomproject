@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical" >
+        android:orientation="vertical">
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/ic_launcher" />
+                    android:background="@drawable/tb_item04" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -37,7 +37,8 @@
                     android:layout_weight="1.0"
                     android:gravity="center_vertical"
                     android:text="@string/help_user"
-                    android:textColor="#FF000000"
+                    android:layout_marginLeft="10dip"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <ImageButton
@@ -52,14 +53,14 @@
                 android:layout_margin="1dip"
                 android:layout_marginLeft="1dip"
                 android:layout_marginRight="1dip"
-                android:background="#FFFFFFFF"
+                android:background="@color/white"
                 android:gravity="center_vertical"
                 android:padding="5dip" >
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/ic_launcher" />
+                    android:background="@drawable/tb_item05" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -67,8 +68,9 @@
                     android:layout_weight="1.0"
                     android:gravity="center_vertical"
                     android:text="@string/help_lucky"
-                    android:textColor="#FF000000"
-                    android:textStyle="bold" />
+                    android:layout_marginLeft="10dip"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"  />
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -87,7 +89,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/ic_launcher" />
+                    android:background="@drawable/tb_item06" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -95,7 +97,9 @@
                     android:layout_weight="1.0"
                     android:gravity="center_vertical"
                     android:text="@string/help_other"
-                    android:textColor="#FF000000" />
+                    android:layout_marginLeft="10dip"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"  />
 
                 <ImageButton
                     android:layout_width="wrap_content"

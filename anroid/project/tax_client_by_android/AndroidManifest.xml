@@ -27,7 +27,8 @@
         </activity>
         <activity android:name=".home.SMSInputActivity" >
         </activity>
-        <activity android:name=".home.SMSSendActivity" >
+        <activity android:name=".home.SMSSendActivity"
+            android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity android:name=".home.HelpActivity" >
         </activity>
