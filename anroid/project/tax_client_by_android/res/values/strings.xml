@@ -98,6 +98,8 @@
 	<string name="qrcodesea">二维码查询</string>
 	<string name="phonenumsea">手机号码查询</string>
 	<string name="input_invoice">输入发票信息查询</string>
-        
+     
+	<!-- scan.xml -->
+	<string name="scan_text">扫描</string>
 
 </resources>
