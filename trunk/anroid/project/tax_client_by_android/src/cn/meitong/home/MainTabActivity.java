@@ -75,9 +75,11 @@ public class MainTabActivity extends TabActivity implements
 	 */
 	private void initIntent() {
 		/**
-		 * 这里是用于初始化tab
+		 * 这里是用于初始化tab...
 		 */
-		this.mScanQuery = new Intent().setClass(this, ScanTestActivity.class);
+
+		this.mScanQuery = new Intent().setClass(this, ScanActivity.class);
+
 		this.mInputQuery = new Intent()
 				.setClass(this, PhoneInputActivity.class);
 		this.mLuckyQuery = new Intent().setClass(this,
