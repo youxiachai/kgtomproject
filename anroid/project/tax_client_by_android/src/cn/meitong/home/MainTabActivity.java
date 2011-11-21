@@ -65,7 +65,7 @@ public class MainTabActivity extends TabActivity implements
 		// 初始化
 		setupIntent();
 		// 切换tab
-		setTab(action);
+	//	setTab(action);
 
 	}
 
@@ -127,9 +127,9 @@ public class MainTabActivity extends TabActivity implements
 	private void setTab(String action) {
 		
 		
-		if(action.equals("")){
+/*		if(action.equals("")){
 			
-		}
+		}*/
 		
 		if (action.equals(ActionValues.SCAN_SUCCESS)) {
 			Log.d(TAG, "ok-------->");
