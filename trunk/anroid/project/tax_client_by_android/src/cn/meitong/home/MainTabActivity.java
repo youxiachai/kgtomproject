@@ -215,9 +215,6 @@ public class MainTabActivity extends TabActivity implements
 			case R.id.radio_button0:
 				Log.d(TAG, "0");
 				this.mHost.setCurrentTabByTag("mScan_tab");
-	//			跳转到扫描capture;
-				Intent intent = new Intent().setClass(this, CaptureActivity.class);
-				startActivity(intent);
 				break;
 			case R.id.radio_button1:
 				Log.d(TAG, "1");
