@@ -25,15 +25,17 @@
 
         <EditText
             android:id="@+id/sms_message"
-            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1.0" />
-
+            android:maxLines="1"
+            android:layout_margin="5dip"
+            android:layout_weight="1.0"/>
         <Button
             android:id="@+id/sms_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sms_send" />
+            android:text="@string/sms_send"/>
     </LinearLayout>
 
     <LinearLayout
