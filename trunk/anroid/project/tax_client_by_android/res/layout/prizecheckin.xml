@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    style="@style/content_background">
+
+    <TableLayout 
+        android:padding="20px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TabWidget
+                android:layout_width="wrap_content"
+                android:layout_height="40px">
+                <TextView android:background="@drawable/tb_buttonbg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Invoiceid"
+                    android:gravity="center"
+                    />
+            </TabWidget>
+            <TabWidget
+                android:gravity="center"
+                android:layout_weight="1.0"
+                android:layout_width="fill_parent"
+                android:layout_height="40px">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Invoiceid" />
+            </TabWidget>
+        </TableRow>
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TabWidget
+                android:layout_width="wrap_content"
+                android:layout_height="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tb_buttonbg"
+                    android:gravity="center"
+                    android:text="@string/invoicenum" />
+
+            </TabWidget>
+            <TabWidget
+                android:gravity="center"
+                android:layout_weight="1.0"
+                android:layout_width="fill_parent"
+                android:layout_height="40px">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Invoiceid" />
+            </TabWidget>
+        </TableRow>
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TabWidget
+                android:layout_width="wrap_content"
+                android:layout_height="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tb_buttonbg"
+                    android:gravity="center"
+                    android:text="@string/Invoicedate" />
+
+            </TabWidget>
+            <TabWidget
+                android:gravity="center"
+                android:layout_weight="1.0"
+                android:layout_width="fill_parent"
+                android:layout_height="40px">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Invoiceid" />
+            </TabWidget>
+        </TableRow>
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TabWidget
+                android:layout_width="wrap_content"
+                android:layout_height="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tb_buttonbg"
+                    android:gravity="center"
+                    android:text="@string/Invoiceamount" />
+
+            </TabWidget>
+            <TabWidget
+                android:gravity="center"
+                android:layout_weight="1.0"
+                android:layout_width="fill_parent"
+                android:layout_height="40px">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Invoiceid" />
+            </TabWidget>
+        </TableRow>
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TabWidget
+                android:layout_width="wrap_content"
+                android:layout_height="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tb_buttonbg"
+                    android:gravity="center"
+                    android:text="@string/fiscalnumber" />
+
+            </TabWidget>
+            <TabWidget
+                android:gravity="center"
+                android:layout_weight="1.0"
+                android:layout_width="fill_parent"
+                android:layout_height="40px">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Invoiceid" />
+            </TabWidget>
+        </TableRow>
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TabWidget
+                android:layout_width="wrap_content"
+                android:layout_height="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tb_buttonbg"
+                    android:gravity="center"
+                    android:text="@string/checknumber" />
+
+            </TabWidget>
+            <TabWidget
+                android:gravity="center"
+                android:layout_weight="1.0"
+                android:layout_width="fill_parent"
+                android:layout_height="40px">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Invoiceid" />
+            </TabWidget>
+        </TableRow>
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TabWidget
+                android:layout_width="wrap_content"
+                android:layout_height="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tb_buttonbg"
+                    android:gravity="center"
+                    android:text="@string/paycertificalnumber" />
+
+            </TabWidget>
+            <TabWidget
+                android:gravity="center"
+                android:layout_weight="1.0"
+                android:layout_width="fill_parent"
+                android:layout_height="40px">
+                <EditText
+                    android:background="#0000"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="input"/>
+            </TabWidget>
+        </TableRow>
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TabWidget
+                android:layout_width="wrap_content"
+                android:layout_height="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tb_buttonbg"
+                    android:gravity="center"
+                    android:text="@string/phonetext" />
+
+            </TabWidget>
+            <TabWidget
+                android:gravity="center"
+                android:layout_weight="1.0"
+                android:layout_width="fill_parent"
+                android:layout_height="40px">
+                <EditText
+                    android:background="#0000"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="input"/>
+            </TabWidget>
+        </TableRow>
+        
+    </TableLayout>
+
+</LinearLayout>
