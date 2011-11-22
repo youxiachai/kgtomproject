@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@drawable/tab_btn_bg_4"
+    android:background="@drawable/title_bg"
     android:gravity="center_vertical" 
     android:padding="0px">
 
@@ -12,7 +12,7 @@
         android:id="@id/titleBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/title_home_back_6"
+        android:background="@drawable/title_home_back"
         android:layout_marginTop="12dip"
         android:layout_marginBottom="12dip"
         android:layout_marginLeft="10dip" />
@@ -37,7 +37,7 @@
         android:id="@+id/titleQuery"
         android:layout_width="wrap_content"
         android:layout_height="40dip"
-        android:background="@drawable/title_home_next_6"
+        android:background="@drawable/title_home_next"
         android:layout_marginRight="10dip"
         android:text="@string/query"
         android:textColor="#ffffff"
