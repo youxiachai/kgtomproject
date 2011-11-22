@@ -15,16 +15,8 @@
         <item name="android:drawablePadding">@dimen/bottom_tab_padding_drawable</item>
         <item name="android:layout_weight">1.0</item>
     </style>
-	<!-- 设置标题样式 -->
-    <style name="titlebar_background">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">50px</item>
-        <item name="android:layout_gravity">top</item>
-        <item name="android:background">@drawable/title_bg</item>
-        <item name="android:gravity">center_vertical</item>
-    </style>
 	<!-- 设置内容背景样式 -->
     <style name="content_background">
-        <item name="android:background">@drawable/content_bg</item>
+        <item name="android:background">@color/hui</item>
     </style>
 </resources>

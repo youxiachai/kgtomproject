@@ -65,7 +65,7 @@
 	 	    android:layout_height="wrap_content"
 	 	    android:text="@string/sms_send"
 	 	    android:textColor="@color/white"
-	 	    android:background="@drawable/content_red"
+	 	    android:background="@drawable/button_selector"
 	 	/>
  	</LinearLayout>
 </LinearLayout>
