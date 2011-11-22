@@ -1,25 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-    <Button
-        android:id="@+id/sound_airfire"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/soundpool_airfile" />
-
-    <Button
-        android:id="@+id/sound_explosion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/soundpool_explosion" />
-
-    <Button
-        android:id="@+id/sound_gameover"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/soundpool_gameover" />
-
-</LinearLayout>
