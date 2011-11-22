@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        style="@style/content_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dip" >
+
+            <TableRow
+                android:layout_width="110dip"
+                android:layout_height="40dip"
+                android:layout_marginTop="60dip"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/content_textviewbg"
+                    android:gravity="center"
+                    android:text="@string/phonetext"
+                    android:textColor="#FFF"
+                    android:textSize="18dip"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/codeinput"
+                    android:layout_width="160dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/content_editbg"
+                    android:paddingLeft="5dip"
+                    android:textColor="#FFF" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/scan_background"
+            android:text="@string/phoneserbtn"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

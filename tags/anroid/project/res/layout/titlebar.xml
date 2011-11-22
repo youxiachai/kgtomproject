@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/lyTitleBar"
+    style="@style/titlebar_background" >
+
+    <Button
+        android:id="@+id/titleQuery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_home_next"
+        android:paddingLeft="12.0dip"
+        android:paddingRight="12.0dip"
+        android:text="@string/query"
+        android:textColor="#ffffff"
+        android:textSize="11.0sp" 
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@id/titleBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_home_back"
+        android:paddingLeft="12.0dip"
+        android:paddingRight="12.0dip"
+        android:text="@string/back"
+        android:textColor="#ffffff"
+        android:textSize="11.0sp" />
+
+    <TextView
+        android:id="@id/titleText"
+        android:layout_width="205.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/titleQuery"
+        android:layout_alignBottom="@+id/titleQuery"
+        android:layout_toLeftOf="@+id/titleQuery"
+        android:layout_weight="1.0"
+        android:ellipsize="middle"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="@string/header_title"
+        android:textColor="#FFFFFF"
+        android:textSize="18.0sp" />
+
+</RelativeLayout>
