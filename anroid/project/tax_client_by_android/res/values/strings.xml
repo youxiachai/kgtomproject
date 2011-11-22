@@ -2,7 +2,7 @@
 <resources>
 
  
-    <string name="app_name">Tax_client_by_android</string>
+    <string name="app_name">税务查询</string>
     <!-- BUTTON values -->
     <string name="back">返回</string>
     <string name="query">查询</string>
