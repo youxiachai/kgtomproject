@@ -33,7 +33,9 @@
         </activity>
         <activity android:name=".home.HelpActivity" >
         </activity>
-        <activity android:name=".query.HandmadeInputActivity" >
+        <activity android:name=".query.HandmadeInputActivity" 
+             android:windowSoftInputMode="adjustResize"
+            >
         </activity>
         <activity android:name=".query.PhoneInputActivity" >
         </activity>

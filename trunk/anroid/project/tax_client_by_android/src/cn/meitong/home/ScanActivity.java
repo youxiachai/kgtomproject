@@ -1,7 +1,7 @@
-
 package cn.meitong.home;
 
-
+import listener.BackListener;
+import listener.ButtonManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,9 +18,10 @@ import cn.meitong.decoder.CaptureActivity;
  * 
  */
 public class ScanActivity extends Activity {
-	
+
 	private TextView mTitle;
 	private Button mScan;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -28,18 +29,22 @@ public class ScanActivity extends Activity {
 		setContentView(R.layout.scan);
 		mTitle = (TextView) findViewById(R.id.titleText);
 		mScan = (Button) findViewById(R.id.button_scan);
-		mTitle.setText(R.string.title_scan);
 		mScan.setOnClickListener(new ScanListener());
+		new ButtonManager(this).getmBack().setVisibility(View.INVISIBLE);
+		mTitle.setText(R.string.title_scan);
 		
+		
+
 	}
-	
-	class ScanListener implements OnClickListener{
+
+	class ScanListener implements OnClickListener {
 
 		@Override
 		public void onClick(View v) {
-			Intent intent = new Intent().setClass(ScanActivity.this, CaptureActivity.class);
+			Intent intent = new Intent().setClass(ScanActivity.this,
+					CaptureActivity.class);
 			startActivity(intent);
 		}
-		
+
 	}
 }

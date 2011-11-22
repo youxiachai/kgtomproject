@@ -7,4 +7,5 @@ package cn.meiton.action;
  */
 public final class ActionValues {
 	public final static String SCAN_SUCCESS = "scan_success";
+	public final static String SCAN_BACK = "scan_back";
 }

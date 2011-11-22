@@ -2,6 +2,9 @@ package cn.meitong.home;
 
 import java.util.List;
 
+import listener.BackListener;
+import listener.ButtonManager;
+
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
@@ -28,6 +31,7 @@ public class SMSSendActivity extends Activity {
 		sendToNo = (TextView) findViewById(R.id.sendToNo);
 		mTitle = (TextView) findViewById(R.id.titleText);
 		mTitle.setText(R.string.title_sms_send);
+		new ButtonManager(this).getmBack().setOnClickListener(new BackListener(this));
 		smsSend = (Button) findViewById(R.id.sms_send);
 		smsSend.setOnClickListener(new OnClickListener() {
 			

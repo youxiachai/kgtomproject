@@ -128,7 +128,7 @@ public class MainTabActivity extends TabActivity implements
 	private void setTab(String action) {
 		
 		
-		if(action.equals("kg.tom.back")){
+		if(action.equals(ActionValues.SCAN_BACK)){
 			this.mHost.setCurrentTabByTag("mScan_tab");
 		}
 		
