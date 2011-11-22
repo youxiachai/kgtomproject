@@ -2,6 +2,9 @@ package cn.meitong.result;
 
 import java.util.ArrayList;
 
+import listener.BackListener;
+import listener.ButtonManager;
+
 import android.app.ListActivity;
 import android.os.Bundle;
 import cn.meitong.R;
@@ -14,7 +17,7 @@ public class BackToResults extends ListActivity {
 		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.backtoresults);
-		
+		new ButtonManager(this).getmBack().setOnClickListener(new BackListener(this));
 		Invoice aa = new Invoice("aa","bb");
 		
 		ArrayList<Invoice> ada = new ArrayList<Invoice>();

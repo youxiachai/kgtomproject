@@ -1,5 +1,7 @@
 package cn.meitong.home;
 
+import listener.BackListener;
+import listener.ButtonManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +23,7 @@ public class SMSInputActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sms_input);
+		new ButtonManager(this).getmBack().setOnClickListener(new BackListener(this));
 		send = (Button) findViewById(R.id.send);
 		mTitle = (TextView) findViewById(R.id.titleText);
 		mTitle.setText(R.string.title_sms);

@@ -1,5 +1,7 @@
 package cn.meitong.result;
 
+import listener.BackListener;
+import listener.ButtonManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,7 +22,7 @@ public class ShowResult extends Activity {
 		mTitle = (TextView) findViewById(R.id.titleText);
 		mTitle.setText("返回结果");
 		mCode = (TextView) findViewById(R.id.showrealut_Invoiceid);
-		
+		new ButtonManager(this).getmBack().setOnClickListener(new BackListener(this));
 		//做测试使用
 		Intent intent = getIntent();
 		result = intent.getStringExtra("result");

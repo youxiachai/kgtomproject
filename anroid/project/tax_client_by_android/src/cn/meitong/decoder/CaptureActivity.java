@@ -303,7 +303,7 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 		switch (item.getItemId()) {
 		case R.id.capture_back:
 			Intent intent = new Intent().setClass(this, MainTabActivity.class);
-			intent.setAction("kg.tom.back");
+			intent.setAction(ActionValues.SCAN_BACK);
 			startActivity(intent);
 			return true;
 		default:
