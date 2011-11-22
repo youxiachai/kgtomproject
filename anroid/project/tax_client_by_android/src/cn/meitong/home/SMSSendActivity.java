@@ -20,11 +20,14 @@ public class SMSSendActivity extends Activity {
 	private TextView sendToNo;
 	private Button smsSend;
 	private EditText message;
+	private TextView mTitle;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sms_send);
 		sendToNo = (TextView) findViewById(R.id.sendToNo);
+		mTitle = (TextView) findViewById(R.id.titleText);
+		mTitle.setText(R.string.title_sms_send);
 		smsSend = (Button) findViewById(R.id.sms_send);
 		smsSend.setOnClickListener(new OnClickListener() {
 			

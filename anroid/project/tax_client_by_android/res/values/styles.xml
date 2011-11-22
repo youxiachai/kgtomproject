@@ -6,7 +6,7 @@
         <item name="android:textColor">#ffffffff</item>
         <item name="android:ellipsize">marquee</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:background">@drawable/home_btn_bg</item>
+        <item name="android:background">@drawable/tab_btn_bg</item>
         <item name="android:paddingTop">@dimen/bottom_tab_padding_up</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -18,13 +18,13 @@
 	<!-- 设置标题样式 -->
     <style name="titlebar_background">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">50px</item>
         <item name="android:layout_gravity">top</item>
-        <item name="android:background">@drawable/tb_buttonbg</item>
+        <item name="android:background">@drawable/title_bg</item>
         <item name="android:gravity">center_vertical</item>
     </style>
 	<!-- 设置内容背景样式 -->
     <style name="content_background">
-        <item name="android:background">@drawable/tb_bg</item>
+        <item name="android:background">@drawable/content_bg</item>
     </style>
 </resources>

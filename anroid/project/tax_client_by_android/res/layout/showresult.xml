@@ -1,40 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/content_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-    android:background="@drawable/tb_bg">
-<include
-    layout="@layout/titlebar" 
-    />
-    <ImageView 
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <ImageView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/showresult_image"/>
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
-            android:text="@string/Invoiceid" 
-            />
-
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/Invoiceid" />
 
         <TextView
             android:id="@+id/showrealut_Invoiceid"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
             android:gravity="center"
-            />
-
+            android:text="asdfa" />
     </LinearLayout>
 
     <LinearLayout
@@ -42,20 +36,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/Invoicenumber" />
 
         <TextView
             android:id="@+id/showrealut_Invoicenum"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
 
     <LinearLayout
@@ -63,21 +56,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/payname" />
-        
+
         <TextView
             android:id="@+id/showrealut_payname"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
 
     <LinearLayout
@@ -85,21 +76,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/paycertificalnumber" />
-        
+
         <TextView
             android:id="@+id/showrealut_paycertificalnumber"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
 
     <LinearLayout
@@ -107,21 +96,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/ordername" />
-        
+
         <TextView
             android:id="@+id/showrealut_ordername"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
 
     <LinearLayout
@@ -129,21 +116,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/Invoicedate" />
-        
+
         <TextView
             android:id="@+id/showrealut_Invoicedate"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
 
     <LinearLayout
@@ -151,21 +136,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/Invoiceamount" />
-        
+
         <TextView
             android:id="@+id/showrealut_Invoiceamount"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
 
     <LinearLayout
@@ -173,21 +156,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/checktime" />
-        
+
         <TextView
             android:id="@+id/showrealut_checktime"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
 
     <LinearLayout
@@ -195,21 +176,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/fiscalnumber" />
-        
+
         <TextView
             android:id="@+id/showrealut_fiscalnumber"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
 
     <LinearLayout
@@ -217,21 +196,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/passwordversion" />
-        
+
         <TextView
             android:id="@+id/showrealut_passwordversion"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
 
     <LinearLayout
@@ -240,84 +217,78 @@
         android:orientation="horizontal" >
 
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/thephonenumberlogined" />
-        
+
         <TextView
             android:id="@+id/showrealut_thephonenumberlogined"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/prizelevel" />
-        
+
         <TextView
             android:id="@+id/showrealut_prizelevel"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/prizeaccount" />
-        
+
         <TextView
             android:id="@+id/showrealut_prizeaccount"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-
         <TextView
-            android:background="@drawable/tb_buttonbg"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
             android:text="@string/prizepriods" />
-        
+
         <TextView
             android:id="@+id/showrealut_prizepriods"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="asdfa" 
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text="asdfa" />
     </LinearLayout>
 
 </LinearLayout>

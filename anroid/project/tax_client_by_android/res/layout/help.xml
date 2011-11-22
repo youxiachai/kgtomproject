@@ -2,16 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    style="@style/content_background" >
+    android:orientation="vertical" >
 
     <include layout="@layout/titlebar" />
 
     <LinearLayout
+        style="@style/content_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical" >
+
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,23 +30,22 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_item04" />
+                    android:background="@drawable/content_item04" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
                     android:layout_weight="1.0"
                     android:gravity="center_vertical"
                     android:text="@string/help_user"
-                    android:layout_marginLeft="10dip"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/help_button_selector"
-                    />
+                    android:background="@drawable/help_button_selector" />
             </TableRow>
 
             <TableRow
@@ -61,17 +61,17 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_item05" />
+                    android:background="@drawable/content_item05" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
                     android:layout_weight="1.0"
                     android:gravity="center_vertical"
                     android:text="@string/help_lucky"
-                    android:layout_marginLeft="10dip"
                     android:textColor="@color/black"
-                    android:textStyle="bold"  />
+                    android:textStyle="bold" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -90,17 +90,17 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_item06" />
+                    android:background="@drawable/content_item06" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
                     android:layout_weight="1.0"
                     android:gravity="center_vertical"
                     android:text="@string/help_other"
-                    android:layout_marginLeft="10dip"
                     android:textColor="@color/black"
-                    android:textStyle="bold"  />
+                    android:textStyle="bold" />
 
                 <ImageButton
                     android:layout_width="wrap_content"

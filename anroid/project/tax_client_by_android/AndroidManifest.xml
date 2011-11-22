@@ -7,27 +7,28 @@
     <uses-sdk android:minSdkVersion="8" />
 
     <application
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/ic_tax"
         android:label="@string/app_name" >
         <activity
             android:label="@string/app_name"
             android:name=".home.MainTabActivity"
-            android:screenOrientation="portrait"
-            >
-        	  <intent-filter >
+            android:screenOrientation="portrait" >
+            <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".decoder.CaptureActivity"
-            	android:screenOrientation="landscape"
-             >
-              
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".decoder.CaptureActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <activity android:name=".home.SMSInputActivity" >
         </activity>
-        <activity android:name=".home.SMSSendActivity"
+        <activity
+            android:name=".home.SMSSendActivity"
             android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity android:name=".home.HelpActivity" >
@@ -42,7 +43,8 @@
         </activity>
         <activity android:name=".result.BackToResults" >
         </activity>
-        <activity android:name=".home.ScanActivity"></activity>
+        <activity android:name=".home.ScanActivity" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.CAMERA" />
