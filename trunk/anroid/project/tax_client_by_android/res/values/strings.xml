@@ -14,6 +14,7 @@
     <string name="title_input">输入查询</string>
     <string name="title_lucky">中奖查询</string>
     <string name="title_sms">短信查询</string>
+    <string name="title_sms_send">短信发送</string>
     <string name="title_phoneinput">手机号码查询</string>
     <string name="title_help">帮助</string>
     <string name="title_showresult">显示结果</string>

@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/tb_title"
+            android:background="@drawable/content_title"
             android:gravity="center"
             android:text="@string/winseachoice"
             android:textColor="#FFF"
@@ -41,7 +41,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_item01" />
+                    android:background="@drawable/content_item01" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_item02" />
+                    android:background="@drawable/content_item02" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -101,7 +101,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_item03" />
+                    android:background="@drawable/content_item03" />
 
                 <TextView
                     android:layout_width="wrap_content"

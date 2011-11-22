@@ -15,7 +15,7 @@
             <TabWidget
                 android:layout_width="wrap_content"
                 android:layout_height="40px">
-                <TextView android:background="@drawable/tb_buttonbg"
+                <TextView android:background="@drawable/content_buttonbg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Invoiceid"
@@ -43,7 +43,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_buttonbg"
+                    android:background="@drawable/content_buttonbg"
                     android:gravity="center"
                     android:text="@string/invoicenum" />
 
@@ -69,7 +69,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_buttonbg"
+                    android:background="@drawable/content_buttonbg"
                     android:gravity="center"
                     android:text="@string/Invoicedate" />
 
@@ -95,7 +95,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_buttonbg"
+                    android:background="@drawable/content_buttonbg"
                     android:gravity="center"
                     android:text="@string/Invoiceamount" />
 
@@ -121,7 +121,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_buttonbg"
+                    android:background="@drawable/content_buttonbg"
                     android:gravity="center"
                     android:text="@string/fiscalnumber" />
 
@@ -147,7 +147,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_buttonbg"
+                    android:background="@drawable/content_buttonbg"
                     android:gravity="center"
                     android:text="@string/checknumber" />
 
@@ -173,7 +173,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_buttonbg"
+                    android:background="@drawable/content_buttonbg"
                     android:gravity="center"
                     android:text="@string/paycertificalnumber" />
 
@@ -200,7 +200,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tb_buttonbg"
+                    android:background="@drawable/content_buttonbg"
                     android:gravity="center"
                     android:text="@string/phonetext" />
 

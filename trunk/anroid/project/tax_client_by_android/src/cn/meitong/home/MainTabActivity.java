@@ -14,6 +14,7 @@ import android.widget.Toast;
 import cn.meiton.action.ActionValues;
 import cn.meitong.R;
 import cn.meitong.decoder.CaptureActivity;
+import cn.meitong.query.HandmadeInputActivity;
 import cn.meitong.query.PhoneInputActivity;
 import cn.meitong.query.WinNumInputActivity;
 import cn.meitong.result.ShowResult;
@@ -81,7 +82,7 @@ public class MainTabActivity extends TabActivity implements
 		this.mScanQuery = new Intent().setClass(this, ScanActivity.class);
 
 		this.mInputQuery = new Intent()
-				.setClass(this, PhoneInputActivity.class);
+				.setClass(this, HandmadeInputActivity.class);
 		this.mLuckyQuery = new Intent().setClass(this,
 				WinNumInputActivity.class);
 		this.mSmsInput = new Intent().setClass(this, SMSInputActivity.class);
@@ -144,15 +145,15 @@ public class MainTabActivity extends TabActivity implements
 		this.mHost = getTabHost();
 		TabHost localTabHost = this.mHost;
 		localTabHost.addTab(buildTabSpec("mScan_tab", R.string.main_scan,
-				R.drawable.icon_1, this.mScanQuery));
+				R.drawable.tab_icon_scan, this.mScanQuery));
 		localTabHost.addTab(buildTabSpec("mInput_tab", R.string.main_input,
-				R.drawable.icon_2, this.mInputQuery));
+				R.drawable.tab_icon_input, this.mInputQuery));
 		localTabHost.addTab(buildTabSpec("mLucky_tab", R.string.main_lucky,
-				R.drawable.icon_3, this.mLuckyQuery));
+				R.drawable.tab_icon_lucky, this.mLuckyQuery));
 		localTabHost.addTab(buildTabSpec("mSms_tab", R.string.main_sms,
-				R.drawable.icon_4, this.mSmsInput));
+				R.drawable.tab_icon_sms, this.mSmsInput));
 		localTabHost.addTab(buildTabSpec("mhelp_tab", R.string.main_help,
-				R.drawable.icon_5, this.mHelpQuery));
+				R.drawable.tab_icon_help, this.mHelpQuery));
 
 		// 创建不可见tab
 		localTabHost.addTab(buildInvisibleTabSpec("m_result", mShowResult));
