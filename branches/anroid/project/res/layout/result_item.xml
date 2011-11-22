@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   style="@style/content_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="记录1："
+        android:textSize="30px"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/Invoiceid" />
+
+        <TextView
+            android:id="@+id/item_Invoiceid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/Invoicenumber" />
+
+        <TextView
+            android:id="@+id/item_Invoicenum"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/payname" />
+
+        <TextView
+            android:id="@+id/item_payname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/paycertificalnumber" />
+
+        <TextView
+            android:id="@+id/item_paycertificalnumber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/ordername" />
+
+        <TextView
+            android:id="@+id/item_ordername"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/Invoicedate" />
+
+        <TextView
+            android:id="@+id/item_Invoicedate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/Invoiceamount" />
+
+        <TextView
+            android:id="@+id/item_Invoiceamount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/checktime" />
+
+        <TextView
+            android:id="@+id/item_checktime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/fiscalnumber" />
+
+        <TextView
+            android:id="@+id/item_fiscalnumber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/passwordversion" />
+
+        <TextView
+            android:id="@+id/item_passwordversion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/thephonenumberlogined" />
+
+        <TextView
+            android:id="@+id/item_thephonenumberlogined"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/prizelevel" />
+
+        <TextView
+            android:id="@+id/item_prizelevel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/prizeaccount" />
+
+        <TextView
+            android:id="@+id/item_prizeaccount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/prizepriods" />
+
+        <TextView
+            android:id="@+id/item_prizepriods"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="asdfa" />
+    </LinearLayout>
+
+</LinearLayout>

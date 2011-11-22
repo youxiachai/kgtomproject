@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/content_bg">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:background="@drawable/content_buttonbg"
+            android:gravity="center"
+            android:text="@string/checkinresult" />
+
+        <TextView
+            android:id="@+id/checkin_checkinresult"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/checkinresult" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40px"
+                android:background="@drawable/content_buttonbg"
+                android:gravity="center"
+                android:text="@string/faildes" />
+
+            <TextView
+                android:id="@+id/checkin_faildes"                
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/checkinresult" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40px"
+                android:background="@drawable/content_buttonbg"
+                android:gravity="center"
+                android:text="@string/Invoiceid" />
+
+            <TextView
+                android:id="@+id/checkin_Invoiceid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/checkinresult" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40px"
+                android:background="@drawable/content_buttonbg"
+                android:gravity="center"
+                android:text="@string/Invoicenumber" />
+
+            <TextView
+                android:id="@+id/checkin_Invoicenumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/checkinresult" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40px"
+                android:background="@drawable/content_buttonbg"
+                android:gravity="center"
+                android:text="@string/Invoiceamount_2" />
+
+            <TextView
+                android:id="@+id/checkin_Invoiceamount_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/checkinresult" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40px"
+                android:background="@drawable/content_buttonbg"
+                android:gravity="center"
+                android:text="@string/Invoicedate" />
+
+            <TextView
+                android:id="@+id/checkin_Invoicedate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/checkinresult" />
+    </LinearLayout>
+
+</LinearLayout>
