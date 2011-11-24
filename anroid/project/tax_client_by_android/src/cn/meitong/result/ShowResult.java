@@ -1,12 +1,13 @@
 package cn.meitong.result;
 
-import listener.BackListener;
-import listener.ButtonManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import cn.meiton.action.ResultValues;
 import cn.meitong.R;
+import cn.meitong.listener.BackListener;
+import cn.meitong.listener.ButtonManager;
 
 public class ShowResult extends Activity {
 	
@@ -25,7 +26,7 @@ public class ShowResult extends Activity {
 		new ButtonManager(this).getmBack().setOnClickListener(new BackListener(this));
 		//做测试使用
 		Intent intent = getIntent();
-		result = intent.getStringExtra("result");
+		result = intent.getStringExtra(ResultValues.RESULT);
 		
 		if(result != null){
 			mCode.setText(result);

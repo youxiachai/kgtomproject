@@ -7,15 +7,16 @@
     <string name="back">返回</string>
     <string name="query">查询</string>
     <!-- Capture -->
-    <string name="capture_tips">将条码放置于镜头红线内进行扫描。</string>    
+    <string name="capture_tips">将二维码放置于镜头红线内进行扫描。</string>    
     <!-- TEXT  values -->
     <string name="header_title">QR Code</string>
-    <string name="title_scan">扫描查询</string>
-    <string name="title_input">输入查询</string>
-    <string name="title_lucky">中奖查询</string>
-    <string name="title_sms">短信查询</string>
+    <string name="title_scan">扫描查验</string>
+    <string name="title_input">输入查验</string>
+    <string name="title_lucky">中奖查验</string>
+    <string name="title_sms">短信查验</string>
+    <string name="title_query">实时查验</string>
     <string name="title_sms_send">短信发送</string>
-    <string name="title_phoneinput">手机号码查询</string>
+    <string name="title_phoneinput">手机号码查验</string>
     <string name="title_help">帮助</string>
     <string name="title_showresult">显示结果</string>
     <!-- share preferneces -->
@@ -103,5 +104,8 @@
 	    
 	<!-- scan.xml -->
 	<string name="scan_text">扫描</string>
-
+	
+	<!-- scan dialog -->
+	<string name="dialog_title">二维码信息:</string>
+	<string name="dialog_cancel">重新扫描</string>
 </resources>
