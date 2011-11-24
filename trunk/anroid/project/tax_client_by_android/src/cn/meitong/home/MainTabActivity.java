@@ -12,6 +12,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 import cn.meiton.action.ActionValues;
+import cn.meiton.action.ResultValues;
 import cn.meitong.R;
 import cn.meitong.decoder.CaptureActivity;
 import cn.meitong.query.HandmadeInputActivity;
@@ -98,7 +99,7 @@ public class MainTabActivity extends TabActivity implements
 	}
 
 	private void receiveIntent(final Intent intent) {
-		result = intent.getStringExtra("result");
+		result = intent.getStringExtra(ResultValues.RESULT);
 		action = intent.getAction();
 		Log.d(TAG, result + "---" + action);
 	}
@@ -116,7 +117,11 @@ public class MainTabActivity extends TabActivity implements
 
 		if (action.equals(ActionValues.SCAN_SUCCESS)) {
 			Log.d(TAG, "putIntentExtra2" + action);
-			this.mShowResult.putExtra("result", result);
+			this.mShowResult.putExtra(ResultValues.RESULT, result);
+		}
+		
+		if(action.equals(ActionValues.SCAN_SMS)){
+			this.mSmsInput.putExtra(ResultValues.RESULT, result);
 		}
 	}
 
@@ -131,10 +136,12 @@ public class MainTabActivity extends TabActivity implements
 		if(action.equals(ActionValues.SCAN_BACK)){
 			this.mHost.setCurrentTabByTag("mScan_tab");
 		}
-		
 		if (action.equals(ActionValues.SCAN_SUCCESS)) {
 			Log.d(TAG, "ok-------->");
 			this.mHost.setCurrentTabByTag("m_result");
+		}
+		if(action.equals(ActionValues.SCAN_SMS)){
+			this.mHost.setCurrentTabByTag("mSms_tab");
 		}
 	}
 

@@ -51,21 +51,22 @@
  	       	</TableRow>
  	    </TableLayout>
  	</LinearLayout>
- 	<LinearLayout 
- 	    android:orientation="horizontal"
+
+ 	<LinearLayout
+ 	    style="@style/content_background"
  	    android:layout_width="match_parent"
  	    android:layout_height="wrap_content"
  	    android:layout_weight="1.0"
  	    android:gravity="center"
- 	    style="@style/content_background"
- 	    >
-	 	<Button
-	 	    android:id="@+id/send" 
-	 	    android:layout_width="wrap_content"
-	 	    android:layout_height="wrap_content"
-	 	    android:text="@string/sms_send"
-	 	    android:textColor="@color/white"
-	 	    android:background="@drawable/button_selector"
-	 	/>
+ 	    android:orientation="horizontal" >
+
+ 	    <Button
+ 	        android:id="@+id/send"
+ 	        style="@style/content_button"
+ 	        android:layout_width="127dp"
+ 	       
+ 	        android:text="@string/sms_send" />
+
  	</LinearLayout>
+
 </LinearLayout>

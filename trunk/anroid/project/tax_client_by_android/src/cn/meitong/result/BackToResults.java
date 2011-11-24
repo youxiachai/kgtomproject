@@ -2,12 +2,12 @@ package cn.meitong.result;
 
 import java.util.ArrayList;
 
-import listener.BackListener;
-import listener.ButtonManager;
 
 import android.app.ListActivity;
 import android.os.Bundle;
 import cn.meitong.R;
+import cn.meitong.listener.BackListener;
+import cn.meitong.listener.ButtonManager;
 
 public class BackToResults extends ListActivity {
 

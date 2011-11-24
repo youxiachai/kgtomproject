@@ -1,7 +1,5 @@
 package cn.meitong.home;
 
-import listener.BackListener;
-import listener.ButtonManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import cn.meitong.R;
 import cn.meitong.decoder.CaptureActivity;
+import cn.meitong.listener.BackListener;
+import cn.meitong.listener.ButtonManager;
 
 /**
  * @author Tom_achai

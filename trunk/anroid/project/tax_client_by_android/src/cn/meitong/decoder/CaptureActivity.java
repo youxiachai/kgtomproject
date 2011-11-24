@@ -4,27 +4,27 @@ import java.io.IOException;
 import java.util.Vector;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Vibrator;
 import android.util.Log;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 import cn.meitiong.camera.CameraManager;
 import cn.meiton.action.ActionValues;
+import cn.meiton.action.ResultValues;
 import cn.meitong.R;
 import cn.meitong.home.MainTabActivity;
 
@@ -40,17 +40,16 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 	private String characterSet;
 	private TextView txtResult;
 	private InactivityTimer inactivityTimer;
-	private MediaPlayer mediaPlayer;
-	@SuppressWarnings(value = {})
-	private boolean playBeep;
+
 	private static final float BEEP_VOLUME = 0.10f;
 	private static final String TAG = "CaptureActivity";
-	private boolean vibrate;
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		setContentView(R.layout.home);
 		// 初始化 CameraManager
 		CameraManager.init(getApplication());
@@ -60,6 +59,7 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 
 		beepManger = new BeepManager(this);
 		hasSurface = false;
+
 		inactivityTimer = new InactivityTimer(this);
 	}
 
@@ -169,6 +169,8 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 
 	}
 
+	public String result;
+
 	public void handleDecode(Result obj, Bitmap barcode) {
 		inactivityTimer.onActivity();
 		// viewfinderView.drawResultBitmap(barcode);
@@ -181,117 +183,81 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 		} else {
 			Log.d("capture", obj.getText());
 			beepManger.playBeepSoundAndVibrate();
-			Intent intent = new Intent().setClass(this, MainTabActivity.class);
-			intent.setAction(ActionValues.SCAN_SUCCESS);
-			intent.putExtra("result", obj.getText());
-			// intent.pute
-			startActivity(intent);
+			result = obj.getText();
+			showDialog(SCAN_DIALOG);
 		}
-
-		// 用于把结果跳转到某个activity
 
 	}
 
-	@SuppressWarnings(value = { "过时的声音提醒" })
-	private void initBeepSound() {
-		if (playBeep && mediaPlayer == null) {
-			// The volume on STREAM_SYSTEM is not adjustable, and users found it
-			// too loud,
-			// so we now play on the music stream.
-			setVolumeControlStream(AudioManager.STREAM_MUSIC);
-			mediaPlayer = new MediaPlayer();
-			mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-			mediaPlayer.setOnCompletionListener(beepListener);
+	public AlertDialog alertDialogBuilder(String message) {
 
-			AssetFileDescriptor file = getResources().openRawResourceFd(
-					R.raw.beep);
-			try {
-				mediaPlayer.setDataSource(file.getFileDescriptor(),
-						file.getStartOffset(), file.getLength());
-				file.close();
-				mediaPlayer.setVolume(BEEP_VOLUME, BEEP_VOLUME);
-				mediaPlayer.prepare();
-			} catch (IOException e) {
-				mediaPlayer = null;
-			}
-		}
+		final String qrCode = message;
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setMessage("二维码结果:" + message)
+				.setCancelable(false)
+				.setPositiveButton(R.string.title_query,
+						new DialogInterface.OnClickListener() {
+
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								Intent intent = new Intent().setClass(
+										CaptureActivity.this,
+										MainTabActivity.class);
+								intent.setAction(ActionValues.SCAN_SUCCESS);
+								intent.putExtra(ResultValues.RESULT, qrCode);
+								startActivity(intent);
+							}
+						})
+				.setNeutralButton(R.string.title_sms,
+						new DialogInterface.OnClickListener() {
+
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								Intent intent = new Intent().setClass(
+										CaptureActivity.this,
+										MainTabActivity.class);
+								intent.setAction(ActionValues.SCAN_SMS);
+								intent.putExtra(ResultValues.RESULT, qrCode);
+								startActivity(intent);
+							}
+						})
+				.setNegativeButton(R.string.dialog_cancel,
+						new DialogInterface.OnClickListener() {
+
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								dialog.cancel();
+								Log.d("mainTab","resume----->");
+								onPause();
+								onResume();
+							}
+						});
+		return builder.create();
 	}
 
-	private static final long VIBRATE_DURATION = 200L;
+	AlertDialog resultDialog;
+	private final static int SCAN_DIALOG = 1;
 
-	/**
-	 * 播放声音和震动
-	 */
-	@SuppressWarnings(value = { "播放声音和震动" })
-	private void playBeepSoundAndVibrate() {
-		if (playBeep && mediaPlayer != null) {
-			mediaPlayer.start();
+	@Override
+	protected Dialog onCreateDialog(int id) {
+		switch (id) {
+		case SCAN_DIALOG:
+			resultDialog = alertDialogBuilder(result);
+			break;
+
+		default:
+			break;
 		}
-		if (vibrate) {
-			Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-			vibrator.vibrate(VIBRATE_DURATION);
-		}
-	}
 
-	/**
-	 * When the beep has finished playing, rewind to queue up another one.
-	 */
-	@SuppressWarnings(value = { "" })
-	private final OnCompletionListener beepListener = new OnCompletionListener() {
-		public void onCompletion(MediaPlayer mediaPlayer) {
-			mediaPlayer.seekTo(0);
-		}
-	};
-
-	/**
-	 * Superimpose a line for 1D or dots for 2D to highlight the key features of
-	 * the barcode. 用于画结果扫码结果图
-	 * 
-	 * @param barcode
-	 *            A bitmap of the captured image.
-	 * @param rawResult
-	 *            The decoded results which contains the points to draw.
-	 */
-	private void drawResultPoints(Bitmap barcode, Result rawResult) {
-		ResultPoint[] points = rawResult.getResultPoints();
-		if (points != null && points.length > 0) {
-			Canvas canvas = new Canvas(barcode);
-			Paint paint = new Paint();
-			paint.setColor(getResources().getColor(R.color.result_image_border));
-			paint.setStrokeWidth(3.0f);
-			paint.setStyle(Paint.Style.STROKE);
-			Rect border = new Rect(2, 2, barcode.getWidth() - 2,
-					barcode.getHeight() - 2);
-			canvas.drawRect(border, paint);
-
-			paint.setColor(getResources().getColor(R.color.result_points));
-			if (points.length == 2) {
-				paint.setStrokeWidth(4.0f);
-				drawLine(canvas, paint, points[0], points[1]);
-			} else if (points.length == 4
-					&& (rawResult.getBarcodeFormat()
-							.equals(BarcodeFormat.UPC_A) || rawResult
-							.getBarcodeFormat().equals(BarcodeFormat.EAN_13))) {
-				// Hacky special case -- draw two lines, for the barcode and
-				// metadata
-				drawLine(canvas, paint, points[0], points[1]);
-				drawLine(canvas, paint, points[2], points[3]);
-			} else {
-				paint.setStrokeWidth(10.0f);
-				for (ResultPoint point : points) {
-					canvas.drawPoint(point.getX(), point.getY(), paint);
-				}
-			}
-		}
-	}
-
-	private static void drawLine(Canvas canvas, Paint paint, ResultPoint a,
-			ResultPoint b) {
-		canvas.drawLine(a.getX(), a.getY(), b.getX(), b.getY(), paint);
+		return resultDialog;
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(android.view.Menu menu) {
+
 		MenuInflater backflater = getMenuInflater();
 		backflater.inflate(R.menu.capture_menu, menu);
 		return true;
