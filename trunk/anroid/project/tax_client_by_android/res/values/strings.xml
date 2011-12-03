@@ -64,7 +64,7 @@
     <string name="sms_input_no">发票号码</string>
     <!-- SMSSendActivity values -->
     <string name="sms_sendto">收件人:</string>
-    <string name="sms_send_address">10-6888888</string>
+    <string name="sms_send_address">123662</string>
     <!-- SMS layout button values -->
     <string name="sms_send">发送</string>
     <string name="sms_edittext_hint">input here</string>
