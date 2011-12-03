@@ -12,20 +12,22 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical" >
-
+        
         <TableLayout
+            android:id="@+id/help_tablelayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dip"
             android:background="@drawable/tableshape" >
 
             <TableRow
+                android:id="@+id/help_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dip"
-                android:background="@drawable/toprowshape"
+                android:background="@drawable/toprowselector"
                 android:gravity="center_vertical"
-                android:padding="5dip" >
+                android:padding="5dip"
+                android:clickable="true" >
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -42,21 +44,24 @@
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
-                <ImageButton
+                  <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/help_button_selector" />
+                    android:background="@drawable/expander_ic_minimized"
+                  	/>
             </TableRow>
 
             <TableRow
+                android:id="@+id/help_middle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dip"
                 android:layout_marginLeft="1dip"
                 android:layout_marginRight="1dip"
-                android:background="@color/white"
+                android:background="@drawable/rowselector"
                 android:gravity="center_vertical"
-                android:padding="5dip" >
+                android:padding="5dip"
+                android:clickable="true" >
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -73,19 +78,21 @@
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
-                <ImageButton
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/help_button_selector" />
+                    android:background="@drawable/expander_ic_minimized" />
             </TableRow>
 
             <TableRow
+                android:id="@+id/help_bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dip"
-                android:background="@drawable/bottomrowshape"
+                android:background="@drawable/bottomrowselector"
                 android:gravity="center_vertical"
-                android:padding="5dip" >
+                android:padding="5dip"
+                android:clickable="true" >
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -102,10 +109,10 @@
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
-                <ImageButton
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/help_button_selector" />
+                    android:background="@drawable/expander_ic_minimized" />
             </TableRow>
         </TableLayout>
     </LinearLayout>
