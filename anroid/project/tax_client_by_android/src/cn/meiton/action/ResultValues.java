@@ -20,21 +20,32 @@ public final class ResultValues {
 	public final static String ROOT = "root";
 	public final static String HEAD = "head";
 	public final static String BODY = "body";
-	public final static String SERVICE = "service";
 
-	public final static String HANDLER = "handler";
 	
 	public final static String ACTION = "action";
 	
-	public final static String CHANNEL = "channel";
-	public final static String TYPE = "type";
-	public final static String IP = "ip";
-	public final static String PHONE = "phoneNo";
-	public final static String CCID = "ccid";
-	public final static String IMEI = "imei";
+	
+	//-------------------request body fields-----------------
+	public final static String SERVICE = "service";
+
+	public final static String HANDLER = "handler";
+	public final class Channel{
+		public final static String CHANNEL = "channel";
+		public final static String TYPE = "type";
+		public final static String IP = "ip";
+		public final static String PHONE = "phoneNo";
+		public final static String CCID = "ccid";
+		public final static String IMEI = "imei";
+	}
 	public final static String ITEMS = "items";
-	public final static String ITEM = "item";
-	public final static String FPDM = "fpdm";
-	public final static String FPHM = "fphm";
-	public final static String KPJE = "kpje";
+	
+	//-------------------request body fields-----------------
+	
+	public final class Item{
+		public final static String ITEM = "item";
+		public final static String FPDM = "fpdm";
+		public final static String FPHM = "fphm";
+		public final static String KPJE = "kpje";
+	}
+	
 }
