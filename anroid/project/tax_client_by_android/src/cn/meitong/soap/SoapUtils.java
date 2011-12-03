@@ -269,32 +269,32 @@ public class SoapUtils {
 		// ----------------构造值xml
 		SoapObject root = buildSoapObject(ResultValues.ROOT);
 		// -------
-		SoapObject head = buildSoapObject(ResultValues.HEAD);
-		SoapObject service = buildSoapObject(ResultValues.SERVICE);
-		service.addProperty(buildProperty(ResultValues.HANDLER,
+		SoapObject head = buildSoapObject(ResultValues.Head.HEAD);
+		SoapObject service = buildSoapObject(ResultValues.Head.SERVICE);
+		service.addProperty(buildProperty(ResultValues.Head.HANDLER,
 				"fpcyServiceHandler"));
-		service.addProperty(buildProperty(ResultValues.ACTION, "fpcy"));
+		service.addProperty(buildProperty(ResultValues.Head.ACTION, "fpcy"));
 		// -----
-		SoapObject channel = buildSoapObject(ResultValues.CHANNEL);
-		channel.addProperty(buildProperty(ResultValues.TYPE, ch.type));
-		channel.addProperty(buildProperty(ResultValues.IP, ch.ip));
-		channel.addProperty(buildProperty(ResultValues.PHONE, ch.phoneNO));
-		channel.addProperty(buildProperty(ResultValues.CCID, ch.ccid));
-		channel.addProperty(buildProperty(ResultValues.IMEI, ch.imei));
+		SoapObject channel = buildSoapObject(ResultValues.Channel.CHANNEL);
+		channel.addProperty(buildProperty(ResultValues.Channel.TYPE, ch.type));
+		channel.addProperty(buildProperty(ResultValues.Channel.IP, ch.ip));
+		channel.addProperty(buildProperty(ResultValues.Channel.PHONE, ch.phoneNO));
+		channel.addProperty(buildProperty(ResultValues.Channel.CCID, ch.ccid));
+		channel.addProperty(buildProperty(ResultValues.Channel.IMEI, ch.imei));
 
 		service.addSoapObject(channel);
 		// ------------
 
 		head.addSoapObject(service);
 		// ---构造body
-		SoapObject body = buildSoapObject(ResultValues.BODY);
-		SoapObject items = buildSoapObject(ResultValues.ITEMS);
+		SoapObject body = buildSoapObject(ResultValues.Body.BODY);
+		SoapObject items = buildSoapObject(ResultValues.Body.ITEMS);
 		
 		for (RequestItem requestItem : itemlist) {
-			SoapObject item = buildSoapObject(ResultValues.ITEM);
-			item.addProperty(buildProperty(ResultValues.FPDM, requestItem.fpdm));
-			item.addProperty(buildProperty(ResultValues.FPHM, requestItem.fphm));
-			item.addProperty(buildProperty(ResultValues.KPJE, requestItem.kpje));
+			SoapObject item = buildSoapObject(ResultValues.Item.ITEM);
+			item.addProperty(buildProperty(ResultValues.Item.FPDM, requestItem.fpdm));
+			item.addProperty(buildProperty(ResultValues.Item.FPHM, requestItem.fphm));
+			item.addProperty(buildProperty(ResultValues.Item.KPJE, requestItem.kpje));
 			items.addSoapObject(item);
 		}
 		
