@@ -21,19 +21,42 @@ public final class ResultValues {
 
 	// -------------------request&response body fields-----------------
 
-	public final class Head {
+	public final static class Head {
 		public final static String HEAD = "head";
 		public final static String SERVICE = "service";
 		public final static String HANDLER = "handler";
 		public final static String ACTION = "action";
+		
+		public final static String REPLYCODE = "replyCode";
+		public final static String REPLYMsg = "replyMsg";
+		public final static String HEAD_ARRAY[] = {"replyCode", "replyMsg" };
 	}
 
-	public final class Body {
+	public final static class Body {
 		public final static String BODY = "body";
 		public final static String ITEMS = "items";
+		public final static String ITEM = "item";
+		public final static String FPDM = "fpdm";
+		public final static String FPHM = "fphm";
+		public final static String FKFMC = "fkfMc";
+		public final static String SKFMC = "skfMc";
+		public final static String SKFZJHM = "skfZjhm";
+		public final static String KPRQ = "kprq";
+		public final static String HJJE = "hjJe";
+		public final static String SKM = "skm";
+		public final static String FKFSJ = "fkfSj";
+		public final static String ZJDJ = "zjDj";
+		public final static String ZJJE = "zjJe";
+		public final static String ZJQS = "zjQs";
+		public final static String CYCS = "cyCs";
+		public final static String FPZTMC = "fpztMc";
+		public final static String CXJG = "cxjg";
+		public final static String BODY_ARRAY[] = {"fpdm", "fpdh", "fkfMc", "skfMc",
+			"skfZjhm", "kprq", "hjJe", "skm", "fkfSj", "zjDj", "zjJe",
+			"zjQs", "cyCs", "fpztMc", "cxjg" };
 	}
 
-	public final class Channel {
+	public final static class Channel {
 		public final static String CHANNEL = "channel";
 		public final static String TYPE = "type";
 		public final static String IP = "ip";
@@ -42,7 +65,7 @@ public final class ResultValues {
 		public final static String IMEI = "imei";
 	}
 
-	public final class Item {
+	public final static class Item {
 		public final static String ITEM = "item";
 		public final static String FPDM = "fpdm";
 		public final static String FPHM = "fphm";
