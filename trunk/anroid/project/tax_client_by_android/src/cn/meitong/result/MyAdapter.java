@@ -53,7 +53,7 @@ public class MyAdapter extends ArrayAdapter<Invoice> {
 //		pnum.setText("锟斤拷录"+String.valueOf(position)+"锟斤拷");
 //		id.setText(data.getInvoiceId());
 		title.setText(data.getInvoiceNum());
-		value.setText(data.get)
+		//value.setText(data.get)
 		
 		return myLayout;
 	}
