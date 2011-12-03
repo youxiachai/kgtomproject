@@ -11,7 +11,7 @@ import android.widget.TextView;
 import cn.meiton.action.ResultValues;
 import cn.meitong.R;
 import cn.meitong.listener.BackListener;
-import cn.meitong.listener.ButtonManager;
+import cn.meitong.listener.TitleManager;
 
 public class SMSInputActivity extends Activity {
 
@@ -28,7 +28,7 @@ public class SMSInputActivity extends Activity {
 		setContentView(R.layout.sms_input);
 		result = getIntent().getStringExtra(ResultValues.RESULT);
 
-		new ButtonManager(this).getmBack().setOnClickListener(
+		new TitleManager(this).getBack().setOnClickListener(
 				new BackListener(this));
 		send = (Button) findViewById(R.id.send);
 		mTitle = (TextView) findViewById(R.id.titleText);

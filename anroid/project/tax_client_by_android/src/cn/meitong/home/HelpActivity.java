@@ -12,7 +12,7 @@ import cn.meitong.help.Help_1;
 import cn.meitong.help.Help_2;
 import cn.meitong.help.Help_3;
 import cn.meitong.listener.BackListener;
-import cn.meitong.listener.ButtonManager;
+import cn.meitong.listener.TitleManager;
 
 public class HelpActivity extends Activity {
     private TextView mTitle;
@@ -31,13 +31,13 @@ public class HelpActivity extends Activity {
 	top.setOnClickListener(new HelpOnClickListener());
 	middle.setOnClickListener(new HelpOnClickListener());
 	bottom.setOnClickListener(new HelpOnClickListener());
-	new ButtonManager(this).getmBack().setOnClickListener(
+	new TitleManager(this).getBack().setOnClickListener(
 		new BackListener(this));
     }
 
     class HelpOnClickListener implements OnClickListener {
 
-	@Override
+
 	public void onClick(View v) {
 	    switch (v.getId()) {
 	    case R.id.help_top:

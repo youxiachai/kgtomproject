@@ -10,7 +10,7 @@ import android.widget.TextView;
 import cn.meitong.R;
 import cn.meitong.decoder.CaptureActivity;
 import cn.meitong.listener.BackListener;
-import cn.meitong.listener.ButtonManager;
+import cn.meitong.listener.TitleManager;
 
 /**
  * @author Tom_achai
@@ -30,7 +30,7 @@ public class ScanActivity extends Activity {
 		mTitle = (TextView) findViewById(R.id.titleText);
 		mScan = (Button) findViewById(R.id.button_scan);
 		mScan.setOnClickListener(new ScanListener());
-		new ButtonManager(this).getmBack().setVisibility(View.INVISIBLE);
+		new TitleManager(this).getBack().setVisibility(View.INVISIBLE);
 		mTitle.setText(R.string.title_scan);
 		
 		
