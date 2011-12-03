@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import cn.meitong.R;
 import cn.meitong.listener.BackListener;
-import cn.meitong.listener.ButtonManager;
+import cn.meitong.listener.TitleManager;
 
 public class WinNumInputActivity extends Activity {
 	private TextView mTitle;
@@ -15,6 +15,6 @@ public class WinNumInputActivity extends Activity {
 		setContentView(R.layout.winnum);
 		mTitle = (TextView) findViewById(R.id.titleText);
 		mTitle.setText(R.string.title_lucky);
-		new ButtonManager(this).getmBack().setOnClickListener(new BackListener(this));
+		new TitleManager(this).getBack().setOnClickListener(new BackListener(this));
 	}
 }

@@ -82,10 +82,9 @@ public class MainTabActivity extends TabActivity implements
 
 		this.mScanQuery = new Intent().setClass(this, ScanActivity.class);
 
-		this.mInputQuery = new Intent()
-				.setClass(this, HandmadeInputActivity.class);
-		this.mLuckyQuery = new Intent().setClass(this,
-				WinNumInputActivity.class);
+		this.mInputQuery = new Intent().setClass(this,
+				HandmadeInputActivity.class);
+
 		this.mSmsInput = new Intent().setClass(this, SMSInputActivity.class);
 
 		this.mHelpQuery = new Intent().setClass(this, HelpActivity.class);
@@ -95,6 +94,8 @@ public class MainTabActivity extends TabActivity implements
 		 */
 		this.mShowResult = new Intent().setClass(this, ShowResult.class);
 		this.mSmsSend = new Intent().setClass(this, SMSSendActivity.class);
+		this.mLuckyQuery = new Intent().setClass(this,
+				WinNumInputActivity.class);
 
 	}
 
@@ -119,8 +120,8 @@ public class MainTabActivity extends TabActivity implements
 			Log.d(TAG, "putIntentExtra2" + action);
 			this.mShowResult.putExtra(ResultValues.RESULT, result);
 		}
-		
-		if(action.equals(ActionValues.SCAN_SMS)){
+
+		if (action.equals(ActionValues.SCAN_SMS)) {
 			this.mSmsInput.putExtra(ResultValues.RESULT, result);
 		}
 	}
@@ -131,16 +132,15 @@ public class MainTabActivity extends TabActivity implements
 	 * @param action
 	 */
 	private void setTab(String action) {
-		
-		
-		if(action.equals(ActionValues.SCAN_BACK)){
+
+		if (action.equals(ActionValues.SCAN_BACK)) {
 			this.mHost.setCurrentTabByTag("mScan_tab");
 		}
 		if (action.equals(ActionValues.SCAN_SUCCESS)) {
 			Log.d(TAG, "ok-------->");
 			this.mHost.setCurrentTabByTag("m_result");
 		}
-		if(action.equals(ActionValues.SCAN_SMS)){
+		if (action.equals(ActionValues.SCAN_SMS)) {
 			this.mHost.setCurrentTabByTag("mSms_tab");
 		}
 	}
@@ -207,8 +207,7 @@ public class MainTabActivity extends TabActivity implements
 				.setOnCheckedChangeListener(this);
 		((RadioButton) findViewById(R.id.radio_button1))
 				.setOnCheckedChangeListener(this);
-		((RadioButton) findViewById(R.id.radio_button2))
-				.setOnCheckedChangeListener(this);
+
 		((RadioButton) findViewById(R.id.radio_button3))
 				.setOnCheckedChangeListener(this);
 		((RadioButton) findViewById(R.id.radio_button4))
@@ -229,10 +228,7 @@ public class MainTabActivity extends TabActivity implements
 				this.mHost.setCurrentTabByTag("mInput_tab");
 
 				break;
-			case R.id.radio_button2:
-				Log.d(TAG, "2");
-				this.mHost.setCurrentTabByTag("mLucky_tab");
-				break;
+
 			case R.id.radio_button3:
 				Log.d(TAG, "3");
 				this.mHost.setCurrentTabByTag("mSms_tab");
