@@ -15,12 +15,16 @@ import org.kxml2.kdom.Node;
 import org.xmlpull.v1.XmlPullParserException;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import cn.meitong.R;
+import cn.meitong.parse.ResultHandle;
+import cn.meitong.soap.SoapUtils;
 
 /**
  * @author Tom_achai
@@ -44,11 +48,25 @@ public class SoapTest extends Activity {
 				Log.d("soap", "onClick");
 				// webService();
 			//	webFpzx();
-				 initWebService(getWeaterbyCityName, true, true);
+			//	 initWebService(getWeaterbyCityName, true, true);
 				//webWords();
+				//testWebService();
+//				 dialog = ProgressDialog.show(SoapTest.this, "", 
+//                        "查验中t...", true);
+				testHandle();
 			}
 		});
 
+	}
+	private ProgressDialog dialog;
+	private ResultHandle mHandle;
+	protected void testHandle() {
+		
+		mHandle = new ResultHandle(this);
+	}
+	
+	public void dismissProgress(){
+	//	dialog.cancel();
 	}
 
 	private void webFpzx() {
@@ -56,41 +74,18 @@ public class SoapTest extends Activity {
 		String ns = "http://services.fpzx.tax.foresee.com";
 		String wsdl = "http://www.gdltax.gov.cn/wssw-webservice/services/FpzxService?wsdl";
 
-		String getResponse = "invoke";
+		String methods = "invoke";
 		// String get = "invokeResponse";
 
-		SoapObject request = new SoapObject(ns, getResponse);
+		SoapObject request = new SoapObject(ns, methods);
+	
 //		request.setProperty(index, value)
 		//request.addAttribute(attributeInfo)
 		request.addProperty("in0", "ok");
 		request.addProperty("in1", "ssss");
 
-		SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
-				SoapEnvelope.VER12);
-		envelope.dotNet = true;
-
-		envelope.setOutputSoapObject(request);
-		
-
-		HttpTransportSE transport = new HttpTransportSE(wsdl);
-		transport.debug = true;
-
-		try {
-			transport.call(ns + getResponse, envelope);
-
-			Log.d("soap", envelope.toString());
-			SoapObject result = (SoapObject) envelope.getResponse();
-			int count = result.getPropertyCount();
-			Log.d("soap", "count-->" + count);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			Log.d("soap", "ioe!!!!!!!!");
-			e.printStackTrace();
-		} catch (XmlPullParserException e) {
-			Log.d("soap", "xmlpull!!!");
-			e.printStackTrace();
-		}
-
+		SoapUtils su = new SoapUtils(request, wsdl, methods, true);
+		su.startService();
 	}
 
 	// 需要调用的方法名(获得本天气预报Web Services支持的洲、国内外省份和城市信息)
@@ -148,6 +143,20 @@ public class SoapTest extends Activity {
 	    
 	    
 	    return security;
+	}
+	
+	
+	private void testWebService(){
+		String ns = "http://WebXml.com.cn/";
+		String wsdl = "http://webservice.webxml.com.cn/WebServices/WeatherWebService.asmx?wsdl";
+		String methods ="getSupportProvince";
+		
+		SoapObject request = new SoapObject(ns, methods);
+		
+		SoapUtils su = new SoapUtils(request, wsdl, methods,true);
+		
+		su.startService();
+		
 	}
 	
 	private void initWebService(String methodName, boolean haveproperty,
