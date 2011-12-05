@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <include layout="@layout/titlebar"/>
 
     <ListView 
         android:id="@android:id/list"
@@ -17,14 +16,20 @@
         android:gravity="center"
         android:layout_weight="1.0"
         >
-        <Button android:layout_width="120dip"
+        <Button 
+            android:id="@+id/sms"
+            android:layout_width="120dip"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="短信查验"/>
-        <Button android:layout_width="120dip"
+            android:text="短信查验"
+            android:visibility="gone"/>
+        <Button 
+            android:id="@+id/fect"
+            android:layout_width="120dip"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="实时查验"/>
+            android:text="实时查验"
+            android:visibility="gone"/>
     </LinearLayout>
 
 </LinearLayout>
