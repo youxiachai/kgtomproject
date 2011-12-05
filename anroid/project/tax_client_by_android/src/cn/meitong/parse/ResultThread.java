@@ -9,11 +9,12 @@ import org.ksoap2.serialization.AttributeInfo;
 import org.ksoap2.serialization.PropertyInfo;
 import org.ksoap2.serialization.SoapObject;
 
-import cn.meiton.action.ResultValues;
+
 import cn.meitong.model.Channel;
 import cn.meitong.model.RequestItem;
 import cn.meitong.model.TestModel;
 import cn.meitong.soap.SoapUtils;
+import cn.meitong.values.ResultValues;
 import android.app.backup.RestoreObserver;
 import android.os.Bundle;
 import android.os.Handler;

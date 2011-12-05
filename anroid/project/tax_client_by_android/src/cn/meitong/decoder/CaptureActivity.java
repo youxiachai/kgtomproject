@@ -87,7 +87,7 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 		// 这里应该有个设置Shareferences的地方
 
 		// 成功声音
-		beepManger.updatePrefs();
+		//beepManger.updatePrefs();
 		inactivityTimer.onResume();
 	}
 
@@ -175,6 +175,7 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 
 	public void handleDecode(Result obj, Bitmap barcode) {
 		inactivityTimer.onActivity();
+		//绘制返回的截图
 		// viewfinderView.drawResultBitmap(barcode);
 
 		// 用于处理以后接口的
@@ -184,10 +185,16 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 			Log.d("capture", "错误!!!");
 		} else {
 			Log.d("capture", obj.getText());
-			beepManger.playBeepSoundAndVibrate();
+			//播放声音
+			//beepManger.playBeepSoundAndVibrate();
 			result = obj.getText();
 			Log.d(TAG, result);
-			showDialog(SCAN_DIALOG);
+			//转送返回的
+			Intent intent = new ContentMananger(CaptureActivity.this)
+			.setIntent(MainTabActivity.class, ResultValues.QueryKey.QRCODE, result, ActionValues.SCAN_SUCCESS);
+			//intent.setClass(packageContext, cls);
+			startActivity(intent);
+			
 		}
 
 	}
