@@ -1,6 +1,6 @@
 package cn.meitong.tab.home;
 
-import java.security.KeyStore.LoadStoreParameter;
+
 
 import android.app.TabActivity;
 import android.content.Intent;
@@ -12,13 +12,14 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TabHost;
 import android.widget.TextView;
-import cn.meition.test.ResultTest;
+
 import cn.meitong.R;
 import cn.meitong.tab.help.HelpActivity;
 import cn.meitong.tab.listener.MessageListener;
 import cn.meitong.tab.query.HandmadeInputActivity;
 import cn.meitong.tab.query.WinNumInputActivity;
-import cn.meitong.tab.result.ShowResult;
+import cn.meitong.tab.result.BackToResults;
+
 import cn.meitong.tab.sms.SMSInputActivity;
 import cn.meitong.tab.sms.SMSSendActivity;
 import cn.meitong.values.ActionValues;
@@ -46,7 +47,7 @@ public class MainTabActivity extends TabActivity {
 	private Intent mShowResult;
 	public TextView mTitle;
 
-	private Object result;
+	private String  qRresult;
 	private String action;
 
 	public Button bBack;
@@ -92,27 +93,32 @@ public class MainTabActivity extends TabActivity {
 
 		this.mInputQuery = new Intent().setClass(this,
 				HandmadeInputActivity.class);
-
-		this.mSmsInput = new Intent().setClass(this, SMSInputActivity.class);
+		this.mLuckyQuery = new Intent().setClass(this,
+				WinNumInputActivity.class);
+		
 
 		this.mHelpQuery = new Intent().setClass(this, HelpActivity.class);
 
 		/**
 		 * 用于设置不可见tab
 		 */
-		this.mShowResult = new Intent().setClass(this, ShowResult.class);
+		this.mShowResult = new Intent().setClass(this, BackToResults.class);
+		this.mSmsInput = new Intent().setClass(this, SMSInputActivity.class);
 		this.mSmsSend = new Intent().setClass(this, SMSSendActivity.class);
-		this.mLuckyQuery = new Intent().setClass(this,
-				WinNumInputActivity.class);
+	
 		
 	
 
 	}
 
 	private void receiveIntent(final Intent intent) {
-		result = intent.getStringExtra(ResultValues.RESULT);
-		action = intent.getAction();
-		Log.d(TAG, result + "---" + action);
+		if(intent != null){
+			qRresult = intent.getStringExtra(ResultValues.QueryKey.QRCODE);
+			action = intent.getAction();
+			Log.d(TAG, qRresult + "---" + action);
+		}
+		
+		
 	}
 
 	/**
@@ -121,22 +127,11 @@ public class MainTabActivity extends TabActivity {
 	 * @param action
 	 */
 	private void setIntentResult(String action) {
-		// if (action == null) {
-		// action = "kg.maintab";
-		// }
-		// Log.d(TAG, "putIntentExtra1" + action);
-		//
-//		 if (action.equals(ActionValues.SCAN_SUCCESS)) {
-//		 Log.d(TAG, "putIntentExtra2" + action);
-//		 this.mShowResult.putExtra(ResultValues.RESULT, result);
-//		 }
-		//
-		// if (action.equals(ActionValues.SCAN_SMS)) {
-		// this.mSmsInput.putExtra(ResultValues.RESULT, result);
-		// }
-		if(action.equals(ActionValues.SHOWRESULT)){
+
+		if(action.equals(ActionValues.SCAN_SUCCESS)){
 			Log.d(TAG, "SHOWRESULT");
-			this.mShowResult.putExtra(ResultValues.RESULT, (String)result);
+			this.mShowResult.putExtra(ResultValues.QueryKey.QRCODE, qRresult);
+			this.mShowResult.putExtra(ResultValues.QueryType.QUERYTYPE, ResultValues.QueryType.qRcode);
 		
 		}
 		
@@ -167,7 +162,7 @@ public class MainTabActivity extends TabActivity {
 		// }
 		
 
-		if(action.equals(ActionValues.SHOWRESULT)){
+		if(action.equals(ActionValues.SCAN_SUCCESS)){
 			Log.d(TAG, "radiostate");
 			this.mHost.setCurrentTabByTag(TabValues.RESULT_TAB);
 			showTitleButton(true, false);
@@ -205,29 +200,22 @@ public class MainTabActivity extends TabActivity {
 				R.string.main_input, R.drawable.tab_icon_input,
 				this.mInputQuery));
 
-		localTabHost.addTab(buildTabSpec(TabValues.SMSIN_TAB,
-				R.string.main_sms, R.drawable.tab_icon_sms, this.mSmsInput));
+		localTabHost.addTab(buildTabSpec(TabValues.LUCKY_TAB,
+				R.string.main_sms, R.drawable.tab_icon_sms, this.mLuckyQuery));
 		localTabHost.addTab(buildTabSpec(TabValues.HELP_TAB,
 				R.string.main_help, R.drawable.tab_icon_help, this.mHelpQuery));
 
 		// 创建不可见tab
+		localTabHost.addTab(buildInvisibleTabSpec(TabValues.SMSIN_TAB, this.mSmsInput));
 		localTabHost.addTab(buildInvisibleTabSpec(TabValues.RESULT_TAB,
 				mShowResult));
 		localTabHost.addTab(buildInvisibleTabSpec(TabValues.SMSOUT_TAB,
 				mSmsSend));
-		localTabHost.addTab(buildInvisibleTabSpec(TabValues.LUCKY_TAB,
-				mLuckyQuery));
+//		localTabHost.addTab(buildInvisibleTabSpec(TabValues.LUCKY_TAB,
+//				mLuckyQuery));
 		//------------test
 		
-		
-		Intent intentTest = new Intent().setClass(this, ResultTest.class);
-		if(action.equals(ActionValues.TEST)){
-			intentTest.putExtra("result", "ok!!!!!!!!!");
-		}
 
-		
-		localTabHost.addTab(buildInvisibleTabSpec("test",
-				intentTest));
 
 	}
 

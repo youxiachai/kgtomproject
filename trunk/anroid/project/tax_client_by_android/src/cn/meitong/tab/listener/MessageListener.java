@@ -1,6 +1,6 @@
 package cn.meitong.tab.listener;
 
-import cn.meition.test.ResultTest;
+
 import cn.meitong.R;
 import cn.meitong.tab.home.MainTabActivity;
 import cn.meitong.values.ActionValues;
@@ -154,8 +154,8 @@ public class MessageListener implements OnClickListener,
 
 			case R.id.radio_button3:
 				Log.d(TAG, "sms");
-				mtActivity.changeTab(TabValues.SMSIN_TAB);
-				mtActivity.changeTitleText(R.string.title_sms);
+				mtActivity.changeTab(TabValues.LUCKY_TAB);
+				mtActivity.changeTitleText(R.string.title_lucky);
 				mtActivity.showTitleButton(true, true);
 				break;
 			case R.id.radio_button4:

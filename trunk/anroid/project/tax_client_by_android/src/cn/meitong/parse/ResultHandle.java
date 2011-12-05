@@ -3,9 +3,10 @@ package cn.meitong.parse;
 
 import org.ksoap2.serialization.SoapObject;
 
-import cn.meition.test.SoapTest;
-import cn.meiton.action.ResultValues;
+
+
 import cn.meitong.model.TestModel;
+import cn.meitong.values.ResultValues;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,11 +23,11 @@ public class ResultHandle extends Handler {
 	
 	
 	private ResultThread mThread;
-	//private Activity mActivity;
-	private SoapTest mActivity;
+	private Activity mActivity;
+	//private SoapTest mActivity;
 	
 	
-	public ResultHandle(SoapTest activity){
+	public ResultHandle(Activity activity){
 		this.mActivity = activity;
 		mThread = new ResultThread(this);
 		mThread.setmState(true);
@@ -46,7 +47,7 @@ public class ResultHandle extends Handler {
 			TestModel tm = (TestModel) b.getSerializable("soap");
 			Log.d("soap", tm.getT1()+"---"+tm.getT2());
 			
-			mActivity.dismissProgress();
+		
 			
 //			Intent intent = new Intt();
 //			mActivity.startActivity(intent);

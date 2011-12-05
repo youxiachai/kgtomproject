@@ -3,7 +3,7 @@ package cn.meitong.handleparse;
 
 import org.ksoap2.serialization.SoapObject;
 
-import cn.meition.test.SoapTest;
+
 import cn.meitong.model.TestModel;
 import cn.meitong.tab.home.MainTabActivity;
 import cn.meitong.values.ActionValues;

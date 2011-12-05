@@ -10,6 +10,7 @@ import cn.meitong.values.ActionValues;
 import cn.meitong.values.ResultValues;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.sax.StartElementListener;
 import android.util.Log;
@@ -72,5 +73,11 @@ public class ContentMananger implements OnClickListener{
 		}
 		
 	}
-	
+	public  Intent setIntent(Class<?> cls,String queryKey,String result,String action){
+		Intent intent = new Intent();
+		intent.setClass(activityContent, cls);
+		intent.setAction(action);
+		intent.putExtra(queryKey, result);
+		return intent;
+	}
 }

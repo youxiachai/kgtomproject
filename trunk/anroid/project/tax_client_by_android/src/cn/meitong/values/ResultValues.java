@@ -1,5 +1,8 @@
 package cn.meitong.values;
 
+import android.content.Context;
+import android.content.Intent;
+
 /**
  * @author Tom_achai
  * @date 2011-11-24
@@ -7,6 +10,7 @@ package cn.meitong.values;
  */
 public final class ResultValues {
 	public final static String RESULT = "result";
+	public final static String QRRESULT = "qrresult";
 	//用于测试soap
 	//public final static String NAMESPACE = "http://WebXml.com.cn/";
 	//public final static String WSDL = "http://webservice.webxml.com.cn/WebServices/WeatherWebService.asmx?wsdl";
@@ -82,10 +86,19 @@ public final class ResultValues {
 	// -------------------request&response body fields-----------------
 	
 	public final static class QueryType{
+		public final static String QUERYTYPE = "queryType";
 		public final static int normal = 0;
 		public final static int qRcode = 1;
 		public final static int phoneNumber = 2;
 		public final static int enrolment = 3;
 	}
+	public final static class QueryKey{
+		public final static String NORMAL = "normalresult";
+		public final static String QRCODE = "qrresult";
+		public final static String PHONENUMBER = "phonenumberresult";
+		public final static String ENROLMENT = "enrolmentresult";
+	}
+	
+
 	
 }
