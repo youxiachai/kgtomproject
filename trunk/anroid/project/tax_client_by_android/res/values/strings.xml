@@ -90,12 +90,14 @@
     <string name="checknumber">查询码</string>
     <string name="passwordversion">密码版本号</string>
     <string name="thephonenumberlogined">登记的手机号码</string>
+    <string name="orderphonenumber">付款方手机号码</string>
     <string name="prizelevel">中奖等级</string>
     <string name="prizeaccount">中奖金额</string>
     <string name="prizepriods">中奖期数</string>
     <string name="checkinresult">登记结果</string>
     <string name="faildes">失败描述</string>
     <string name="Invoiceamount_2">发票金额</string>
+    <string name="Invokestute">发票状态</string>
 	 <!-- xxxxxxxx -->   
 	<!-- winnum.xml -->
 	<string name="winseachoice">中奖查询方式选择</string>
