@@ -5,9 +5,7 @@
     android:orientation="vertical"
 	
     >
-       <include 
-        layout="@layout/titlebar"
-        />
+  
  		<LinearLayout
 	 	    android:orientation="horizontal"
 	 	    android:layout_width="match_parent"

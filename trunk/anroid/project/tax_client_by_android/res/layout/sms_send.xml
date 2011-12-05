@@ -4,9 +4,7 @@
     android:layout_height="match_parent" 
     style="@style/content_background">
 
-    <include
-        android:id="@+id/titlebarid"
-        layout="@layout/titlebar" />
+  
 
     <LinearLayout
         

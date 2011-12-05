@@ -11,18 +11,27 @@
 
         <!-- TabActivity 显示用的布局 -->
 
+        <include layout="@layout/titlebar" />
+
         <FrameLayout
             android:id="@android:id/tabcontent"
             android:layout_width="fill_parent"
             android:layout_height="0.0dip"
-            android:layout_weight="1.0" />
+            android:layout_weight="1.0" >
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/button_scan"
+            android:layout_width="0dip"
+            android:layout_height="0dip" />
 
         <TabWidget
             android:id="@android:id/tabs"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.0"
-            android:visibility="gone" />
+            android:visibility="gone" >
+        </TabWidget>
 
         <RadioGroup
             android:id="@id/main_radio"
@@ -45,11 +54,11 @@
                 android:drawableTop="@drawable/tab_icon_input_n"
                 android:text="@string/main_input" />
 
-<!--             <RadioButton -->
-<!--                 android:id="@+id/radio_button2" -->
-<!--                 style="@style/main_tab_bottom" -->
-<!--                 android:drawableTop="@drawable/tab_icon_lucky_unselected" -->
-<!--                 android:text="@string/main_lucky" /> -->
+            <!-- <RadioButton -->
+            <!-- android:id="@+id/radio_button2" -->
+            <!-- style="@style/main_tab_bottom" -->
+            <!-- android:drawableTop="@drawable/tab_icon_lucky_unselected" -->
+            <!-- android:text="@string/main_lucky" /> -->
 
             <RadioButton
                 android:id="@+id/radio_button3"

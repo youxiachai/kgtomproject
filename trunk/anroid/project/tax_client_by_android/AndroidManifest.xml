@@ -11,46 +11,51 @@
         android:label="@string/app_name" >
         <activity
             android:label="@string/app_name"
-            android:name=".home.MainTabActivity"
+            android:name=".tab.home.MainTabActivity"
             android:screenOrientation="portrait" >
-            
+                      
         </activity>
         <activity
             android:configChanges="orientation|keyboardHidden"
             android:name=".decoder.CaptureActivity"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-           
+          
         </activity>
-        <activity android:name=".home.SMSInputActivity" >
-        </activity>
-        <activity
-            android:name=".home.SMSSendActivity"
-            android:windowSoftInputMode="adjustResize" >
-        </activity>
-        <activity android:name=".home.HelpActivity" >
+        <activity android:name=".tab.sms.SMSInputActivity" >
         </activity>
         <activity
-            android:name=".query.HandmadeInputActivity"
+            android:name=".tab.sms.SMSSendActivity"
             android:windowSoftInputMode="adjustResize" >
         </activity>
-        <activity android:name=".query.PhoneInputActivity" >
+        <activity android:name=".tab.help.HelpActivity" >
         </activity>
-        <activity android:name=".query.WinNumInputActivity" >
+        <activity
+            android:name=".tab.query.HandmadeInputActivity"
+            android:windowSoftInputMode="adjustResize" >
         </activity>
-        <activity android:name=".result.ShowResult" >
+        <activity android:name=".tab.query.PhoneInputActivity" >
         </activity>
-        <activity android:name=".result.BackToResults" >
+        <activity android:name=".tab.query.WinNumInputActivity" >
         </activity>
-        <activity android:name=".home.ScanActivity" >
+        <activity android:name=".tab.result.ShowResult" >
+        </activity>
+        <activity android:name=".tab.result.BackToResults" >
+        </activity>
+        <activity android:name=".tab.home.ScanActivity" >
         </activity>
         <activity android:name="cn.meition.test.SoapTest">
-             <intent-filter >
+	   <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             
+            
+        </activity>
+        <activity android:name="cn.meition.test.ResultTest"></activity>
+        <activity android:name="cn.meition.test.SaxActivity">
+             
         </activity>
     </application>
 

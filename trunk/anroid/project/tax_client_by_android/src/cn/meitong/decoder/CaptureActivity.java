@@ -22,11 +22,13 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
-import cn.meitiong.camera.CameraManager;
-import cn.meiton.action.ActionValues;
-import cn.meiton.action.ResultValues;
 import cn.meitong.R;
-import cn.meitong.home.MainTabActivity;
+import cn.meitong.camera.CameraManager;
+import cn.meitong.handleparse.ResultHandle;
+import cn.meitong.tab.home.MainTabActivity;
+import cn.meitong.tab.listener.ContentMananger;
+import cn.meitong.values.ActionValues;
+import cn.meitong.values.ResultValues;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
@@ -184,11 +186,13 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 			Log.d("capture", obj.getText());
 			beepManger.playBeepSoundAndVibrate();
 			result = obj.getText();
+			Log.d(TAG, result);
 			showDialog(SCAN_DIALOG);
 		}
 
 	}
-
+	
+	private ResultHandle resultHandle;
 	public AlertDialog alertDialogBuilder(String message) {
 
 		final String qrCode = message;
@@ -204,9 +208,12 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 								Intent intent = new Intent().setClass(
 										CaptureActivity.this,
 										MainTabActivity.class);
-								intent.setAction(ActionValues.SCAN_SUCCESS);
-								intent.putExtra(ResultValues.RESULT, qrCode);
-								startActivity(intent);
+					
+								//----------------进行实时查询
+								new ContentMananger(CaptureActivity.this).haveProgressDialog();
+								ResultHandle rh = new ResultHandle(CaptureActivity.this, qrCode, ResultValues.QueryType.qRcode,true);
+								//-------------
+								
 							}
 						})
 				.setNeutralButton(R.string.title_sms,
@@ -218,9 +225,11 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
 								Intent intent = new Intent().setClass(
 										CaptureActivity.this,
 										MainTabActivity.class);
-								intent.setAction(ActionValues.SCAN_SMS);
-								intent.putExtra(ResultValues.RESULT, qrCode);
-								startActivity(intent);
+								
+								//----------------短信查验
+								new ContentMananger(CaptureActivity.this).haveProgressDialog();
+								ResultHandle rh = new ResultHandle(CaptureActivity.this, qrCode, ResultValues.QueryType.qRcode,false);
+							
 							}
 						})
 				.setNegativeButton(R.string.dialog_cancel,

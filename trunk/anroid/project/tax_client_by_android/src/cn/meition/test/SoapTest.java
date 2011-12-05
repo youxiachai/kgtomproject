@@ -23,8 +23,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import cn.meitong.R;
-import cn.meitong.parse.ResultHandle;
+import cn.meitong.handleparse.ResultHandle;
 import cn.meitong.soap.SoapUtils;
+import cn.meitong.tab.listener.ContentMananger;
+import cn.meitong.values.ResultValues;
 
 /**
  * @author Tom_achai
@@ -55,16 +57,21 @@ public class SoapTest extends Activity {
 //                        "查验中t...", true);
 				testHandle();
 			}
+
+		
 		});
 
 	}
+	
+	private void testHandle() {
+		String message = "01|281ccb05fe1354c3f07|20111031180715226|200|244061107030|08029274|4406057470918";
+		new ContentMananger(this).haveProgressDialog();
+		ResultHandle rh = new ResultHandle(this, message, ResultValues.QueryType.qRcode,true);
+		
+	}
 	private ProgressDialog dialog;
 	private ResultHandle mHandle;
-	protected void testHandle() {
-		
-		mHandle = new ResultHandle(this);
-	}
-	
+
 	public void dismissProgress(){
 	//	dialog.cancel();
 	}
