@@ -9,8 +9,9 @@
     <!-- Capture -->
     <string name="capture_tips">将二维码放置于镜头红线内进行扫描。</string>    
     <!-- TEXT  values -->
-    <string name="header_title">QR Code</string>
+   
     <string name="title_scan">扫描查验</string>
+    <string name="title_scan_result">扫描结果</string>
     <string name="title_input">输入查验</string>
     <string name="title_lucky">中奖查验</string>
     <string name="title_sms">短信查验</string>
