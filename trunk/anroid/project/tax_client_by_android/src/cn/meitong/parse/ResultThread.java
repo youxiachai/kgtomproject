@@ -45,14 +45,14 @@ public class ResultThread extends Thread {
 		super.run();
 		if (mState) {
 			Log.d("soap", "run------->start");
-			startSend();
+			//startSend();
 		}
 	}
 
 	/**
 	 * 用于向webServices 发送soap 请求 和 获得soap 的返回结果
 	 */
-	private void startSend() {
+	private void startSend(int type) {
 		//--------------test mehod
 		Channel ch = new Channel();
 
@@ -72,7 +72,7 @@ public class ResultThread extends Thread {
 		SoapObject request = new SoapObject(ResultValues.NAMESPACE,
 				ResultValues.METHOD);
 
-		SoapObject in0 = su.buildRoot(ch, ri);
+		SoapObject in0 = su.buildRoot(ch, ri,type);
 
 		request.addSoapObject(in0);
 
