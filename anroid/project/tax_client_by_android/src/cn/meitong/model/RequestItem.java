@@ -10,4 +10,6 @@ public class RequestItem {
 	public String fpdm;
 	public String fphm;
 	public String kpje;
+	
+	public String mmq;
 }

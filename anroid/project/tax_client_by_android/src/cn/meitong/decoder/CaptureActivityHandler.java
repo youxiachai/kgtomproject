@@ -26,8 +26,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import cn.meitiong.camera.CameraManager;
 import cn.meitong.R;
+import cn.meitong.camera.CameraManager;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;

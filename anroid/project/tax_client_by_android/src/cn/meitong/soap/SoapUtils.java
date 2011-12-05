@@ -16,9 +16,9 @@ import org.kxml2.kdom.Element;
 import org.kxml2.kdom.Node;
 import org.xmlpull.v1.XmlPullParserException;
 
-import cn.meiton.action.ResultValues;
 import cn.meitong.model.Channel;
 import cn.meitong.model.RequestItem;
+import cn.meitong.values.ResultValues;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -120,6 +120,7 @@ public class SoapUtils {
 			if (Debug) {
 				String requestdump = transport.requestDump;
 				String responsdump = transport.responseDump;
+				
 				Log.d(TAG, requestdump);
 				Log.d(TAG, responsdump);
 			}
@@ -204,7 +205,7 @@ public class SoapUtils {
 
 		Element passwordE = new Element().createElement(wsse, "Password");
 		passwordE.setAttribute(null, "Type", passwordType);
-		passwordE.addChild(Node.TEXT, "testPasssssssss");
+		passwordE.addChild(Node.TEXT, password);
 
 		Element nonceE = new Element().createElement(wsse, "Nonce");
 		nonceE.addChild(Node.TEXT, "nnnnnnnnnnnnn");
@@ -260,8 +261,8 @@ public class SoapUtils {
 	 * @param itemlist
 	 * @return
 	 */
-	public SoapObject buildRoot(Channel ch,List<RequestItem> itemlist) {
-
+	public SoapObject buildRoot(Channel ch,List<RequestItem> itemlist,int type) {
+		Log.d("soap", "buildRoot");
 		// 子节点
 		SoapObject in0 = new SoapObject(ResultValues.NAMESPACE,
 				ResultValues.IN0);
@@ -288,15 +289,7 @@ public class SoapUtils {
 		head.addSoapObject(service);
 		// ---构造body
 		SoapObject body = buildSoapObject(ResultValues.Body.BODY);
-		SoapObject items = buildSoapObject(ResultValues.Body.ITEMS);
-		
-		for (RequestItem requestItem : itemlist) {
-			SoapObject item = buildSoapObject(ResultValues.Item.ITEM);
-			item.addProperty(buildProperty(ResultValues.Item.FPDM, requestItem.fpdm));
-			item.addProperty(buildProperty(ResultValues.Item.FPHM, requestItem.fphm));
-			item.addProperty(buildProperty(ResultValues.Item.KPJE, requestItem.kpje));
-			items.addSoapObject(item);
-		}
+		SoapObject items = buildItem(type, itemlist);
 		
 		body.addSoapObject(items);
 		// -------
@@ -306,6 +299,88 @@ public class SoapUtils {
 
 		in0.addSoapObject(root);
 		return in0;
+	}
+	
+	
+	/**
+	 * 根据请求的类型构造相对应的item
+	 * @param type
+	 * @param itemlist
+	 * @return
+	 */
+	private SoapObject buildItem(int type,List<RequestItem> itemlist){
+		SoapObject items;
+		switch (type) {
+		case ResultValues.QueryType.normal:
+			 items = buildSoapObject(ResultValues.Body.ITEMS);
+			
+			for (RequestItem requestItem : itemlist) {
+				SoapObject item = buildSoapObject(ResultValues.Item.ITEM);
+				item.addProperty(buildProperty(ResultValues.Item.FPDM, requestItem.fpdm));
+				item.addProperty(buildProperty(ResultValues.Item.FPHM, requestItem.fphm));
+				item.addProperty(buildProperty(ResultValues.Item.KPJE, requestItem.kpje));
+				items.addSoapObject(item);
+			}
+			return items;
+		case ResultValues.QueryType.qRcode:
+			 items = buildSoapObject(ResultValues.Body.ITEMS);
+				for (RequestItem requestItem : itemlist) {
+					SoapObject item = buildSoapObject(ResultValues.Item.ITEM);
+					
+					item.addProperty(buildProperty(ResultValues.Item.MMQ, requestItem.mmq));
+				
+					items.addSoapObject(item);
+				}
+				return items;
+			
+		}
+		
+		return null;
+		
+	}
+	
+	public String testStartServiceWsse(String username,String password){
+		Log.d(TAG, "test!!!!!!!!!!!!!");
+		SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(
+				SoapEnvelope.VER11);
+		// 设置与服务器兼容的编码
+		soapEnvelope.dotNet = true;
+		Debug = true;
+		// set Body
+		soapEnvelope.setOutputSoapObject(soap);
+
+	
+			soapEnvelope.headerOut = new Element[1];
+			soapEnvelope.headerOut[0] = buildWsseHeader(soapEnvelope.env,
+					username, password);
+		
+
+		// 访问服务器
+		HttpTransportSE transport = new HttpTransportSE(wsdl);
+		if (Debug) {
+			transport.debug = true;
+		}
+
+		try {
+			transport.call(soap.getNamespace() + methods, soapEnvelope);
+			if (Debug) {
+				String requestdump = transport.requestDump;
+				String responsdump = transport.responseDump;
+				
+				Log.d(TAG, requestdump);
+				Log.d(TAG, responsdump);
+				return requestdump;
+			}
+
+			// 返回解析结果
+		
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (XmlPullParserException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 

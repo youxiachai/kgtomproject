@@ -13,8 +13,8 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-import cn.meitiong.camera.CameraManager;
 import cn.meitong.R;
+import cn.meitong.camera.CameraManager;
 
 import com.google.zxing.ResultPoint;
 

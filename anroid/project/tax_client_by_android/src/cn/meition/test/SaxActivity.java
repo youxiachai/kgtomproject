@@ -16,11 +16,12 @@ import qing.SDCardService;
 import qing.XmlReader;
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import cn.meiton.action.ResultValues;
 import cn.meitong.R;
+import cn.meitong.values.ResultValues;
 
 /**
  * @author zhang
@@ -44,12 +45,12 @@ public class SaxActivity extends Activity {
 
 		// 获得sdcard里xml的File对象
 		SDCardService s = new SDCardService();
-		File f = s.createFile("test/", "test_2.xml");
+		File f = s.createFile("test/", "test2.xml");
 
 		r = new XmlReader();
 		// 获得xml里的内容
 		String str = r.readerXML(f);
-
+		Log.d("mainTab", str);
 		SAXParserFactory spf = SAXParserFactory.newInstance();
 		XMLReader reader;
 		try {
