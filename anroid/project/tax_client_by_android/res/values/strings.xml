@@ -79,8 +79,9 @@
 	<string name="Invoiceid">发票代码</string>
     <string name="Invoicenumber">发票号码</string>
     <string name="payname">收款方名称</string>
-    <string name="paycertificalnumber">收款方证件号码</string>
+    <string name="paycertificalnumber">收款方证件</string>
     <string name="ordername">付款方名称</string>
+    <string name="ordercertificalnumber">付款方证件</string>
     <string name="Invoicedate">开票日期</string>
     <string name="Invoiceamount">金额</string>
     <string name="checktime">查验的次数</string>

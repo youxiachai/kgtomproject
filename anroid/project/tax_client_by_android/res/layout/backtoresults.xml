@@ -3,19 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    <include layout="@layout/titlebar"/>
 
-     <ImageView 
-        android:layout_width="fill_parent"
-        android:layout_height="60px"
-        android:id="@+id/resultpic"/>
-    <TextView 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="符合条件的有N条记录："/>
     <ListView 
         android:id="@android:id/list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         ></ListView>
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1.0"
+        >
+        <Button android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="短信查验"/>
+        <Button android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="实时查验"/>
+    </LinearLayout>
 
 </LinearLayout>
