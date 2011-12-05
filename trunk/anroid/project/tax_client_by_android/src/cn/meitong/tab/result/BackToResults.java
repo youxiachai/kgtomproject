@@ -36,7 +36,7 @@ public class BackToResults extends ListActivity {
 		setResultString(getIntent());
 
 		
-
+		//显示
 		MyAdapter myAdapter = new MyAdapter(this, R.layout.result_item, ada);
 
 		this.setListAdapter(myAdapter);
@@ -70,9 +70,10 @@ public class BackToResults extends ListActivity {
 	}
 
 	// 用于管理显示按钮
-	public void showButton() {
+	public void showButton(boolean isShow) {
 		
 	}
+	
 
 	private void inputData() {
 		if (resultsOfString == null) {
