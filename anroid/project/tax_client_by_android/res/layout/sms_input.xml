@@ -61,8 +61,8 @@
  	    <Button
  	        android:id="@+id/send"
  	        style="@style/content_button"
- 	        android:layout_width="127dp"
- 	       
+ 	        android:layout_width="wrap_content"
+ 	       android:background="@drawable/content_buttonbg"
  	        android:text="@string/sms_send" />
 
  	</LinearLayout>
