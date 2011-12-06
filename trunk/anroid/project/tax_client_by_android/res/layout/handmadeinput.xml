@@ -38,13 +38,13 @@
                 <EditText
                     android:layout_width="160dip"
                     android:layout_height="40dip"
-                    android:background="@drawable/content_editbg"
+                    android:background="#00FFFFFF"
                     android:gravity="center_vertical"
                     android:hint="Input Here"
                     android:inputType="number"
                     android:paddingLeft="5dip"
-                    android:textColor="#FFF"
-                    android:textColorHint="#FFF" />
+                    android:textColor="#000"
+                    android:textColorHint="#000" />
             </TableRow>
 
             <TableRow
@@ -66,13 +66,13 @@
                 <EditText
                     android:layout_width="160dip"
                     android:layout_height="40dip"
-                    android:background="@drawable/content_editbg"
+                    android:background="#00FFFFFF"
                     android:gravity="center_vertical"
                     android:hint="Input Here"
                     android:inputType="number"
                     android:paddingLeft="5dip"
-                    android:textColor="#FFF"
-                    android:textColorHint="#FFF" />
+                    android:textColor="#000"
+                    android:textColorHint="#000" />
             </TableRow>
 
             <TableRow
@@ -94,13 +94,13 @@
                 <EditText
                     android:layout_width="160dip"
                     android:layout_height="40dip"
-                    android:background="@drawable/content_editbg"
+                    android:background="#00FFFFFF"
                     android:gravity="center_vertical"
                     android:hint="Input Here"
                     android:inputType="number"
                     android:paddingLeft="5dip"
-                    android:textColor="#FFF"
-                    android:textColorHint="#FFF" />
+                    android:textColor="#000"
+                    android:textColorHint="#000" />
             </TableRow>
         </TableLayout>
 
@@ -109,7 +109,8 @@
             android:layout_width="127dp"
             android:layout_gravity="center"
             android:layout_marginTop="60dip"
-            android:text="@string/seabtntext" />
+            android:text="@string/seabtntext" 
+            android:textColor="#FFF"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -26,7 +26,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/content_textviewbg"
+                    android:background="@drawable/content_buttonbg"
                     android:gravity="center"
                     android:text="@string/phonetext"
                     android:textColor="#FFF"
@@ -37,7 +37,7 @@
                     android:id="@+id/codeinput"
                     android:layout_width="160dip"
                     android:layout_height="40dip"
-                    android:background="@drawable/content_editbg"
+                    android:background="#00ffffff"
                     android:paddingLeft="5dip"
                     android:textColor="#FFF" />
             </TableRow>
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dip"
-            android:background="@drawable/scan_background"
+            android:background="@drawable/content_buttonbg"
             android:text="@string/phoneserbtn"
             android:textColor="#FFFFFF" />
     </LinearLayout>
