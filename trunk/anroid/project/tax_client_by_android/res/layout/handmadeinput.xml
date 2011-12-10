@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   
+
+    <LinearLayout
+        style="@style/content_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="60dip" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:gravity="center"
+                android:padding="5dip" >
+
+                <TextView
+                    android:layout_width="110dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/content_buttonbg"
+                    android:gravity="center"
+                    android:text="@string/fpdm"
+                    android:textColor="#FFF"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="160dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/content_editbg"
+                    android:gravity="center_vertical"
+                    android:hint="Input Here"
+                    android:inputType="number"
+                    android:paddingLeft="5dip"
+                    android:textColor="#FFF"
+                    android:textColorHint="#FFF" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:gravity="center"
+                android:padding="5dip" >
+
+                <TextView
+                    android:layout_width="110dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/content_buttonbg"
+                    android:gravity="center"
+                    android:text="@string/fphm"
+                    android:textColor="#FFF"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="160dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/content_editbg"
+                    android:gravity="center_vertical"
+                    android:hint="Input Here"
+                    android:inputType="number"
+                    android:paddingLeft="5dip"
+                    android:textColor="#FFF"
+                    android:textColorHint="#FFF" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:gravity="center"
+                android:padding="5dip" >
+
+                <TextView
+                    android:layout_width="110dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/content_buttonbg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/hjje"
+                    android:textColor="#FFF" />
+
+                <EditText
+                    android:layout_width="160dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/content_editbg"
+                    android:gravity="center_vertical"
+                    android:hint="Input Here"
+                    android:inputType="number"
+                    android:paddingLeft="5dip"
+                    android:textColor="#FFF"
+                    android:textColorHint="#FFF" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            style="@style/content_button"
+            android:layout_width="127dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dip"
+            android:text="@string/seabtntext" />
+    </LinearLayout>
+
+</LinearLayout>

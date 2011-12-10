@@ -1,0 +1,11 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soap:Body>
+		<ns1:invokeResponse xmlns:ns1="http://services.fpzx.tax.foresee.com">
+			<ns1:out>&lt;?xml version="1.0" encoding="UTF-8" ?>&lt;root
+				identity="16929F97341EBFF001341EE04BD80005">&lt;head>&lt;service>&lt;replyCode>0&lt;/replyCode>&lt;replyMsg>查询成功&lt;/replyMsg>&lt;/service>&lt;createTime>1323367943128&lt;/createTime>&lt;/head>&lt;body>&lt;items>&lt;item>&lt;fpdm>244011106020&lt;/fpdm>&lt;fphm>05369908&lt;/fphm>&lt;fkfMc>再来吧&lt;/fkfMc>&lt;fkfZjhm>广州军区联勤部军人服务社&lt;/fkfZjhm>&lt;skfMc>再来吧&lt;/skfMc>&lt;skfZjhm>440104718171810&lt;/skfZjhm>&lt;kprq>2011-12-07&lt;/kprq>&lt;hjJe>51327.00&lt;/hjJe>&lt;skm>44130512785714454966551&lt;/skm>&lt;fkfSj
+				/>&lt;zjDj>&lt;/zjDj>&lt;zjJe>&lt;/zjJe>&lt;zjQs>&lt;/zjQs>&lt;cyCs>1&lt;/cyCs>&lt;fpztDm>02&lt;/fpztDm>&lt;fpztMc>填用&lt;/fpztMc>&lt;cxjg>1&lt;/cxjg>&lt;/item>&lt;/items>&lt;/body>&lt;/root>
+			</ns1:out>
+		</ns1:invokeResponse>
+	</soap:Body>
+</soap:Envelope>
