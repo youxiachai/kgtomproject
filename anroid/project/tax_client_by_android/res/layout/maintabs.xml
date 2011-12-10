@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <!-- TabActivity 显示用的布局 -->
+
+        <include layout="@layout/titlebar" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" >
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/button_scan"
+            android:layout_width="0dip"
+            android:layout_height="0dip" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" >
+        </TabWidget>
+
+        <RadioGroup
+            android:id="@id/main_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/tab_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_button0"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/tab_icon_scan_unselected"
+                android:text="@string/main_scan" />
+
+            <RadioButton
+                android:id="@+id/radio_button1"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/tab_icon_input_n"
+                android:text="@string/main_input" />
+
+            <!-- <RadioButton -->
+            <!-- android:id="@+id/radio_button2" -->
+            <!-- style="@style/main_tab_bottom" -->
+            <!-- android:drawableTop="@drawable/tab_icon_lucky_unselected" -->
+            <!-- android:text="@string/main_lucky" /> -->
+
+            <RadioButton
+                android:id="@+id/radio_button3"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/tab_icon_lucky_unselected"
+                android:text="@string/main_lucky" />
+
+            <RadioButton
+                android:id="@+id/radio_button4"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/tab_icon_help_unselected"
+                android:text="@string/main_help" />
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

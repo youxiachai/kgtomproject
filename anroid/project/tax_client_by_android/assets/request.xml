@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<soapenv:Header>
+<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1"><wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-13333"><wsse:Username>gdds_fpzx_chinaunicom</wsse:Username><wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">mrCE1wdMzfuW46Vdtf62gI9l3mQ=</wsse:Password><wsse:Nonce>oRWsuWW5RyQg+KuaCtlFEA==</wsse:Nonce><wsu:Created>2011-12-0806:37:17</wsu:Created></wsse:UsernameToken></wsse:Security></soapenv:Header><soapenv:Body><ns1:invoke xmlns:ns1="http://61.142.246.130/wssw-webservice/services/FpzxService" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><ns1:arg0 xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="soapenc:string">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;root&gt;
+	&lt;head&gt;
+		&lt;service&gt;
+			&lt;!-- ==  隆陇隆缃????== --&gt;
+		
+			&lt;!-- 隆陇隆缃????|m--&gt;
+			&lt;handler&gt;fpcyServiceHandler&lt;/handler&gt;&lt;!-- 隆陇???隆搂? --&gt;
+			&lt;action&gt;ewmcy&lt;/action&gt;&lt;!-- 隆洌ぢ÷ぢ＄俊楼?,1?隆搂? --&gt;
+			&lt;channel&gt;                           &lt;!--?娄藡娄士 --&gt;
+				&lt;type&gt;&lt;/type&gt;											&lt;!-- ?娄藔?隆榄★拷?????搂锟?隆楫桝P, WEB, PC_CLIENT, MOBILE_CLIENT,SMS   --&gt;
+				&lt;ip&gt;192.168.0.2&lt;/ip&gt;			        &lt;!--ip娄士隆陇隆榄??--&gt;
+				&lt;phoneNo&gt;13800000000&lt;/phoneNo&gt;    &lt;!--???隆榄??--&gt;
+				&lt;ccid&gt;&lt;/ccid&gt;                     &lt;!--SIM?隆搂隆锟铰￠??--&gt;
+				&lt;imei&gt;&lt;/imei&gt;                     &lt;!--???隆锟铰￠??--&gt;               
+			&lt;/channel&gt;
+		&lt;/service&gt;
+	&lt;/head&gt;
+	
+	&lt;body&gt;
+		&lt;items&gt; 
+			&lt;item&gt;
+				&lt;mmq&gt;01|2815ab874c0c1613e0b|20110911135532010|647|244011107030|25227078|440106190654098|n娄椰&lt;/mmq&gt;   &lt;!-- 2????锟?搂鲁?140娄恕杞?????--&gt; 
+				&lt;!-- ????菎隆榄犅°笟o?隆陇N隆锟絴?a??篓路|???隆陇隆缈♀俊缇???隆峤柯★拷??a??
+				     ?}???o01|281ccb05fe1354c3f07|20111031180715226|200|244061107030|08029274|4406057470918
+52|??q
+				--&gt;
+			&lt;/item&gt;
+		&lt;/items&gt;
+	&lt;/body&gt;
+	
+&lt;/root&gt;</ns1:arg0><ns1:arg1 xsi:nil="true"></ns1:arg1></ns1:invoke></soapenv:Body></soapenv:Envelope>
