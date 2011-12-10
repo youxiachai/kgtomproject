@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<resources>
-    <color name="black">#FF000000</color>
-    <color name="table">#FFd0d0d0</color>
-    <color name="white">#FFF8F8F8</color>
-    <color name="hui">#FFE0E0F0</color>
-    <color name="gray">#FFCCCCCC</color>
-    <color name="blue">#FF2222AA</color>
-</resources>
