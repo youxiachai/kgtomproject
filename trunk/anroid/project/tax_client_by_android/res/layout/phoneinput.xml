@@ -1,56 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/content_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical" >
 
-   
-
-    <LinearLayout
-        style="@style/content_background"
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content"
+        android:background="@drawable/tableshape" >
 
-        <TableLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="250dip" >
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
-            <TableRow
+            <TextView
+                style="@style/text_size"
                 android:layout_width="110dip"
                 android:layout_height="40dip"
-                android:layout_marginTop="60dip"
-                android:gravity="center_horizontal" >
+                android:gravity="center"
+                android:text="@string/phonetext"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/content_buttonbg"
-                    android:gravity="center"
-                    android:text="@string/phonetext"
-                    android:textColor="#FFF"
-                    android:textSize="18dip"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/codeinput"
-                    android:layout_width="160dip"
-                    android:layout_height="40dip"
-                    android:background="#00ffffff"
-                    android:paddingLeft="5dip"
-                    android:textColor="#FFF" />
-            </TableRow>
-        </TableLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dip"
-            android:background="@drawable/content_buttonbg"
-            android:text="@string/phoneserbtn"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
+            <EditText
+                android:id="@+id/phone_input"
+                 style="@style/edit_style"
+                android:layout_width="160dip"
+                android:layout_height="40dip"
+                android:inputType="number"
+                android:paddingLeft="5dip" />
+        </TableRow>
+    </TableLayout>
 
 </LinearLayout>

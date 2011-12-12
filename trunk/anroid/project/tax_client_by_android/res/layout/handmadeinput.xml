@@ -4,8 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-   
-
     <LinearLayout
         style="@style/content_background"
         android:layout_width="match_parent"
@@ -15,101 +13,93 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
-            android:layout_marginTop="60dip" >
+            android:layout_marginTop="60dip"
+            android:background="@drawable/tableshape" >
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dip"
-                android:gravity="center"
+                android:background="@drawable/toprowselector"
+                android:clickable="true"
                 android:padding="5dip" >
 
                 <TextView
+                    style="@style/text_size"
                     android:layout_width="110dip"
                     android:layout_height="40dip"
-                    android:background="@drawable/content_buttonbg"
                     android:gravity="center"
+                    android:textStyle="bold"
                     android:text="@string/fpdm"
-                    android:textColor="#FFF"
-                    android:textStyle="bold" />
+                     />
 
                 <EditText
+                    android:id="@+id/edit_fpdm"
+                    style="@style/edit_style"
                     android:layout_width="160dip"
                     android:layout_height="40dip"
-                    android:background="@drawable/content_editbg"
-                    android:gravity="center_vertical"
-                    android:hint="Input Here"
-                    android:inputType="number"
-                    android:paddingLeft="5dip"
-                    android:textColor="#FFF"
-                    android:textColorHint="#FFF" />
+                    android:paddingLeft="5dip" />
             </TableRow>
 
             <TableRow
-                android:layout_width="match_parent"
+              android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dip"
-                android:gravity="center"
-                android:padding="5dip" >
+                android:layout_marginLeft="1dip"
+                android:layout_marginRight="1dip"
+                android:background="@drawable/rowselector"
+                android:gravity="center_vertical"
+                android:padding="5dip"
+                android:clickable="true" >
 
                 <TextView
+                    style="@style/text_size"
+                    
                     android:layout_width="110dip"
                     android:layout_height="40dip"
-                    android:background="@drawable/content_buttonbg"
                     android:gravity="center"
+                    android:textStyle="bold"
                     android:text="@string/fphm"
-                    android:textColor="#FFF"
-                    android:textStyle="bold" />
+               />
 
                 <EditText
+                    style="@style/edit_style"
+                     android:id="@+id/edit_fphm"
                     android:layout_width="160dip"
                     android:layout_height="40dip"
-                    android:background="@drawable/content_editbg"
-                    android:gravity="center_vertical"
-                    android:hint="Input Here"
-                    android:inputType="number"
-                    android:paddingLeft="5dip"
-                    android:textColor="#FFF"
-                    android:textColorHint="#FFF" />
+                    android:paddingLeft="5dip" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dip"
-                android:gravity="center"
-                android:padding="5dip" >
+                android:background="@drawable/bottomrowselector"
+                android:gravity="center_vertical"
+                android:padding="5dip"
+                android:clickable="true" >
 
                 <TextView
+                   style="@style/text_size"
                     android:layout_width="110dip"
                     android:layout_height="40dip"
-                    android:background="@drawable/content_buttonbg"
                     android:gravity="center"
-                    android:inputType="number"
+                    android:textStyle="bold"
                     android:text="@string/hjje"
-                    android:textColor="#FFF" />
+                     />
 
                 <EditText
+                    style="@style/edit_style"
+                     android:id="@+id/edit_fpje"
                     android:layout_width="160dip"
                     android:layout_height="40dip"
-                    android:background="@drawable/content_editbg"
-                    android:gravity="center_vertical"
-                    android:hint="Input Here"
-                    android:inputType="number"
-                    android:paddingLeft="5dip"
-                    android:textColor="#FFF"
-                    android:textColorHint="#FFF" />
+                    android:paddingLeft="5dip" />
             </TableRow>
         </TableLayout>
 
-        <Button
-            style="@style/content_button"
-            android:layout_width="127dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dip"
-            android:text="@string/seabtntext" />
     </LinearLayout>
 
 </LinearLayout>

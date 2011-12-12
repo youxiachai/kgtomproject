@@ -49,9 +49,8 @@ public class QueryResult extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.showresult);
 		initTextView();
-		// mCode = (TextView) findViewById(R.id.showrealut_Invoicenid);
-		// mCode = (TextView) findViewById(R.id.resulttest);
-		// //做测试使用
+	
+//		// //做测试使用
 		 Intent intent = getIntent();
 		 result = intent.getStringExtra(ResultValues.QUERYRESULT);
 		//
@@ -59,11 +58,6 @@ public class QueryResult extends Activity {
 			parseResult(result);
 			setQueryResult();
 		}
-		// String [] responseItem =
-		// getResources().getStringArray(R.array.responseItem);
-		// setListAdapter(new
-		// ArrayAdapter<String>(this,R.layout.item_list,responseItem));
-		//
 
 	}
 

@@ -42,10 +42,10 @@
         <activity android:name=".tab.query.WinNumInputActivity" >
         </activity>
         <activity android:name=".tab.result.QueryResult" >
-            
+              
         </activity>
         <activity android:name=".tab.result.BackToResults" >
-             <intent-filter >
+           <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

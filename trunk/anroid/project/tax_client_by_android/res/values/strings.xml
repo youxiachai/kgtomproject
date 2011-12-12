@@ -73,30 +73,30 @@
     
         
    <!-- handmadeinput.xml -->
-	<string name="fpdm">发票代码</string>
-	<string name="fphm">发票号码</string>
-	<string name="hjje">发票金额</string>
+	<string name="fpdm">发票代码:</string>
+	<string name="fphm">发票号码:</string>
+	<string name="hjje">发票金额:</string>
 	<string name="seabtntext">查询</string>
 	<!-- xxxxxxx -->
 
-    <string name="skfmc">收款方名称</string>
-    <string name="skfzjhm">收款方证件号码</string>
-    <string name="fkfmc">付款方名称</string>
-    <string name="fkfzjhm">付款方证件号码</string>
-    <string name="kprq">开票日期</string>
+    <string name="skfmc">收款方名称:</string>
+    <string name="skfzjhm">收款方证件号码:</string>
+    <string name="fkfmc">付款方名称:</string>
+    <string name="fkfzjhm">付款方证件号码:</string>
+    <string name="kprq">开票日期:</string>
 
-    <string name="cycs">查验的次数</string>
-    <string name="skm">税控码</string>
+    <string name="cycs">查验的次数:</string>
+    <string name="skm">税控码:</string>
   
-    <string name="thephonenumberlogined">登记的手机号码</string>
-    <string name="fkfsj">付款方手机号码</string>
-    <string name="zjdj">中奖等级</string>
-    <string name="zjje">中奖金额</string>
-    <string name="zjqs">中奖期数</string>
-    <string name="checkinresult">登记结果</string>
-    <string name="faildes">失败描述</string>
+    <string name="thephonenumberlogined">登记的手机号码:</string>
+    <string name="fkfsj">付款方手机号码:</string>
+    <string name="zjdj">中奖等级:</string>
+    <string name="zjje">中奖金额:</string>
+    <string name="zjqs">中奖期数:</string>
+    <string name="checkinresult">登记结果:</string>
+    <string name="faildes">失败描述:</string>
 
-    <string name="fpztmc">发票状态</string>
+    <string name="fpztmc">发票状态:</string>
 	 <!-- xxxxxxxx -->   
 	<!-- winnum.xml -->
 	<string name="winseachoice">中奖查询方式选择</string>
@@ -106,8 +106,9 @@
 	
 	    
 	<!-- scan.xml -->
-	<string name="scan_text">扫描</string>
-	
+	<string name="scan_text">二维码扫描</string>
+	<string name="scan_history">发票查验记录</string>
+		<string name="scan_lucky">中奖历史记录</string>
 	<!-- scan dialog -->
 	<string name="dialog_title">二维码信息:</string>
 	<string name="dialog_cancel">重新扫描</string>

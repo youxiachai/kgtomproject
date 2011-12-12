@@ -43,6 +43,9 @@ public class SoapBuild {
 				"UsernameToken");
 		usernameToken.setPrefix("wsu", wsu);
 		usernameToken.setAttribute(wsu, "Id", "token");
+		String token = WsseUtils.userNameToken(8);
+		//生成密码username token
+		usernameToken.addChild(Node.TEXT, token);
 
 		// --------------节点定义
 		String nonce = WsseUtils.randomString(16).toString();

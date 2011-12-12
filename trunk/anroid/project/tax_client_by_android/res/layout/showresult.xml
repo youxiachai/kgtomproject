@@ -1,52 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/content_background"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" 
-   
-    >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+      style="@style/content_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
     <TableLayout
         android:id="@+id/tableLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-   		
-         >
+        android:layout_height="wrap_content" 
+        android:background="@drawable/tableshape" >
 
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-             >
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fpdm" />
+                android:text="@string/fpdm"
+              
+                 />
 
             <TextView
                 android:id="@+id/fpdm"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fpdm" />
+                android:text="@string/fpdm" 
+            
+                />
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-             android:gravity="center"
-             >
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fphm" />
 
             <TextView
                 android:id="@+id/fphm"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fphm" />
@@ -56,15 +67,21 @@
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-              android:gravity="center" >
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fkfmc" />
 
             <TextView
                 android:id="@+id/fkfmc"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fkfmc" />
@@ -74,32 +91,45 @@
             android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-              android:gravity="center" >
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fkfzjhm" />
 
             <TextView
                 android:id="@+id/fkfzjhm"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fkfzjhm" />
+
         </TableRow>
 
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-              android:gravity="center" >
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/skfmc" />
 
             <TextView
                 android:id="@+id/skfmc"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/skfmc" />
@@ -107,16 +137,22 @@
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-              android:gravity="center">
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/skfzjhm" />
 
             <TextView
                 android:id="@+id/skfzjhm"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/skfzjhm" />
@@ -124,16 +160,22 @@
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-              android:gravity="center">
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/kprq" />
 
             <TextView
                 android:id="@+id/kprq"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/kprq" />
@@ -141,16 +183,22 @@
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-              android:gravity="center">
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hjje" />
 
             <TextView
                 android:id="@+id/hjje"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hjje" />
@@ -159,15 +207,21 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-              android:gravity="center" >
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/skm" />
 
             <TextView
                 android:id="@+id/skm"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/skm" />
@@ -175,16 +229,22 @@
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-              android:gravity="center">
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fkfsj" />
 
             <TextView
                 android:id="@+id/fkfsj"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fkfsj" />
@@ -193,15 +253,21 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-              android:gravity="center" >
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/zjdj" />
 
             <TextView
                 android:id="@+id/zjdj"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/zjdj" />
@@ -210,15 +276,21 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-              android:gravity="center" >
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/zjje" />
 
             <TextView
                 android:id="@+id/zjje"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/zjje" />
@@ -226,16 +298,22 @@
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-              android:gravity="center">
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/zjqs" />
 
             <TextView
                 android:id="@+id/zjqs"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/zjqs" />
@@ -244,15 +322,21 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-              android:gravity="center" >
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cycs" />
 
             <TextView
                 android:id="@+id/cycs"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cycs" />
@@ -261,19 +345,25 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-              android:gravity="center" >
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
 
             <TextView
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fpztmc" />
 
             <TextView
                 android:id="@+id/fpztmc"
+                style="@style/text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fpztmc" />
         </TableRow>
     </TableLayout>
 
-</LinearLayout>
+</ScrollView>
