@@ -66,7 +66,9 @@ public class SoapUtils {
 			soaprequest.call("", soapEnvelope);
 			// 获取服务器返回内容
 			responsedump = soaprequest.responseDump;
+			String requestdump = soaprequest.requestDump;
 			Log.d("soap", responsedump);
+			Log.d("soap", requestdump);
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

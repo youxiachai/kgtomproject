@@ -3,6 +3,8 @@ package cn.meitong.tab.listener;
 
 import cn.meitong.R;
 import cn.meitong.tab.home.MainTabActivity;
+import cn.meitong.tab.query.HandmadeInputActivity;
+import cn.meitong.tab.query.PhoneInputActivity;
 import cn.meitong.values.ActionValues;
 import cn.meitong.values.ResultValues;
 import cn.meitong.values.TabValues;
@@ -111,12 +113,18 @@ public class MessageListener implements OnClickListener,
 	private void sendQuery(String tag){
 		
 		if(tag.equals(TabValues.INPUT_TAB)){
-			
+			HandmadeInputActivity hi = (HandmadeInputActivity) mtActivity.getCurrentActivity();
+			 hi.sendToQuery();
 			Log.d(TAG,"query!!!!!!"+mtActivity.getCurrentActivity().getClass().getName());
 		}
 		if(tag.equals(TabValues.SMSIN_TAB)){
 			Log.d(TAG,"query!!!!!!"+mtActivity.getCurrentActivity().getClass().getName());
 		}
+		if(tag.equals(TabValues.PHONENO_TAB)){
+			PhoneInputActivity pia = (PhoneInputActivity) mtActivity.getCurrentActivity();
+			pia.sendToQuery();
+		}
+	
 	}
 	
 	private void back() {

@@ -175,10 +175,12 @@ public class MainTabActivity extends TabActivity {
 		if(action.equals(ActionValues.INPUTPHONE)){
 			this.mHost.setCurrentTabByTag(TabValues.PHONENO_TAB);
 			changeTitleText(R.string.title_phoneinput);
+			showTitleButton(true, true);
 		}
 		if(action.equals(ActionValues.INPUTQUERY)){
 			this.mHost.setCurrentTabByTag(TabValues.INPUT_TAB);
 			changeTitleText(R.string.title_input);
+			
 			rInput.setChecked(true);
 		}
 		
