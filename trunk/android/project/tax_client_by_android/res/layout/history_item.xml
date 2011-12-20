@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+      android:background="@drawable/listbackground"
+    android:orientation="horizontal" >
+      <TextView
+        
+        android:gravity="right"
+        android:textSize="18sp"
+        android:id="@+id/history_date"
+        android:layout_width="110dip"
+        android:layout_height="fill_parent"
+        android:text="title" 
+        android:textColor="#043afc"/>
+
+    <TextView 
+    
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+        android:id="@+id/history_result"
+        android:text="invokevalue"
+        android:textColor="#000"/>
+
+</LinearLayout>

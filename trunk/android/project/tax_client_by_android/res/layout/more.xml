@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/content_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="top"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:id="@+id/help_tablelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/tableshape" >
+     <TableRow
+                android:id="@+id/help_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:background="@drawable/toprowselector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tab_icon_help_unselected" />
+
+                <TextView
+                    style="@style/text_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:autoLink="web"
+                
+                    android:text="@string/dsxx"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/expander_ic_minimized" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/help_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:background="@drawable/rowselector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tab_icon_help_unselected" />
+
+                <TextView
+                    style="@style/text_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:autoLink="web"
+                
+                    android:text="@string/ltyet"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/expander_ic_minimized" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/help_middle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:layout_marginLeft="1dip"
+                android:layout_marginRight="1dip"
+                android:background="@drawable/rowselector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tab_icon_help_unselected" />
+
+                <TextView
+                    style="@style/text_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                     android:autoLink="web"
+                    android:text="@string/ltwmh"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/expander_ic_minimized" />
+            </TableRow>
+	
+                   <TableRow
+                android:id="@+id/help_middle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:layout_marginLeft="1dip"
+                android:layout_marginRight="1dip"
+                android:background="@drawable/rowselector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tab_icon_help_unselected" />
+
+                <TextView
+                    style="@style/text_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                     android:autoLink="web"
+                    android:text="@string/xmgd"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/expander_ic_minimized" />
+            </TableRow>
+                   <TableRow
+                android:id="@+id/help_middle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:layout_marginLeft="1dip"
+                android:layout_marginRight="1dip"
+                android:background="@drawable/rowselector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tab_icon_help_unselected" />
+
+                <TextView
+                    style="@style/text_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                     android:autoLink="web"
+                    android:text="@string/yqwo"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/expander_ic_minimized" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/help_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:background="@drawable/bottomrowselector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                  
+                    android:background="@drawable/tab_icon_help_unselected" />
+
+                <TextView
+                    style="@style/text_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="@string/gddswap"
+                    android:autoLink="web"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/expander_ic_minimized" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

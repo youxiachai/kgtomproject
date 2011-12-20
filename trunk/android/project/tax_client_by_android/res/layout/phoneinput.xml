@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/content_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dip"
+        android:clickable="true"
+        android:gravity="center_vertical"
+         android:background="@drawable/toprowselector"
+        android:padding="5dip" >
+
+        <TextView
+            style="@style/text_size"
+            android:layout_width="110dip"
+            android:layout_height="40dip"
+            android:gravity="center"
+            android:text="@string/phonetext"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/phone_input"
+            style="@style/edit_style"
+            android:layout_width="160dip"
+            android:layout_height="40dip"
+            android:hint="@string/phonenolength"
+            android:inputType="number"
+            android:paddingLeft="5dip" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dip"
+        android:clickable="true"
+           android:background="@drawable/rowselector"
+        android:gravity="center_vertical"
+        android:padding="5dip" >
+
+        <TextView
+            style="@style/text_size"
+            android:layout_width="110dip"
+            android:layout_height="40dip"
+            android:gravity="center"
+            android:text="@string/kprqq"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fp_date_start"
+            style="@style/edit_style"
+            android:layout_width="160dip"
+            android:layout_height="40dip"
+            android:hint="@string/kprqq"
+            android:paddingLeft="5dip" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dip"
+        android:clickable="true"
+        android:gravity="center_vertical"
+          android:background="@drawable/bottomrowselector"
+        android:padding="5dip" >
+
+        <TextView
+            style="@style/text_size"
+            android:layout_width="110dip"
+            android:layout_height="40dip"
+            android:gravity="center"
+            android:text="@string/kprqz"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fp_date_end"
+            style="@style/edit_style"
+            android:layout_width="160dip"
+            android:layout_height="40dip"
+            android:hint="@string/kprqz"
+            android:paddingLeft="5dip" />
+    </TableRow>
+
+</TableLayout>

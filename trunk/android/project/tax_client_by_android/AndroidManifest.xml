@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.meitong"
+    android:versionCode="1"
+    android:versionName="1.2" >
+
+    <uses-sdk android:minSdkVersion="7" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Wifi related -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:icon="@drawable/ic_tax"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".tab.home.MainTabActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+           
+        </activity>
+        <activity
+            android:name=".decoder.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        	   <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".tab.sms.SMSInputActivity" >
+        </activity>
+        <activity
+            android:name=".tab.sms.SMSSendActivity"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity android:name=".tab.help.HelpActivity" >
+        </activity>
+        <activity
+            android:name=".tab.query.HandmadeInputActivity"
+            android:windowSoftInputMode="adjustResize" >
+             
+        </activity>
+        <activity android:name=".tab.query.PhoneInputActivity" >
+        </activity>
+        <activity android:name=".tab.query.WinNumInputActivity" >
+        </activity>
+        <activity android:name=".tab.result.QueryResult" >
+        </activity>
+        <activity android:name=".tab.result.BackToResults" >
+            
+        </activity>
+        <activity android:name=".tab.home.ScanActivity" >
+        </activity>
+        <activity android:name="cn.meitong.test.SoapTest" >
+        </activity>
+        <activity android:name="cn.meition.test.ResultTest" >
+        </activity>
+        <activity android:name="cn.meition.test.SaxActivity" >
+        </activity>
+        <activity android:name=".test.SoapTest" >
+        </activity>
+        <activity android:name=".test.SaxTest" >
+        </activity>
+        <activity android:name=".tab.query.LuckyInput" >
+        </activity>
+        <activity android:name=".tab.result.LuckyResult" >
+        </activity>
+        <activity android:name=".tab.more.MoreActivity"></activity>
+        <activity android:name=".tab.home.SelectHistoryType"></activity>
+        <activity android:name=".tab.home.ShowHistoryResult" android:screenOrientation="portrait"  android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity android:name=".tab.help.Help_2"></activity>
+        <activity android:name=".tab.help.Help_3"></activity>
+    </application>
+
+</manifest>

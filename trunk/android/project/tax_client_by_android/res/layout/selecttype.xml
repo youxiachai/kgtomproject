@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/help_tablelayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     style="@style/content_background"
+ >
+
+    <TableRow
+           android:id="@+id/history_qrcode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dip"
+        android:background="@drawable/toprowselector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="5dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_icon_help_unselected" />
+
+        <TextView
+            style="@style/text_left"
+         
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="@string/history_qrcorde"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/expander_ic_minimized" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/history_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dip"
+        android:layout_marginLeft="1dip"
+        android:layout_marginRight="1dip"
+        android:background="@drawable/rowselector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="5dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_icon_lucky_unselected" />
+
+        <TextView
+            style="@style/text_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="@string/history_input"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/expander_ic_minimized" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/history_sms"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dip"
+        android:background="@drawable/bottomrowselector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="5dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:background="@drawable/version" />
+
+        <TextView
+            style="@style/text_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="@string/history_sms"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/expander_ic_minimized" />
+    </TableRow>
+
+</TableLayout>

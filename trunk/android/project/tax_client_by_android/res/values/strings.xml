@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+ 
+    <string name="app_name">税务查询</string>
+    <!-- BUTTON values -->
+    <string name="back">返回</string>
+    <string name="query">查询</string>
+    <string name="lucky_input">中奖登记</string>
+    <string name="lucky_up">在线登记</string>
+    
+    <!-- Capture -->
+    <string name="capture_tips">将二维码放置于镜头红线内进行扫描。</string>    
+    <!-- TEXT  values -->
+   <string name="dialog_back">返回到主界面</string>
+    <string name="title_scan">扫描查验</string>
+    <string name="title_scan_result">扫描结果</string>
+    <string name="title_input">输入查验</string>
+    <string name="title_lucky">中奖查询</string>
+     <string name="title_lucky_result">中奖登记结果</string>
+    <string name="title_lucky_input">中奖登记</string>
+    <string name="title_sms">短信查验</string>
+    <string name="title_query">实时查验</string>
+    <string name="title_sms_send">短信发送</string>
+    <string name="title_phoneinput">手机号码查验</string>
+    <string name="title_help">帮助</string>
+    <string name="title_help_2">常用电话</string>
+    <string name="title_help_3">版本说明</string>
+       <string name="title_more">更多</string>
+    <string name="title_showresult">显示结果</string>
+    <string name="title_queryresult">查验结果</string>
+    <string name="title_history">历史记录</string>
+    <!-- share preferneces -->
+    <string name="preferences_actions_title">找到条码时</string>
+    <string name="preferences_bulk_mode_summary">连续扫描并保存多个条形码</string>
+    <string name="preferences_bulk_mode_title">批量扫描模式</string>
+    <string name="preferences_copy_to_clipboard_title">复制到剪切板</string>
+    <string name="preferences_custom_product_search_title">自定义搜索网址</string>
+    <string name="preferences_decode_1D_title">扫描 一维条码</string>
+    <string name="preferences_decode_Data_Matrix_title">扫描 DM码</string>
+    <string name="preferences_decode_QR_title">扫描 QR码</string>
+    <string name="preferences_front_light_summary">前灯可用时，打开前灯</string>
+    <string name="preferences_front_light_title">前灯</string>
+    <string name="preferences_general_title">一般设置</string>
+    <string name="preferences_name">设置</string>
+    <string name="preferences_play_beep_title">提示音</string>
+    <string name="preferences_remember_duplicates_summary">在历史记录中保存重复记录</string>
+    <string name="preferences_remember_duplicates_title">记住重复</string>
+    <string name="preferences_result_title">结果设置</string>
+    <string name="preferences_reverse_image_summary">设备上启用了前置摄像头只</string>
+    <string name="preferences_reverse_image_title">反转摄像机的图像</string>
+    <string name="preferences_scanning_title">条码类型选择</string>
+    <string name="preferences_supplemental_summary">尝试检索关于条码内容的更多信息</string>
+    <string name="preferences_supplemental_title">检索更多信息</string>
+    <string name="preferences_vibrate_title">振动</string>
+    <string formatted="false" name="preferences_custom_product_search_summary">Use %s as a placeholder for the product ID, and %f for format</string>
+    <!-- TAB HOST -->
+    <string name="main_scan">扫描查询</string>
+    <string name="main_input">输入查询</string>
+    <string name="main_lucky">中奖查询</string>
+    <string name="main_sms">短信查询</string>
+    <string name="main_help">帮助</string>
+    <string name="main_more">更多</string>
+
+    <!-- PHONE INPUT -->
+    <string name="phonetext">手机号码</string>
+    <string name="phoneserbtn">查询</string>
+
+    <!-- HelpActivity layout values -->
+    <string name="help_user">使用说明</string>
+    <string name="help_lucky">地税常用电话</string>
+    <string name="help_other">版本说明</string>
+
+    <!-- SMS layout values -->
+    <!-- SMSInputActivity values -->
+    <string name="sms_input_no">发票号码</string>
+    <!-- SMSSendActivity values -->
+    <string name="sms_sendto">收件人:</string>
+    <string name="sms_send_address">123662900</string>
+    <!-- SMS layout button values -->
+    <string name="sms_send">发送</string>
+    <string name="sms_edittext_hint">input here</string>
+    
+        
+   <!-- handmadeinput.xml -->
+	<string name="fpdm">发票代码:</string>
+	<string name="fphm">发票号码:</string>
+	<string name="hjje">发票金额:</string>
+	<string name="seabtntext">查询</string>
+	<!-- xxxxxxx -->
+
+    <string name="skfmc">收款方名称:</string>
+    <string name="skfzjhm">收款方证件号码:</string>
+    <string name="fkfmc">付款方名称:</string>
+    <string name="fkfzjhm">付款方证件号码:</string>
+    <string name="kprq">开票日期:</string>
+
+    <string name="cycs">查验的次数:</string>
+    <string name="skm">税控码:</string>
+  
+    <string name="thephonenumberlogined">登记的手机号码:</string>
+    <string name="fkfsj">付款方手机号码:</string>
+    <string name="zjdj">中奖等级:</string>
+    <string name="zjje">中奖金额:</string>
+    <string name="zjqs">中奖期数:</string>
+    <string name="checkinresult">登记结果:</string>
+    <string name="faildes">失败描述:</string>
+
+    <string name="fpztmc">发票状态:</string>
+	 <!-- xxxxxxxx -->   
+	<!-- winnum.xml -->
+	<string name="winseachoice">中奖查询方式选择</string>
+	<string name="qrcodesea">二维码查询</string>
+	<string name="phonenumsea">手机号码查询</string>
+	<string name="input_invoice">输入发票信息查询</string>
+	
+	    
+	<!-- scan.xml -->
+	<string name="scan_text">二维码扫描</string>
+	<string name="scan_check">发票查验记录</string>
+	<string name="scan_query">发票查询记录</string>
+		<string name="scan_lucky">中奖登记记录</string>
+	<!-- scan dialog -->
+	<string name="dialog_title">二维码信息:</string>
+	<string name="dialog_cancel">重新扫描</string>
+	
+	<!-- lucky -->
+	<string name="lucky_phoneno">手机号码</string>
+	<string name="kprqq">开票日期起</string>
+	<string name="kprqz">开票日期止</string>
+	<string name="phonenolength">手机号码长度为11位</string>
+	<string name="fpdmlength">12位数字</string>
+	<string name="fphmlength">8位数字</string>
+	<string name="onlinequery">实时查验</string>
+	<string name="smsquery">短信查验</string>
+	<string name="smsdj">短信登记</string>
+	<string name="fpje">金额</string>
+	
+	<!-- more -->
+	<string name="dsxx">地税信息\n http://www.gdltax.gov.cn</string>
+	<string name="ltyet">联通营业厅\n http://wap.10010.cn</string>
+	<string name="ltwmh">联通沃门户\n http://m.wo.com.cn</string>
+	<string name="xmgd">炫魅广东\n http://g.iuni.com.cn</string>
+	<string name="yqwo">3G一起沃\n http://wap.17wo.cn</string>
+	<string name="gddswap">广东地税WAP在线\n </string>
+	<!-- history -->
+	<string name="history_qrcorde">二维码信息</string>
+	<string name="history_input">输入信息</string>
+	<string name="history_sms">短信信息</string>
+	<string name="history_title_query">查询信息</string>
+	<string name="history_title_date">查询时间</string>
+	<string name="help2_sjdatzb">省局大堂值班：</string>
+	<string name="help2_sjdatbhm">020-85299032</string>
+	<string name="gddsns">广东地税纳税服务热线：</string>
+	<string name="gddsnshm">12366-2</string>
+	<string name="fponline">发票在线系统技术支持热线：</string>
+	<string name="fponlinehm">10000-9 \n（周一至周日24小时）</string>
+	<string name="zfxigk">政府信息公开：</string>
+	<string name="zfxxgkhm">020-85299455</string>
+	<string name="wzzgbm">网站工作主管部门：</string>
+	<string name="wzzgbmhm">020-85299270</string>
+	<string name="version_text">版本：v1.0 \n 版权所属：中国联合网络通信有限公司广东省分公司\n
+	    广州美通信息科技有限公司提供技术支持</string>
+	
+</resources>
