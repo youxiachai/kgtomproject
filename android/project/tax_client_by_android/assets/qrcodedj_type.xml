@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<head>
+		<service>
+			<handler>fpcyServiceHandler</handler>
+			<action>ermcjdj</action>
+			<channel>
+				<type>MOBILE_CLIENT</type>
+				<ip>192.168.0.2</ip>
+				<phoneNo>13800000000</phoneNo>
+				<ccid></ccid>
+				<imei></imei>
+			</channel>
+		</service>
+	</head>
+	<body>
+		<items>
+			<item>
+				<mmq>
+				</mmq>
+				<fkfSj>
+				</fkfSj>
+			</item>
+		</items>
+	</body>
+</root>

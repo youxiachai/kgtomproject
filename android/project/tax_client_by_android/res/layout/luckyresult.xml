@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    style="@style/content_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tableshape" >
+         <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@drawable/toprowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
+
+            <TextView
+                style="@style/text_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fpdm" />
+
+            <TextView
+                android:id="@+id/fpdm"
+                style="@style/text_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fpdm" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@drawable/rowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
+
+            <TextView
+                style="@style/text_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fphm" />
+
+            <TextView
+                android:id="@+id/fphm"
+                style="@style/text_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fphm" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+           android:background="@drawable/rowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
+
+            <TextView
+                style="@style/text_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hjje" />
+
+            <TextView
+                android:id="@+id/hjje"
+                style="@style/text_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hjje" />
+        </TableRow>
+
+               <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@drawable/rowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
+
+            <TextView
+                style="@style/text_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lucky_phoneno" />
+
+            <TextView
+                android:id="@+id/fkfsj"
+                style="@style/text_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fkfsj" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@drawable/bottomrowselector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="5dip" >
+
+            <TextView
+                style="@style/text_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kprq" />
+
+            <TextView
+                android:id="@+id/kprq"
+                style="@style/text_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kprq" />
+        </TableRow>
+
+
+
+       
+    </TableLayout>
+
+</ScrollView>

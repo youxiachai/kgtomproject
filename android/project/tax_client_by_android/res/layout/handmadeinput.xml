@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+       style="@style/content_background">
+
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/tableshape" >
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:background="@drawable/toprowselector"
+                android:clickable="true"
+                android:padding="5dip" >
+
+                <TextView
+                    style="@style/text_size"
+                    android:layout_width="110dip"
+                    android:layout_height="40dip"
+                    android:gravity="center"
+                    android:text="@string/fpdm"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_fpdm"
+                    style="@style/edit_style"
+                    android:layout_width="160dip"
+                    android:layout_height="40dip"
+                    android:paddingLeft="5dip" 
+                    android:hint="@string/fpdmlength"
+                    >
+					
+                
+                </EditText>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:layout_marginLeft="1dip"
+                android:layout_marginRight="1dip"
+                android:background="@drawable/rowselector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="5dip" >
+
+                <TextView
+                    style="@style/text_size"
+                    android:layout_width="110dip"
+                    android:layout_height="40dip"
+                    android:gravity="center"
+                    android:text="@string/fphm"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_fphm"
+                    style="@style/edit_style"
+                    android:layout_width="160dip"
+                    android:layout_height="40dip"
+                    android:paddingLeft="5dip"
+                   android:hint="@string/fphmlength" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:background="@drawable/bottomrowselector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="5dip" >
+
+                <TextView
+                    style="@style/text_size"
+                    android:layout_width="110dip"
+                    android:layout_height="40dip"
+                    android:gravity="center"
+                    android:text="@string/hjje"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_fpje"
+                    style="@style/edit_style"
+                    android:layout_width="160dip"
+                    android:layout_height="40dip"
+                    android:paddingLeft="5dip" 
+                     android:hint="@string/fpje"
+                    />
+            </TableRow>
+        </TableLayout>
+
+
+</LinearLayout>
