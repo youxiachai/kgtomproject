@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, ShowActivity!</string>
+    <string name="app_name">Shop_by_achai</string>
+  	<string name="statics">统计</string>
+  	<string name="analysis">分析</string>
+  	<string name="recordes">记账</string>
+  	<string name="option">设置店铺成本</string>
+  	<string name="shop_rent">店铺成本</string>
+  	<string name="hr_cost">人力成本</string>
+  	<string name="others_cost">杂项支出</string>
+  	<string name="record_category">类别名称</string>
+  	<string name="add_category">添加类别</string>
+  	<string name="record_confirm">确定</string>
+	<string name="record_cancel">取消</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <EditTextPreference android:key="@string/shop_rent" android:title="@string/shop_rent">
+        
+        
+    </EditTextPreference>
+    <EditTextPreference android:key="@string/hr_cost" android:title="@string/hr_cost"/>
+    <EditTextPreference android:key="@string/others_cost" android:title="@string/others_cost"/>
+
+</PreferenceScreen>
