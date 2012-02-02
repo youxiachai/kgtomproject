@@ -1,0 +1,8 @@
+bin/
+gen/
+jar/
+sqlite/
+javadoc/
+release/
+*.properties
+.DS_Store

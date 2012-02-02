@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="main_radio" type="id"></item>
+    <item name="statistics" type="id"></item>
+    <item name="analysis" type="id"></item>
+    <item name="records" type="id"></item>
+    <item name="option_menu" type="id"></item>
+</resources>

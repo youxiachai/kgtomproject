@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="record_all">
+        <item >类别</item>
+        <item >供应商</item>
+        <item >货物</item>
+        <item >库存</item>
+        <item >销售</item>
+    </string-array>
+    <string-array name="curd_array">
+        <item >添加</item>
+        <item >修改</item>
+        <item >删除</item>
+        
+    </string-array>
+    
+</resources>
