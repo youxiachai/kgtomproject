@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -16,9 +14,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.achai.R;
-import com.achai.shop.model.Category;
-import com.achai.shop.services.CategoryServices;
-import com.achai.shop.utils.DialogUtils;
+import com.achai.shop.services.ListItemListening;
+import com.achai.shop.utils.DialogFactory;
 
 public class Records extends Activity {
 
@@ -35,19 +32,7 @@ public class Records extends Activity {
 		
 		String [] records = getResources().getStringArray(R.array.record_all);
 		lv.setAdapter(new ArrayAdapter<String>(this, R.layout.items,records));
-		lv.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				TextView tv = (TextView) view;
-				if(tv.getText().equals("类别")){
-					Intent categoryService = new Intent();
-					categoryService.setClass(Records.this, CategoryServices.class);
-					startActivityForResult(categoryService, position);
-				}
-			}
-		});
+		lv.setOnItemClickListener(new ListItemListening(this));
 		
 		
 		
@@ -66,7 +51,7 @@ public class Records extends Activity {
 	@Override
 	protected Dialog onCreateDialog(int id) {
 		switch (id) {
-		case DialogUtils.RECORD_CATEGORY:
+		case DialogFactory.RECORD_CATEGORY:
 			//添加一个自定义对话框
 			LayoutInflater factory = LayoutInflater.from(this);
 			final View categoryView = factory.inflate(R.layout.record_category, null);

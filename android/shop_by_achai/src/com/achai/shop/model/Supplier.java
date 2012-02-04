@@ -15,7 +15,7 @@ import com.j256.ormlite.table.DatabaseTable;
 @DatabaseTable(tableName="supplier")
 public class Supplier {
 	@DatabaseField(generatedId=true,columnName="supplier_id")
-	private int id;
+	private int supplier_id;
 	@DatabaseField()
 	private String name;
 	
@@ -26,7 +26,7 @@ public class Supplier {
 	private Date lastSupply; 
 	
 	public int getId() {
-		return id;
+		return supplier_id;
 	}
 
 
@@ -38,6 +38,12 @@ public class Supplier {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public void setLastSupply(Date lastSupply) {
+		this.lastSupply = lastSupply;
+	}
+
+
 
 	public String getPhone() {
 		return phone;
@@ -59,5 +65,10 @@ public class Supplier {
 	
 	public Supplier(long millis){
 		this.lastSupply = new Date(millis);
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.name;
 	}
 }

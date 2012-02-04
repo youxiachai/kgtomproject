@@ -14,16 +14,16 @@ import com.j256.ormlite.table.DatabaseTable;
 @DatabaseTable(tableName="category")
 public class Category {
 	@DatabaseField(generatedId = true ,columnName="category_id")
-	private int id;
+	private int category_id;
 	@DatabaseField
 	private String name;
 	
 	public int getId() {
-		return id;
+		return category_id;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.category_id = id;
 	}
 
 	public String getName() {
@@ -40,10 +40,10 @@ public class Category {
 	
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("id=").append(id);
-		sb.append(", ").append("name=").append(name);
-		return sb.toString();
+//		StringBuilder sb = new StringBuilder();
+//		sb.append("id=").append(id);
+//		sb.append(", ").append("name=").append(name);
+		return this.name;
 		
 	}
 }
