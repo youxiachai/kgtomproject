@@ -4,11 +4,9 @@
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry kind="lib" path="libs/achartengine-0.7.0.jar" sourcepath="/AChartEngine"/>
-	<classpathentry kind="lib" path="libs/androrm.jar" sourcepath="doc/androrm/pxlplnt-androrm-36601d2/src"/>
-	<classpathentry kind="lib" path="libs/commons-lang3-3.0.1.jar" sourcepath="doc/androrm/commons-lang3-3.1/commons-lang3-3.1-sources.jar">
+	<classpathentry kind="lib" path="libs/achartengine-0.7.0.jar" sourcepath="D:/Project/root/practise/android/game_engine/shop_by_achai/doc/achartEngine/src">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:platform:/resource/shop_by_achai/doc/androrm/commons-lang3-3.1/commons-lang3-3.1-javadoc.jar!/"/>
+			<attribute name="javadoc_location" value="jar:platform:/resource/shop_by_achai/doc/achartEngine/achartengine-0.7.0-javadocs.zip!/"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="libs/ormlite-android-4.33.jar" sourcepath="doc/ormlite_android/ormlite-android-4.33-sources.jar">

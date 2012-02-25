@@ -120,7 +120,8 @@ public class LinChart extends ShopAbstractChart {
 		    renderer.setPanEnabled(false, false);
 		    //设置是否支持两点缩放
 		    renderer.setZoomEnabled(false, false);
-		    
+			// 设置页边空白的颜色
+			renderer.setMarginsColor(Color.CYAN);
 		    renderer.setXLabelsAlign(Align.CENTER);
 		    renderer.setYLabelsAlign(Align.RIGHT);
 		    
@@ -129,7 +130,12 @@ public class LinChart extends ShopAbstractChart {
 		    renderer.setYLabels(10);
 		    renderer.setChartTitleTextSize(20);
 		    
-		    
+			// 设置坐标轴,轴的颜色
+			renderer.setAxesColor(Color.RED);
+			// 显示网格
+			renderer.setShowGrid(true);
+			// 设置x,y轴上的刻度的颜色
+			renderer.setLabelsColor(Color.BLACK);
 		  int  length = renderer.getSeriesRendererCount();
 		  Log.d("chart", ""+length);
 		    for (int i = 0; i < length; i++) {

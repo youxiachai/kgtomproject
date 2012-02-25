@@ -37,10 +37,7 @@
              
                 android:text="@string/recordes" />
 
-            <RadioButton
-              style="@style/tab_radio_button"
-                android:background="@android:color/background_light"
-                android:visibility="invisible" />
+           
         </RadioGroup>
 
         <FrameLayout

@@ -12,6 +12,22 @@
   	<string name="others_cost">杂项支出</string>
   	<string name="record_category">类别名称</string>
   	<string name="add_category">添加类别</string>
+  	<string name="add_supplier">添加供应商</string>
+  	<string name="add_product">添加货物</string>
   	<string name="record_confirm">确定</string>
 	<string name="record_cancel">取消</string>
+	
+	<!-- dialog text -->
+	<string name="dialog_supplier_name">名称</string>
+	<string name="dialog_supplier_phone">电话</string>
+	<string name="dialog_product_name">货物名称</string>
+	<string name="dialog_product_price">货物价格</string>
+	<string name="dialog_product_category">货物类别</string>
+	<string name="dialog_product_supplier">供应商</string>
+	<string name="stat_cost">成本</string>
+	<string name="stat_sales">营业额</string>
+	<string name="stat_profit">利润</string>
+	<string name="dialog_stat_year">选择年</string>
+	<string name="dialog_stat_month">选择月</string>
+	<string name="dialog_stat_week">选择周</string>
 </resources>

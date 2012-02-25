@@ -5,13 +5,16 @@
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="8" />
+    <uses-permission android:name="android.permission.SET_TIME"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
 
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name=".shop.view.ShopMainActivity"
-            android:label="@string/app_name" >
+            android:name=".test.AlamTest"
+            android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,12 +23,18 @@
         </activity>
         
         <activity android:name="org.achartengine.GraphicalActivity" />
-        <activity android:name=".shop.view.Statistics"></activity>
+        <activity android:name=".shop.view.StatisticsAcitvity"></activity>
         <activity android:name=".shop.view.Analysis"></activity>
       
         <activity android:name=".shop.preferences.ShopPreference"></activity>
         <activity android:name=".shop.view.Records"></activity>
         <activity android:name=".shop.services.CategoryServices"></activity>
+        <activity android:name=".shop.services.SupplierServices"></activity>
+        <activity android:name=".shop.services.ProductServices"></activity>
+        <activity android:name=".shop.services.SalesServices"></activity>
+        <activity android:name=".shop.services.StockServices"></activity>
+        <service android:name=".shop.services.StatisticsServices"></service>
+        <service android:name=".shop.noitfy.UpdateStatics"></service>
     </application>
 
 </manifest>

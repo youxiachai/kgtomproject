@@ -9,8 +9,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.achai.shop.model.Category;
+
 import com.achai.shop.model.Product;
+
 import com.achai.shop.model.Sales;
+
+import com.achai.shop.model.Statistics;
+import com.achai.shop.model.StatisticsMonth;
+import com.achai.shop.model.StatisticsYear;
 import com.achai.shop.model.Stock;
 import com.achai.shop.model.Supplier;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
@@ -22,7 +28,7 @@ import com.j256.ormlite.table.TableUtils;
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 	
 	private static final String DATABASE_NAME = "shop.db";
-	private static final int DATABASE_VERSION =2;
+	private static final int DATABASE_VERSION =11;
 	
 	//创建操作用表用的dao
 	private Dao<Category, Integer> categoryDao = null;
@@ -79,6 +85,9 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
 	
+	public DatabaseHelper(Context context,int version){
+		super(context, DATABASE_NAME, null, version);
+	}
 	//第一次创建时调用
 	@Override
 	public void onCreate(SQLiteDatabase database,
@@ -89,6 +98,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 			TableUtils.createTable(connectionSource, Stock.class);
 			TableUtils.createTable(connectionSource, Sales.class);
 			TableUtils.createTable(connectionSource, Supplier.class);
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -98,21 +108,25 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 	@Override
 	public void onUpgrade(SQLiteDatabase database,
 			ConnectionSource connectionSource, int oldVersion, int newVersion) {
-		try {
+//		try {
 //			TableUtils.dropTable(connectionSource, Category.class, true);
 //			TableUtils.dropTable(connectionSource, Product.class, true);
 //			TableUtils.dropTable(connectionSource, Stock.class, true);
 //			TableUtils.dropTable(connectionSource, Supplier.class, true);
+			//TableUtils.createTable(connectionSource, Statistics.class);
+			try {
+				TableUtils.createTable(connectionSource, StatisticsYear.class);
+				TableUtils.createTable(connectionSource, StatisticsMonth.class);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			Log.d("orm", "update");
-			TableUtils.createTable(connectionSource, Product.class);
-			TableUtils.createTable(connectionSource, Category.class);
-			TableUtils.createTable(connectionSource, Stock.class);
-			TableUtils.createTable(connectionSource, Supplier.class);
-			TableUtils.createTable(connectionSource, Sales.class);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 	
 	//返回一个可操作的DAO

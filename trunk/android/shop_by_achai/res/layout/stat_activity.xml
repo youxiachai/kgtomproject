@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/stat_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stat_cost"
+        android:visibility="visible"
+         />
+
+    <Button
+        android:id="@+id/stat_sales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stat_sales"
+          android:visibility="gone"
+         />
+
+    <Button
+        android:id="@+id/stat_profit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stat_profit"
+          android:visibility="gone"
+         />
+
+    <ListView
+        android:id="@+id/stat_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+       android:visibility="gone"
+        >
+
+    </ListView>
+
+</LinearLayout>
