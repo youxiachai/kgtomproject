@@ -9,6 +9,8 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.sax.StartElementListener;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,14 +20,17 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.achai.R;
+import com.achai.shop.chart.BarChartValues;
 import com.achai.shop.model.Category;
 import com.achai.shop.model.Product;
 import com.achai.shop.model.Supplier;
 import com.achai.shop.services.IServices;
 import com.achai.shop.services.ProductServices;
 import com.achai.shop.services.SalesServices;
+import com.achai.shop.services.StatisticsServices;
 import com.achai.shop.services.StockServices;
 import com.achai.shop.services.SupplierServices;
+import com.achai.shop.view.StatisticsAcitvity;
 
 /**
  * @author Tom_achai
@@ -44,13 +49,114 @@ public class DialogFactory {
 	public static final int RECORD_UPDATE_DELETE = 3;
 
 	public static final String POSITION = "position";
-
+	
+	public static final int STAT_DIALOG_UPDATE = 1;
 	public static final String CATEGORY = "CategoryServices";
 	static int mCategoryPos = 0;
 	static int mSupplierPos = 0;
 
+	static int mStatYearPos = 0;
+	static int mStatMonthPos = 0;
+	static int mStatWeekPos = 0;
+
+	public static Dialog createStatDialog(final Activity shopServices,
+			String title, View statDialogView) {
+		final Spinner statYear = (Spinner) statDialogView
+				.findViewById(R.id.dialog_stat_year);
+		final Spinner statMonth = (Spinner) statDialogView
+				.findViewById(R.id.dialog_stat_month);
+		final Spinner statWeek = (Spinner) statDialogView
+				.findViewById(R.id.dialog_stat_week);
+		statYear.setAdapter(new ArrayAdapter<String>(shopServices,
+				R.layout.items, shopServices.getResources().getStringArray(
+						R.array.stat_year)));
+		statMonth.setAdapter(new ArrayAdapter<String>(shopServices,
+				R.layout.items, shopServices.getResources().getStringArray(
+						R.array.stat_month)));
+		statWeek.setAdapter(new ArrayAdapter<String>(shopServices,
+				R.layout.items, shopServices.getResources().getStringArray(
+						R.array.stat_week)));
+
+		statYear.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				Log.d("dialog", "year" + position);
+				mStatYearPos = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+		
+		statMonth.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				mStatMonthPos = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		statWeek.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				mStatWeekPos = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+
+		return new AlertDialog.Builder(shopServices)
+				.setTitle(title)
+				.setView(statDialogView)
+				.setPositiveButton(R.string.record_confirm,
+						new OnClickListener() {
+
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								String year = (String) statYear.getAdapter()
+										.getItem(mStatYearPos);
+								String month = (String) statMonth.getAdapter().getItem(mStatMonthPos);
+								
+								String week = (String) statWeek.getAdapter().getItem(mStatWeekPos);
+								((StatisticsAcitvity)shopServices).queryWeekResult(year,month,week);
+								shopServices.removeDialog(DialogFactory.STAT_DIALOG_UPDATE);
+							
+							}
+						})
+				.setNegativeButton(R.string.record_cancel,
+						new OnClickListener() {
+
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								// TODO Auto-generated method stub
+
+							}
+						}).create();
+	}
+
 	public static Dialog createProductDialog(final Activity shopServices,
-			String title, View view, final int type,final Product product) {
+			String title, View view, final int type, final Product product) {
 		final IServices is = (IServices) shopServices;
 		final TextView productName = (TextView) view
 				.findViewById(R.id.dialog_product_name);
@@ -77,8 +183,10 @@ public class DialogFactory {
 			productName.setText(product.getProductName());
 			productPrice.setText(String.valueOf(product.getPrice()));
 			int i = 0;
-			Log.d("dialog", "productCategoryName"+product.getCategory().getName());
-			Log.d("dialog", "productCategoryName"+product.getSupplier().getName());
+			Log.d("dialog", "productCategoryName"
+					+ product.getCategory().getName());
+			Log.d("dialog", "productCategoryName"
+					+ product.getSupplier().getName());
 			for (Category category : categorys) {
 				if (category.getName().equals(product.getCategory().getName())) {
 					productCategory.setSelection(i);
@@ -151,7 +259,8 @@ public class DialogFactory {
 										Product addProduct = new Product();
 										addProduct.setId(1003);
 										addProduct.setProductName(name);
-										addProduct.setPrice(Double.valueOf(price));
+										addProduct.setPrice(Double
+												.valueOf(price));
 										addProduct.setCategory(currentCategory);
 										addProduct.setSupplier(currentSupplier);
 										Log.d("dialog", "-->"
@@ -159,7 +268,8 @@ public class DialogFactory {
 														.getName());
 										is.create(addProduct);
 									}
-									shopServices.removeDialog(DialogFactory.RECORD_ADD);
+									shopServices
+											.removeDialog(DialogFactory.RECORD_ADD);
 									break;
 								case DialogFactory.RECORD_UPDATE_DELETE:
 									currentCategory = (Category) productCategory
@@ -172,17 +282,20 @@ public class DialogFactory {
 										Product updatePoduct = product;
 
 										updatePoduct.setProductName(name);
-										updatePoduct.setPrice(Double.valueOf(price));
-										updatePoduct.setCategory(currentCategory);
-										updatePoduct.setSupplier(currentSupplier);
+										updatePoduct.setPrice(Double
+												.valueOf(price));
+										updatePoduct
+												.setCategory(currentCategory);
+										updatePoduct
+												.setSupplier(currentSupplier);
 										Log.d("dialog", "-->"
 												+ updatePoduct.getCategory()
 														.getName());
 										is.update(updatePoduct);
 									}
-									
-									
-									shopServices.removeDialog(DialogFactory.RECORD_UPDATE_DELETE);
+
+									shopServices
+											.removeDialog(DialogFactory.RECORD_UPDATE_DELETE);
 									break;
 								default:
 									break;
@@ -201,12 +314,12 @@ public class DialogFactory {
 							}
 						}).create();
 	}
-	
+
 	// 对textView 用List<TextView> 来保存
-	public static Dialog createDialog(final Activity shopServices, String title,
-			View view, final ArrayList<TextView> tv, final int type,
-			final Object obj) {
-		
+	public static Dialog createDialog(final Activity shopServices,
+			String title, View view, final ArrayList<TextView> tv,
+			final int type, final Object obj) {
+
 		final IServices is = (IServices) shopServices;
 		final String className = shopServices.getClass().getSimpleName();
 
@@ -229,7 +342,8 @@ public class DialogFactory {
 									if (as != null) {
 										addServices(className, as, is);
 									}
-									shopServices.removeDialog(DialogFactory.RECORD_ADD);
+									shopServices
+											.removeDialog(DialogFactory.RECORD_ADD);
 									break;
 								case DialogFactory.RECORD_UPDATE_DELETE:
 									as = checkEmpty(as, tv);
@@ -237,12 +351,13 @@ public class DialogFactory {
 										updateServices(className, as, is, obj);
 									}
 									Log.d("dialog", "onclick!!!");
-									shopServices.removeDialog(DialogFactory.RECORD_UPDATE_DELETE);
+									shopServices
+											.removeDialog(DialogFactory.RECORD_UPDATE_DELETE);
 									break;
 								default:
 									break;
 								}
-								
+
 							}
 
 						})
@@ -255,7 +370,8 @@ public class DialogFactory {
 								switch (type) {
 								case DialogFactory.RECORD_UPDATE_DELETE:
 									deleteServices(is, obj);
-									shopServices.removeDialog(DialogFactory.RECORD_UPDATE_DELETE);
+									shopServices
+											.removeDialog(DialogFactory.RECORD_UPDATE_DELETE);
 									break;
 
 								default:

@@ -2,6 +2,7 @@ package com.achai.shop.chart;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.achartengine.ChartFactory;
 import org.achartengine.GraphicalView;
@@ -31,83 +32,53 @@ public class BarChart extends ShopAbstractChart {
 
 	@Override
 	public Intent execute(Context context) {
-		// 图例
-		String[] titles = new String[] { "2010", "2011" };
-		List<double[]> values = new ArrayList<double[]>();
-		values.add(new double[] { 5230, 7300, 9240, 10540, 7900, 9200, 12030,
-				11200, 9500, 10500, 11600, 13500 });
-		values.add(new double[] { 14230, 12300, 14240, 15244, 15900, 19200,
-				22030, 21200, 19500, 15500, 12600, 14000 });
-		int[] colors = new int[] { Color.RED, Color.BLUE };
-		// 1,渲染对象
-		XYMultipleSeriesRenderer renderer = buildBarRenderer(colors);
-		renderer.setOrientation(Orientation.HORIZONTAL);
-		// 2 设置图表属性
-		setChartSettings(renderer, "柱状图测试", "Month", "sales", 0.5, 12.5, 0,
-				24000, Color.GRAY, Color.LTGRAY);
-		renderer.setShowGrid(true);
-		renderer.setXLabels(1);
-		renderer.setYLabels(10);
-		renderer.addXTextLabel(1, "Jan");
-		renderer.addXTextLabel(3, "Mar");
-		renderer.addXTextLabel(5, "May");
-		renderer.addXTextLabel(7, "Jul");
-		renderer.addXTextLabel(10, "Oct");
-		renderer.addXTextLabel(12, "Dec");
+		
+		return null;
+	}
+
+	/**
+	 * 
+	 * @param context
+	 * @param titles
+	 * @param values
+	 * @return
+	 */
+	public GraphicalView getChartView(Context context, List<String> titles,
+			List<List<Double>> values,Map<String, String> settings) {
+		// 1,图例颜色根据titles的数量进行填充
+		int colorLength = titles.size();
+
+		// 2,渲染图例用颜色
+		List<Integer> rendererColor = new ArrayList<Integer>();
+		for (int i = 0; i < colorLength; i++) {
+			rendererColor.add(BarChartValues.COLORS[i]);
+		}
+
+		// 3,创建渲染对象
+		XYMultipleSeriesRenderer renderer = buildBarRenderer(rendererColor);
+
+
+		//4, 设置显示数据
 		int length = renderer.getSeriesRendererCount();
-		// 显示柱状图信息
-		// for (int i = 0; i < length; i++) {
-		// SimpleSeriesRenderer seriesRenderer = renderer
-		// .getSeriesRendererAt(i);
-		// seriesRenderer.setDisplayChartValues(true);
-		// }
-		return ChartFactory.getBarChartIntent(context,
+		for (int i = 0; i < length; i++) {
+			SimpleSeriesRenderer ser = renderer.getSeriesRendererAt(i);
+			//设置图上的字体大小
+			ser.setChartValuesTextSize(14);
+			ser.setChartValuesTextAlign(Align.CENTER);
+			// ser.setChartValuesSpacing(1);
+			ser.setDisplayChartValues(true);
+		}
+		// 5 设置图表属性
+		setBarChartXSetting(renderer, Integer.valueOf(settings.get(BarChartValues.SHOWTYPE)),settings);
+		return ChartFactory.getBarChartView(context,
 				buildBarDataset(titles, values), renderer, Type.DEFAULT);
+
 	}
 
 	@Override
 	public GraphicalView chartView(Context context) {
-		// 图例
-		String[] titles = new String[] { "拉箱", "手提包", "背囊" };
-		List<double[]> values = new ArrayList<double[]>();
-		values.add(new double[] { 5230, 7300, 9240, 10540, 7900, 9200, 12030,
-				11200, 9500, 10500, 11600, 13500 });
-		values.add(new double[] { 14230, 12300, 14240, 15244, 15900, 19200,
-				22030, 21200, 19500, 15500, 12600, 14000 });
-		values.add(new double[] { 14230, 12300, 14240, 15244, 15900, 19200,
-				22030, 21200, 19500, 15500, 12600, 14000 });
-		int[] colors = new int[] { Color.RED, Color.BLUE, Color.CYAN };
-		// 1,渲染对象
-		XYMultipleSeriesRenderer renderer = buildBarRenderer(colors);
-		renderer.setOrientation(Orientation.HORIZONTAL);
-		// 2 设置图表属性
-		setChartSettings(renderer, "柱状图测试", "Month", "sales", 0.5, 12.5, 0,
-				24000, Color.RED, Color.BLUE);
-		renderer.setShowGrid(true);
-		renderer.setXLabels(1);
-		// renderer.setYLabels(10);
-		renderer.addXTextLabel(1, "Jan");
-		renderer.addXTextLabel(2, "二月");
-
-		renderer.addXTextLabel(3, "Mar");
-		renderer.addXTextLabel(5, "May");
-		renderer.addXTextLabel(7, "Jul");
-		renderer.addXTextLabel(10, "Oct");
-		renderer.addXTextLabel(12, "Dec");
-		renderer.setYLabelsAlign(Align.RIGHT);
-		renderer.setBarSpacing(0.1);
-		int length = renderer.getSeriesRendererCount();
-		for (int i = 0; i < length; i++) {
-			SimpleSeriesRenderer ser = renderer.getSeriesRendererAt(i);
-			ser.setChartValuesTextSize(12);
-			ser.setChartValuesTextAlign(Align.RIGHT);
-			ser.setChartValuesSpacing(1);
-
-			ser.setDisplayChartValues(true);
-		}
-
-		return ChartFactory.getBarChartView(context,
-				buildBarDataset(titles, values), renderer, Type.DEFAULT);
+		
+		return null;
 	}
 
 }
